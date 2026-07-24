@@ -1,47 +1,74 @@
-<!doctype html><html><head><meta charset="utf-8">
+<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CTD — AI in the Cuts</title>
 <style>
-:root{--ink:#20232a;--dim:#6b7280;--paper:#f6f4ef;--card:#fffefb;--line:#e3ded2;--gold:#96781c;--red:#b3382f;--green:#2e7d4f;--blue:#2f5d9e}
+:root{
+  --bg:#07080c; --panel:rgba(255,255,255,.038); --panel2:rgba(255,255,255,.062);
+  --stroke:rgba(255,255,255,.09); --stroke2:rgba(255,255,255,.15);
+  --ink:#f2f5fa; --dim:#9aa6ba; --dim2:#5f6a7e;
+  --blue:#5b9dff; --cyan:#43e6d0; --green:#54e08a; --amber:#ffb020; --red:#ff5d6c; --purple:#b98cff;
+  --g1:#7c5cff; --g2:#4d9bff; --g3:#37e6c8; --track:rgba(255,255,255,.08); --gold:#d9a84a;
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 -apple-system,system-ui,"Segoe UI",sans-serif}
-main{max-width:840px;margin:0 auto;padding:2.8rem 1.8rem 4rem}
-.kicker{font:700 .74rem/1 ui-monospace,monospace;letter-spacing:.3em;color:var(--gold)}
-h1{font-family:Georgia,serif;font-size:2.3rem;margin:.4rem 0 .3rem}
-.dek{color:var(--dim);max-width:64ch;margin:0 0 1.4rem}
-.stats{display:flex;gap:2.6rem;margin:.4rem 0 1.8rem;flex-wrap:wrap}
-.stats div{font-size:.82rem;color:var(--dim)}
-.stats b{display:block;font-family:Georgia,serif;font-size:2.1rem;line-height:1.1;color:var(--ink)}
-h2{font-family:Georgia,serif;font-size:1.3rem;margin:2.2rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.3rem;margin:.7rem 0;box-shadow:0 1px 3px rgba(30,25,10,.05)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.62 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;letter-spacing:-.006em;min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;
+  background:radial-gradient(900px 520px at 12% -8%,rgba(124,92,255,.20),transparent 60%),radial-gradient(760px 480px at 92% 4%,rgba(55,230,200,.12),transparent 62%),radial-gradient(700px 700px at 78% 108%,rgba(77,155,255,.11),transparent 60%),var(--bg)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;opacity:.5;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:44px 44px;-webkit-mask-image:radial-gradient(circle at 50% 14%,#000 0%,transparent 76%);mask-image:radial-gradient(circle at 50% 14%,#000 0%,transparent 76%)}
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);background:rgba(10,12,18,.62);border-bottom:1px solid var(--stroke)}
+.nav .in{max-width:900px;margin:0 auto;padding:.8rem 1.6rem;display:flex;align-items:center;gap:.9rem}
+.brand{display:flex;align-items:center;gap:.55rem;font-weight:700;letter-spacing:.02em;font-size:1rem}
+.mark{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--g1),var(--g2) 55%,var(--g3));box-shadow:0 0 22px rgba(93,157,255,.5);position:relative}
+.mark::after{content:"";position:absolute;inset:6px;border-radius:4px;background:var(--bg)}
+.brand small{color:var(--dim);font-weight:600;letter-spacing:.22em;font-size:.62rem;text-transform:uppercase;margin-left:.1rem}
+.navlinks{margin-left:auto;display:flex;align-items:center;gap:.35rem}
+.navlinks a{color:var(--dim);text-decoration:none;font-size:.85rem;font-weight:600;padding:.42rem .85rem;border-radius:99px;transition:.16s;white-space:nowrap}
+.navlinks a:hover{color:var(--ink);background:var(--panel2)}
+.navlinks a.hub{color:var(--ink);border:1px solid var(--stroke2)}
+main{max-width:900px;margin:0 auto;padding:2.4rem 1.8rem 4rem}
+.eyebrow{font:700 .7rem/1 ui-monospace,"SF Mono",monospace;letter-spacing:.32em;background:linear-gradient(90deg,var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{font-size:2.4rem;margin:.5rem 0 .3rem;letter-spacing:-.028em;font-weight:800}
+.dek{color:var(--dim);max-width:66ch;margin:0 0 1.4rem}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin:.6rem 0 1.9rem}
+.stats div{position:relative;flex:1;min-width:150px;border-radius:16px;padding:1rem 1.15rem;overflow:hidden;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--stroke)}
+.stats div::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,transparent,var(--acc,var(--blue)),transparent);opacity:.85}
+.stats b{display:block;font-size:2rem;font-weight:800;letter-spacing:-.03em;color:var(--acc,var(--ink));line-height:1.05}
+.stats span{font-size:.78rem;color:var(--dim)}
+h2{font-size:1.3rem;font-weight:750;letter-spacing:-.01em;margin:2.4rem 0 .8rem;padding-bottom:.4rem;border-bottom:1px solid var(--stroke2)}
+.card{position:relative;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--stroke);border-radius:16px;padding:1.15rem 1.35rem;margin:.7rem 0;box-shadow:0 10px 40px -26px rgba(0,0,0,.9)}
 table{width:100%;border-collapse:collapse;font-size:.92rem}
-th{color:var(--dim);text-align:left;font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;padding:.5rem .5rem;border-bottom:1px solid var(--line)}
-td{padding:.6rem .5rem;border-bottom:1px solid #efece3;vertical-align:middle}
+th{color:var(--dim2);text-align:left;font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;padding:.5rem .5rem;border-bottom:1px solid var(--stroke)}
+td{padding:.6rem .5rem;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:middle}
 tr:last-child td{border-bottom:none}
-.big{font-family:Georgia,serif;font-size:1.15rem;font-weight:700}
-.bar{background:#eceae4;border-radius:6px;height:12px;overflow:hidden;min-width:110px;margin-top:3px}
-.bar > div{height:100%;background:linear-gradient(90deg,#96781c,#b3382f)}
+.big{font-size:1.12rem;font-weight:700;letter-spacing:-.01em}
+.bar{background:var(--track);border-radius:6px;height:11px;overflow:hidden;min-width:110px;margin-top:5px}
+.bar>div{height:100%;background:linear-gradient(90deg,var(--g1),var(--g2))}
 .sup{color:var(--dim);font-size:.85rem}
-.tip{background:#eef3fb;border:1px solid #cfe0f5;border-radius:10px;padding:.8rem 1.1rem;font-size:.9rem;margin:.8rem 0}
+.tip{background:rgba(77,155,255,.08);border:1px solid rgba(91,157,255,.22);border-radius:14px;padding:.9rem 1.15rem;font-size:.9rem;margin:.8rem 0}
 .tip b{color:var(--blue)}
-.note{background:#fbf2e6;border:1px solid #f0dcbb;border-radius:10px;padding:.8rem 1.1rem;font-size:.88rem;margin:.8rem 0}
-.note b{color:var(--gold)}
+.note{background:rgba(255,176,32,.07);border:1px solid rgba(255,176,32,.22);border-radius:14px;padding:.9rem 1.15rem;font-size:.88rem;margin:.8rem 0}
+.note b{color:var(--amber)}
 ul{padding-left:1.2rem}li{margin-bottom:.5rem}
-.foot{color:var(--dim);font-size:.82rem;border-top:1px solid var(--line);padding-top:1rem;margin-top:2.4rem}
+.foot{color:var(--dim2);font-size:.82rem;border-top:1px solid var(--stroke);padding-top:1rem;margin-top:2.4rem}
 .foot a{color:var(--dim)}
-@media print{body{background:#fff}.card{box-shadow:none;break-inside:avoid}}
+@media (max-width:640px){main{padding:2rem 1.1rem}h1{font-size:1.9rem}.navlinks a:not(.hub){display:none}}
 </style></head><body>
-<a href="index.html" id="backlink" style="position:fixed;top:14px;left:14px;z-index:99999;font:600 13px/1 -apple-system,system-ui,sans-serif;text-decoration:none;color:#fff;background:rgba(18,22,31,.78);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.20);padding:8px 14px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.25)">← All reports</a>
+
+<nav class="nav"><div class="in"><span class="brand"><span class="mark"></span>CTD <small>Gen AI</small></span><span class="navlinks"><a href="index.html" class="hub">← All reports</a><a href="CTD_AI_Dashboard.html">Dashboard</a><a href="CTD_AI_Master_Report.html">Master</a><a href="CTD_Active_Shots.html">Shots</a></span></div></nav>
+
 <main>
-<div class="kicker">CLOSE TO DISASTER — GEN AI</div>
+<div class="eyebrow">CLOSE TO DISASTER · GEN AI</div>
 <h1>AI in the Cuts</h1>
 <p class="dek">How much generative-AI footage sits in each network cut, measured from the GEN AI REPORTS timeline data. Read-only pull of the CTD Airtable, 1,523 clip entries. Snapshot July 23, 2026.</p>
 
 <div class="stats">
-<div><b>~1/3</b>of each episode is AI footage</div>
-<div><b>2.4:1</b>generate-to-use (103, down from 5.1:1)</div>
-<div><b>3,990</b>AI clips generated to date</div>
-<div><b>3</b>cuts measured</div>
+<div style="--acc:#8fbcff"><b>~1/3</b><span>of each episode is AI footage</span></div>
+<div style="--acc:#9bf0b8"><b>2.4:1</b><span>generate-to-use (103, from 5.1:1)</span></div>
+<div style="--acc:#8fd7ff"><b>3,990</b><span>AI clips generated to date</span></div>
+<div style="--acc:#d3b8ff"><b>3</b><span>cuts measured</span></div>
 </div>
 
 <h2>Per cut</h2>
@@ -76,17 +103,17 @@ ul{padding-left:1.2rem}li{margin-bottom:.5rem}
 </ul></div>
 
 <h2>Efficiency — generated vs. used</h2>
-<p class="dek" style="margin-bottom:.6rem">How many AI clips we generated to land one in the cut. Generated = every delivered file in GEN AI ASSETS for that episode&#39;s stories; In cut = AI clip placements on that cut&#39;s timeline.</p>
+<p class="dek" style="margin-bottom:.6rem">How many AI clips we generated to land one in the cut. Generated = every clip delivered in GEN AI ASSETS for that episode&#39;s stories; Used = AI clip placements on that cut&#39;s timeline.</p>
 <div class="card">
 <table>
-<tr><th>Episode</th><th>Clips generated</th><th>Clips in cut</th><th>Generated per used</th></tr>
-<tr><td class="big">101</td><td>1,879</td><td>368</td><td class="big" style="color:var(--red)">5.1 : 1<div class="bar"><div style="width:100%"></div></div></td></tr>
-<tr><td class="big">102</td><td>872</td><td>295</td><td class="big" style="color:var(--gold)">3.0 : 1<div class="bar"><div style="width:59%"></div></div></td></tr>
-<tr><td class="big">103</td><td>774</td><td>318</td><td class="big" style="color:var(--green)">2.4 : 1<div class="bar"><div style="width:47%"></div></div></td></tr>
+<tr><th>Episode</th><th>Clips generated</th><th>Used (in cut)</th><th>Generated per used</th></tr>
+<tr><td class="big">101</td><td>1,879</td><td>368</td><td class="big" style="color:var(--red)">5.1 : 1<div class="bar"><div style="width:100%;background:linear-gradient(90deg,#ff8a5c,var(--red))"></div></div></td></tr>
+<tr><td class="big">102</td><td>872</td><td>295</td><td class="big" style="color:var(--amber)">3.0 : 1<div class="bar"><div style="width:59%;background:linear-gradient(90deg,#ffd07a,var(--amber))"></div></div></td></tr>
+<tr><td class="big">103</td><td>774</td><td>318</td><td class="big" style="color:var(--green)">2.4 : 1<div class="bar"><div style="width:47%;background:linear-gradient(90deg,#2ab77e,var(--green))"></div></div></td></tr>
 </table>
 </div>
 <div class="tip"><b>Yes — we&#39;re getting more efficient, sharply.</b> The generate-to-use ratio has more than halved across three episodes: 101 needed ~5 generations per clip that made the cut, 102 dropped to 3, and 103 is down to 2.4. Same output (a third of each episode is AI) for less than half the generation waste. That&#39;s the prompt-library locks, reference-frame workflow, and re-spin discipline compounding.</div>
-<div class="note"><b>Read with two caveats:</b> (1) 101 has been in production longest, so it has accumulated the most experimental and re-spun generations — some of its 1,879 is early-days learning that later episodes skip. (2) "Clips in cut" counts timeline placements; a clip used twice counts twice, so true distinct-clip efficiency is marginally leaner still. The direction is unambiguous regardless.</div>
+<div class="note"><b>Read with two caveats:</b> (1) 101 has been in production longest, so it has accumulated the most experimental and re-spun generations — some of its 1,879 is early-days learning that later episodes skip. (2) "Used" counts timeline placements; a clip used twice counts twice, so true distinct-clip efficiency is marginally leaner still. The direction is unambiguous regardless.</div>
 
 <h2>Superseded cuts (for the record)</h2>
 <div class="card"><ul>

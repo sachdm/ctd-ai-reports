@@ -2,81 +2,102 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CTD — GEN AI Reports</title>
 <style>
-:root{--bg:#0b0e14;--card:#151a23;--card2:#1a212c;--line:#232b38;--ink:#e6edf3;--dim:#8b98a9;--dim2:#5c6773;--blue:#4c9aff;--green:#3fb950;--purple:#a371f7;--amber:#e3a008}
+:root{
+  --bg:#07080c; --panel:rgba(255,255,255,.038); --panel2:rgba(255,255,255,.062);
+  --stroke:rgba(255,255,255,.09); --stroke2:rgba(255,255,255,.15);
+  --ink:#f2f5fa; --dim:#9aa6ba; --dim2:#5f6a7e;
+  --blue:#5b9dff; --green:#54e08a; --amber:#ffb020; --purple:#b98cff;
+  --g1:#7c5cff; --g2:#4d9bff; --g3:#37e6c8;
+}
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,#141a26 0%,var(--bg) 55%);color:var(--ink);font:16px/1.6 -apple-system,system-ui,"Segoe UI",sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
-.wrap{max-width:960px;margin:0 auto;padding:3.4rem 1.6rem 5rem}
-.kick{font:700 .72rem/1 ui-monospace,monospace;letter-spacing:.3em;color:var(--blue)}
-h1{font-size:2.4rem;margin:.4rem 0 .3rem;letter-spacing:-.01em}
-.dek{color:var(--dim);max-width:60ch;margin:0 0 2.2rem}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-a.card{display:block;text-decoration:none;color:inherit;background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:16px;padding:1.3rem 1.4rem;transition:.15s}
-a.card:hover{border-color:var(--blue);transform:translateY(-2px)}
-a.card.feat{grid-column:span 2;background:linear-gradient(120deg,#16233a,#151a23)}
-.tag{font:700 .66rem/1 ui-monospace,monospace;letter-spacing:.15em;color:var(--dim2)}
-.card h2{font-size:1.15rem;margin:.5rem 0 .3rem}
-.card.feat h2{font-size:1.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;
+  min-height:100vh;-webkit-font-smoothing:antialiased;letter-spacing:-.006em;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;
+  background:radial-gradient(900px 520px at 12% -8%,rgba(124,92,255,.22),transparent 60%),radial-gradient(760px 480px at 92% 4%,rgba(55,230,200,.14),transparent 62%),radial-gradient(700px 700px at 78% 108%,rgba(77,155,255,.13),transparent 60%),var(--bg)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;opacity:.5;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:44px 44px;-webkit-mask-image:radial-gradient(circle at 50% 12%,#000 0%,transparent 74%);mask-image:radial-gradient(circle at 50% 12%,#000 0%,transparent 74%)}
+.wrap{max-width:980px;margin:0 auto;padding:3rem 1.6rem 5rem}
+.brand{display:flex;align-items:center;gap:.55rem;font-weight:700;letter-spacing:.02em;font-size:1rem;margin-bottom:2.4rem}
+.mark{width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg,var(--g1),var(--g2) 55%,var(--g3));box-shadow:0 0 24px rgba(93,157,255,.55);position:relative}
+.mark::after{content:"";position:absolute;inset:6px;border-radius:5px;background:var(--bg)}
+.brand small{color:var(--dim);font-weight:600;letter-spacing:.22em;font-size:.62rem;text-transform:uppercase;margin-left:.1rem}
+.kick{font:700 .72rem/1 ui-monospace,"SF Mono",monospace;letter-spacing:.3em;background:linear-gradient(90deg,var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{font-size:2.9rem;margin:.5rem 0 .35rem;letter-spacing:-.03em;font-weight:800;line-height:1.03}
+.dek{color:var(--dim);max-width:62ch;margin:0 0 2.2rem}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+a.card{position:relative;display:block;text-decoration:none;color:inherit;overflow:hidden;
+  background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--stroke);border-radius:18px;padding:1.35rem 1.45rem;transition:.18s;
+  box-shadow:0 10px 40px -28px rgba(0,0,0,.9)}
+a.card::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,transparent,var(--acc,var(--blue)),transparent);opacity:.75}
+a.card:hover{border-color:var(--stroke2);transform:translateY(-3px);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04))}
+a.card.feat{grid-column:span 2;background:linear-gradient(120deg,rgba(124,92,255,.16),rgba(77,155,255,.08),var(--panel))}
+.tag{font:700 .64rem/1 ui-monospace,"SF Mono",monospace;letter-spacing:.15em;color:var(--dim2)}
+.card h2{font-size:1.18rem;margin:.5rem 0 .3rem;font-weight:750;letter-spacing:-.01em;border:0;padding:0}
+.card.feat h2{font-size:1.55rem}
 .card p{color:var(--dim);font-size:.88rem;margin:0}
-.arrow{color:var(--blue);font-size:.85rem;margin-top:.7rem;display:inline-block}
+.arrow{color:var(--blue);font-size:.85rem;margin-top:.7rem;display:inline-block;font-weight:600}
 .kpis{display:flex;gap:1.8rem;flex-wrap:wrap;margin:1.4rem 0 0}
 .kpis div{font-size:.8rem;color:var(--dim)}
-.kpis b{display:block;font-size:1.6rem;color:var(--ink)}
+.kpis b{display:block;font-size:1.6rem;color:var(--ink);font-weight:800;letter-spacing:-.03em}
 .foot{color:var(--dim2);font-size:.78rem;margin-top:2.6rem;text-align:center}
-@media(max-width:720px){.grid{grid-template-columns:1fr}a.card.feat{grid-column:span 1}}
+@media(max-width:720px){.grid{grid-template-columns:1fr}a.card.feat{grid-column:span 1}h1{font-size:2.2rem}}
 </style></head><body>
 <div class="wrap">
+<div class="brand"><span class="mark"></span>CTD <small>Gen AI</small></div>
 <div class="kick">CLOSE TO DISASTER · GEN AI</div>
 <h1>Production Reports</h1>
 <p class="dek">Read-only reporting on the generative-AI pipeline — how much AI is in the cuts, how efficiently we're generating it, re-spin load, and the state of every shot. Sourced from the CTD Airtable.</p>
 
 <div class="grid">
-  <a class="card feat" href="CTD_AI_Dashboard.html">
+  <a class="card feat" href="CTD_AI_Dashboard.html" style="--acc:var(--purple)">
     <div class="tag">LIVE · DARK · CHARTS</div>
     <h2>Production Dashboard →</h2>
     <p>Visual overview: AI share, efficiency &amp; churn trends, pipeline split, and re-spin load by story.</p>
     <div class="kpis">
       <div><b>~33%</b>AI per episode</div>
       <div><b>2.4:1</b>generate-to-use</div>
-      <div><b>0.66</b>re-spins/shot</div>
-      <div><b>712</b>delivered</div>
+      <div><b>0.46</b>re-spins/used shot</div>
+      <div><b>712</b>sent to Cream</div>
     </div>
   </a>
 
-  <a class="card" href="CTD_AI_Master_Report.html">
+  <a class="card" href="CTD_AI_Master_Report.html" style="--acc:var(--blue)">
     <div class="tag">FULL BREAKDOWN</div>
     <h2>Master Report</h2>
     <p>Every metric with method &amp; sources — cuts, efficiency, pipeline, re-spins, by episode.</p>
     <span class="arrow">Open →</span>
   </a>
 
-  <a class="card" href="CTD_Active_Shots.html">
+  <a class="card" href="CTD_Active_Shots.html" style="--acc:var(--amber)">
     <div class="tag">WORKLOAD</div>
     <h2>Active Shots</h2>
     <p>Every open shot + re-spin, grouped by story, with the workload analysis.</p>
     <span class="arrow">Open →</span>
   </a>
 
-  <a class="card" href="CTD_AI_Meeting_Report.html">
+  <a class="card" href="CTD_AI_Meeting_Report.html" style="--acc:var(--green)">
     <div class="tag">ACCURACY</div>
     <h2>Accuracy Audit</h2>
     <p>Creative direction vs. the historical record — overview, full audit, continuity.</p>
     <span class="arrow">Open →</span>
   </a>
 
-  <a class="card" href="CTD_AI_In_The_Cuts.html">
+  <a class="card" href="CTD_AI_In_The_Cuts.html" style="--acc:var(--cyan,#43e6d0)">
     <div class="tag">FOCUS</div>
     <h2>AI in the Cuts</h2>
     <p>AI share and efficiency, on its own.</p>
     <span class="arrow">Open →</span>
   </a>
 
-  <a class="card" href="CTD_AI_Master_Report.pdf">
+  <a class="card" href="CTD_AI_Master_Report.pdf" style="--acc:var(--dim)">
     <div class="tag">PRINT</div>
     <h2>Master Report (PDF)</h2>
-    <p>iOS-styled print version for the meeting handout.</p>
+    <p>Print version for the meeting handout.</p>
     <span class="arrow">Download →</span>
   </a>
 </div>
 
-<div class="foot">Updated Jul 23, 2026 · Read-only — nothing written to the base · GEN AI REPORTS · ASSETS · SHOTCODES</div>
+<div class="foot">Updated Jul 24, 2026 · Read-only — nothing written to the base · GEN AI REPORTS · ASSETS · SHOTCODES</div>
 </div></body></html>

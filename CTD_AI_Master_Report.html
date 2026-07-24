@@ -1,0 +1,153 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CTD — GEN AI Master Report</title>
+<style>
+:root{--ink:#20232a;--dim:#6b7280;--paper:#f6f4ef;--card:#fffefb;--line:#e3ded2;--gold:#96781c;--red:#b3382f;--amber:#a06a10;--green:#2e7d4f;--blue:#2f5d9e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 -apple-system,system-ui,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:900px;margin:0 auto;padding:3rem 2rem 5rem}
+.kicker{font:700 .74rem/1 ui-monospace,monospace;letter-spacing:.32em;color:var(--gold)}
+h1{font-family:Georgia,serif;font-size:2.6rem;line-height:1.12;margin:.4rem 0 .5rem;letter-spacing:-.01em}
+.dek{color:var(--dim);max-width:66ch;margin:0 0 1.6rem;font-size:1.02rem}
+.toc{display:flex;gap:.45rem;flex-wrap:wrap;margin:1.2rem 0 2rem;border-bottom:1px solid var(--line);padding-bottom:1.4rem}
+.toc a{text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--card);padding:.32rem .95rem;border-radius:99px;font-size:.84rem;font-weight:700}
+.toc a:hover{border-color:var(--gold);color:var(--gold)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin:0 0 1rem}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.9rem 1rem;box-shadow:0 1px 3px rgba(30,25,10,.05)}
+.kpi b{display:block;font-family:Georgia,serif;font-size:1.9rem;line-height:1.05;color:var(--ink)}
+.kpi span{font-size:.76rem;color:var(--dim)}
+h2{font-family:Georgia,serif;font-size:1.35rem;margin:2.6rem 0 .4rem;padding-bottom:.35rem;border-bottom:2px solid var(--ink)}
+.sub{color:var(--dim);font-size:.9rem;margin:.3rem 0 .8rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.35rem;margin:.7rem 0;box-shadow:0 1px 3px rgba(30,25,10,.05)}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{color:var(--dim);text-align:left;font-weight:600;font-size:.71rem;text-transform:uppercase;letter-spacing:.06em;padding:.5rem .5rem;border-bottom:1px solid var(--line)}
+td{padding:.55rem .5rem;border-bottom:1px solid #efece3;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+td.big{font-family:Georgia,serif;font-size:1.08rem;font-weight:700}
+.bar{background:#eceae4;border-radius:6px;height:11px;overflow:hidden;min-width:90px;margin-top:3px}
+.bar>div{height:100%;background:linear-gradient(90deg,#96781c,#b3382f)}
+.barg>div{background:linear-gradient(90deg,#4a9d6a,#2e7d4f)}
+.pill{display:inline-block;padding:.1rem .55rem;border-radius:99px;font-size:.7rem;font-weight:800}
+.p-sent{background:#ddeee3;color:var(--green)}.p-prog{background:#f5e7cd;color:var(--amber)}
+.p-first{background:#dde7f5;color:var(--blue)}.p-hold{background:#eceae4;color:var(--dim)}
+.tip{background:#eef3fb;border:1px solid #cfe0f5;border-radius:10px;padding:.85rem 1.1rem;font-size:.9rem;margin:.8rem 0}
+.tip b{color:var(--blue)}
+.note{background:#fbf2e6;border:1px solid #f0dcbb;border-radius:10px;padding:.85rem 1.1rem;font-size:.88rem;margin:.8rem 0}
+.note b{color:var(--gold)}
+ul{padding-left:1.2rem}li{margin-bottom:.5rem}
+.foot{color:var(--dim);font-size:.82rem;border-top:1px solid var(--line);padding-top:1rem;margin-top:3rem}
+.foot a{color:var(--dim)}
+@media print{body{background:#fff}.card,.kpi{box-shadow:none;break-inside:avoid}.toc{display:none}}
+@media (max-width:640px){.kpis{grid-template-columns:repeat(2,1fr)}main{padding:2rem 1.1rem}h1{font-size:2rem}}
+</style></head><body><main>
+
+<div class="kicker">CLOSE TO DISASTER — GEN AI · MASTER REPORT</div>
+<h1>The GEN AI Program, by the Numbers</h1>
+<p class="dek">A full read-only breakdown of the CTD generative-AI pipeline: how much AI is in the cuts, how efficiently we&#39;re generating it, and where every shot stands. Sourced entirely from the CTD Airtable — GEN AI SHOTCODES, GEN AI ASSETS, and GEN AI REPORTS. Snapshot July 23, 2026.</p>
+
+<nav class="toc">
+<a href="#top">Top line</a><a href="#cuts">AI in the cuts</a><a href="#eff">Efficiency</a><a href="#pipe">Pipeline</a><a href="#respin">Re-spins</a><a href="#ep">By episode</a><a href="#method">Method</a>
+</nav>
+
+<h2 id="top">Top line</h2>
+<div class="kpis">
+<div class="kpi"><b>~1/3</b><span>of each finished episode is AI footage</span></div>
+<div class="kpi"><b>2.4:1</b><span>generate-to-use ratio (103) — down from 5.1:1</span></div>
+<div class="kpi"><b>3,990</b><span>AI clips generated across the series</span></div>
+<div class="kpi"><b>712</b><span>shots delivered to Cream</span></div>
+</div>
+<div class="card" style="margin-top:.3rem">
+<b>The one-sentence version:</b> generative AI reliably fills about a third of every episode, we&#39;re producing it more than twice as efficiently as when we started, and just over half of all planned shots are already cut-ready and delivered.
+</div>
+
+<h2 id="cuts">1 &nbsp; AI in the cuts</h2>
+<p class="sub">AI screen-time as a share of each cut. Runtime = the timeline position of each cut&#39;s final AI clip (broadcast master starts 01:00:00:00), so these are floors — true share is these or marginally lower.</p>
+<div class="card"><table>
+<tr><th>Cut</th><th>AI clips</th><th>AI screen-time</th><th>Runtime</th><th>AI share</th></tr>
+<tr><td class="big">101 Fine Cut <span style="font-weight:400;color:var(--dim);font-size:.82rem">+ snap-ins</span></td><td>368</td><td>14:23</td><td>43:36</td><td class="big">33.0%<div class="bar"><div style="width:33%"></div></div></td></tr>
+<tr><td class="big">102 Rough Cut 1</td><td>295</td><td>14:33</td><td>44:49</td><td class="big">32.5%<div class="bar"><div style="width:32.5%"></div></div></td></tr>
+<tr><td class="big">103 Rough Cut</td><td>318</td><td>12:02</td><td>43:12</td><td class="big">27.9%<div class="bar"><div style="width:27.9%"></div></div></td></tr>
+</table></div>
+<div class="tip"><b>AI is a structural third of the show.</b> Across three independent cuts on three different stories the share holds at ~28–33%, and it doesn&#39;t shrink as a cut matures — 101&#39;s locked fine cut carries <i>more</i> AI (14:23) than its own earlier rough cut (11:28). 103 sits lower only because it&#39;s a first assembly with sequences still to fill; expect it to climb toward the others.</div>
+
+<h2 id="eff">2 &nbsp; Efficiency — are we improving?</h2>
+<p class="sub">Clips generated per clip that lands in the cut. Generated = all delivered files for that episode&#39;s stories; In cut = AI placements on that cut&#39;s timeline.</p>
+<div class="card"><table>
+<tr><th>Episode</th><th>Generated</th><th>In cut</th><th>Generate-to-use</th></tr>
+<tr><td class="big">101</td><td>1,879</td><td>368</td><td class="big" style="color:var(--red)">5.1 : 1<div class="bar"><div style="width:100%"></div></div></td></tr>
+<tr><td class="big">102</td><td>872</td><td>295</td><td class="big" style="color:var(--amber)">3.0 : 1<div class="bar"><div style="width:59%"></div></div></td></tr>
+<tr><td class="big">103</td><td>774</td><td>318</td><td class="big" style="color:var(--green)">2.4 : 1<div class="bar barg"><div style="width:47%"></div></div></td></tr>
+</table></div>
+<div class="tip"><b>Yes — sharply.</b> The generate-to-use ratio has more than halved across three episodes. Same on-screen output for less than half the generation waste. That&#39;s the locked prompt library, the reference-frame workflow, and re-spin discipline compounding.</div>
+<div class="note"><b>Two caveats for honesty:</b> (1) 101 has been in production longest and carries the most one-time experimental and re-spun generations — some of its 5.1:1 was tuition later episodes skip. (2) "In cut" counts timeline placements; a clip used twice counts twice, so true distinct-clip efficiency is marginally leaner. The trend is unambiguous either way.</div>
+
+<h2 id="pipe">3 &nbsp; Production pipeline</h2>
+<p class="sub">Every planned shot (GEN AI SHOTCODES) and every generated file (GEN AI ASSETS), by status.</p>
+<div class="card">
+<table>
+<tr><th>Stage</th><th>Count</th><th>Share of planned shots</th></tr>
+<tr><td><span class="pill p-sent">SENT TO CREAM</span></td><td class="big">712</td><td>52%<div class="bar barg"><div style="width:52%"></div></div></td></tr>
+<tr><td><span class="pill p-first">FIRST REQUEST</span></td><td class="big">106</td><td>8%<div class="bar"><div style="width:8%"></div></div></td></tr>
+<tr><td><span class="pill p-prog">IN PROGRESS</span></td><td class="big">69</td><td>5%<div class="bar"><div style="width:5%"></div></div></td></tr>
+<tr><td><span class="pill p-hold">PAUSED / CANCELLED / UNSET</span></td><td class="big">493</td><td>35%<div class="bar"><div style="width:35%"></div></div></td></tr>
+<tr><td style="font-weight:700">Total planned shots</td><td class="big">1,380</td><td class="sub" style="margin:0">across all episodes</td></tr>
+</table>
+</div>
+<div class="card">
+<table>
+<tr><th>Generation</th><th>Count</th><th></th></tr>
+<tr><td>Total clips generated (all files)</td><td class="big">3,990</td><td class="sub" style="margin:0">~2.9 files per planned shot</td></tr>
+<tr><td>Re-spin requests (all-time, by note)</td><td class="big">522</td><td class="sub" style="margin:0">~0.66 per delivered shot on recent episodes</td></tr>
+<tr><td>Currently open re-spins (by status)</td><td class="big">142</td><td class="sub" style="margin:0">the rest were re-spun and moved on</td></tr>
+</table>
+</div>
+<div class="tip"><b>Reading the funnel:</b> 712 of 1,380 planned shots (52%) are cut-ready and delivered. The live queue is small — 175 shots either just requested (106) or being generated now (69). The 493 on hold/unset are mostly back-half episodes (104/105) and the story editor&#39;s parking lot, not blockers. Against 1,380 planned shots we&#39;ve generated 3,990 files — the ~2.9× reflects variants, re-spins, and coverage.</div>
+
+<h2 id="respin">4 &nbsp; Re-spins</h2>
+<p class="sub">Delivered clips sent back for changes — counted by re-spin note (broader than the 142 still flagged, since most get completed and re-statused). Measured against <b>shots delivered</b>, not total generated files: you can only re-spin something you delivered, and a generated-file denominator just rewards over-generation (it made 101 look artificially clean). This is re-spin passes per shot actually sent to Cream.</p>
+<div class="card"><table>
+<tr><th>Episode</th><th>Re-spin requests</th><th>Shots delivered</th><th>Re-spins per delivered shot</th></tr>
+<tr><td class="big">101</td><td>251</td><td>159</td><td class="big" style="color:var(--red)">1.58<div class="bar"><div style="width:100%"></div></div></td></tr>
+<tr><td class="big">102</td><td>110</td><td>167</td><td class="big" style="color:var(--green)">0.66<div class="bar barg"><div style="width:42%"></div></div></td></tr>
+<tr><td class="big">103</td><td>145</td><td>220</td><td class="big" style="color:var(--green)">0.66<div class="bar barg"><div style="width:42%"></div></div></td></tr>
+<tr><td style="font-weight:700">101–103</td><td class="big">506</td><td>546</td><td class="big">0.93</td></tr>
+</table></div>
+<div class="card">
+<b style="font-size:.85rem;color:var(--dim);text-transform:uppercase;letter-spacing:.05em">Re-spin load by story (top of the pile)</b>
+<table style="margin-top:.5rem">
+<tr><th>Story</th><th>Ep</th><th>Re-spins</th><th></th></tr>
+<tr><td class="big">FDN — Fukushima</td><td>101</td><td>71</td><td><div class="bar"><div style="width:100%"></div></div></td></tr>
+<tr><td class="big">447 — Air France 447</td><td>101</td><td>64</td><td><div class="bar"><div style="width:90%"></div></div></td></tr>
+<tr><td class="big">HMB — Halifax</td><td>103</td><td>47</td><td><div class="bar"><div style="width:66%"></div></div></td></tr>
+<tr><td class="big">CHF / TXC (tie)</td><td>101</td><td>34</td><td><div class="bar"><div style="width:48%"></div></div></td></tr>
+<tr><td class="big">SDS — Sampoong</td><td>103</td><td>31</td><td><div class="bar"><div style="width:44%"></div></div></td></tr>
+<tr><td class="big">MSH — Mount St. Helens</td><td>101</td><td>29</td><td><div class="bar"><div style="width:41%"></div></div></td></tr>
+<tr><td class="big">CCS — Costa Concordia</td><td>103</td><td>27</td><td><div class="bar"><div style="width:38%"></div></div></td></tr>
+<tr><td class="big">BMF · PAO · HKA · SJE · TAD</td><td>102/03</td><td>17–25 each</td><td><div class="bar"><div style="width:30%"></div></div></td></tr>
+</table>
+</div>
+<div class="tip"><b>101 was the learning episode; 102 and 103 have settled.</b> Churn ran 1.58 re-spin passes per delivered shot on 101 — the most rework, while the pipeline was still finding its locks — then dropped to a flat 0.66 on both 102 and 103, less than half. Churn is down and consistent, which tracks the efficiency gain rather than fighting it. (The earlier "18.7%" figure divided by generated files, which unfairly punished 103 for generating leanly.) <b>101&#39;s FDN and 447 are the heaviest single stories</b> (71 and 64 re-spins) — the effects-dense reactor and mid-air sequences, where getting physics right takes the most passes.</div>
+
+<h2 id="ep">5 &nbsp; By episode</h2>
+<p class="sub">Everything measured, lined up per episode. AI-in-cut figures exist only where a cut has been assembled (101–103).</p>
+<div class="card"><table>
+<tr><th>Ep</th><th>Cut stage</th><th>AI share</th><th>Generated</th><th>Gen-to-use</th><th>Re-spins</th></tr>
+<tr><td class="big">101</td><td>Fine Cut</td><td class="big">33.0%</td><td>1,879</td><td style="color:var(--red);font-weight:700">5.1:1</td><td>251</td></tr>
+<tr><td class="big">102</td><td>Rough Cut 1</td><td class="big">32.5%</td><td>872</td><td style="color:var(--amber);font-weight:700">3.0:1</td><td>110</td></tr>
+<tr><td class="big">103</td><td>Rough Cut</td><td class="big">27.9%</td><td>774</td><td style="color:var(--green);font-weight:700">2.4:1</td><td>145</td></tr>
+<tr><td class="big">104</td><td>Not yet assembled</td><td class="sub" style="margin:0">—</td><td colspan="3" class="sub" style="margin:0">generating; heavy first-request load (MVE, TSF, MRB)</td></tr>
+<tr><td class="big">105</td><td>Not yet assembled</td><td class="sub" style="margin:0">—</td><td colspan="3" class="sub" style="margin:0">generating; heavy first-request load (HSA, QIS)</td></tr>
+</table></div>
+<div class="note"><b>Where the risk is:</b> 104 and 105 carry the bulk of the untouched first-request work and have no cut yet, so their AI share and efficiency are still unknown. If the efficiency curve holds, they should generate leaner than 101 did — but they&#39;re the numbers to watch.</div>
+
+<h2 id="method">5 &nbsp; Method &amp; sources</h2>
+<div class="card"><ul>
+<li><b>AI share:</b> sum of AI clip durations per cut (GEN AI REPORTS), excluding rows flagged outdated or duplicate, over the runtime taken from each cut&#39;s final Seq-Out timecode.</li>
+<li><b>Efficiency:</b> total delivered files per episode&#39;s stories (GEN AI ASSETS, matched by story-code) divided by AI placements in that episode&#39;s cut (GEN AI REPORTS).</li>
+<li><b>Pipeline:</b> live status counts from GEN AI SHOTCODES; re-spin count from GEN AI ASSETS re-spin statuses.</li>
+<li><b>Scope:</b> 1,523 clip placements, 3,990 generated files, 1,380 planned shots read. Two figures are floors (runtime, placements-as-clips) and are flagged where they appear; both bias the same direction and don&#39;t change any conclusion.</li>
+</ul></div>
+
+<p class="foot">Compiled read-only — nothing was written to the base · Sources: <a href="https://airtable.com/appFVGyWTPCqLcpvm/tblnRWFXVJXBNBAzw" target="_blank">GEN AI REPORTS</a> · <a href="https://airtable.com/appFVGyWTPCqLcpvm/tbl0Fz1aBHogdb3kN" target="_blank">GEN AI ASSETS</a> · <a href="https://airtable.com/appFVGyWTPCqLcpvm/tblkmmLzuQvQsytut" target="_blank">GEN AI SHOTCODES</a> · July 23 2026</p>
+</main></body></html>

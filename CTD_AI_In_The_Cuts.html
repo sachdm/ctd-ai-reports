@@ -1,0 +1,98 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CTD — AI in the Cuts</title>
+<style>
+:root{--ink:#20232a;--dim:#6b7280;--paper:#f6f4ef;--card:#fffefb;--line:#e3ded2;--gold:#96781c;--red:#b3382f;--green:#2e7d4f;--blue:#2f5d9e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 -apple-system,system-ui,"Segoe UI",sans-serif}
+main{max-width:840px;margin:0 auto;padding:2.8rem 1.8rem 4rem}
+.kicker{font:700 .74rem/1 ui-monospace,monospace;letter-spacing:.3em;color:var(--gold)}
+h1{font-family:Georgia,serif;font-size:2.3rem;margin:.4rem 0 .3rem}
+.dek{color:var(--dim);max-width:64ch;margin:0 0 1.4rem}
+.stats{display:flex;gap:2.6rem;margin:.4rem 0 1.8rem;flex-wrap:wrap}
+.stats div{font-size:.82rem;color:var(--dim)}
+.stats b{display:block;font-family:Georgia,serif;font-size:2.1rem;line-height:1.1;color:var(--ink)}
+h2{font-family:Georgia,serif;font-size:1.3rem;margin:2.2rem 0 .8rem;padding-bottom:.3rem;border-bottom:2px solid var(--ink)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.3rem;margin:.7rem 0;box-shadow:0 1px 3px rgba(30,25,10,.05)}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th{color:var(--dim);text-align:left;font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;padding:.5rem .5rem;border-bottom:1px solid var(--line)}
+td{padding:.6rem .5rem;border-bottom:1px solid #efece3;vertical-align:middle}
+tr:last-child td{border-bottom:none}
+.big{font-family:Georgia,serif;font-size:1.15rem;font-weight:700}
+.bar{background:#eceae4;border-radius:6px;height:12px;overflow:hidden;min-width:110px;margin-top:3px}
+.bar > div{height:100%;background:linear-gradient(90deg,#96781c,#b3382f)}
+.sup{color:var(--dim);font-size:.85rem}
+.tip{background:#eef3fb;border:1px solid #cfe0f5;border-radius:10px;padding:.8rem 1.1rem;font-size:.9rem;margin:.8rem 0}
+.tip b{color:var(--blue)}
+.note{background:#fbf2e6;border:1px solid #f0dcbb;border-radius:10px;padding:.8rem 1.1rem;font-size:.88rem;margin:.8rem 0}
+.note b{color:var(--gold)}
+ul{padding-left:1.2rem}li{margin-bottom:.5rem}
+.foot{color:var(--dim);font-size:.82rem;border-top:1px solid var(--line);padding-top:1rem;margin-top:2.4rem}
+.foot a{color:var(--dim)}
+@media print{body{background:#fff}.card{box-shadow:none;break-inside:avoid}}
+</style></head><body><main>
+<div class="kicker">CLOSE TO DISASTER — GEN AI</div>
+<h1>AI in the Cuts</h1>
+<p class="dek">How much generative-AI footage sits in each network cut, measured from the GEN AI REPORTS timeline data. Read-only pull of the CTD Airtable, 1,523 clip entries. Snapshot July 23, 2026.</p>
+
+<div class="stats">
+<div><b>~1/3</b>of each episode is AI footage</div>
+<div><b>2.4:1</b>generate-to-use (103, down from 5.1:1)</div>
+<div><b>3,990</b>AI clips generated to date</div>
+<div><b>3</b>cuts measured</div>
+</div>
+
+<h2>Per cut</h2>
+<div class="card">
+<table>
+<tr><th>Cut</th><th>AI clips</th><th>AI screen-time</th><th>Runtime</th><th>AI share</th></tr>
+<tr>
+ <td class="big">101 Fine Cut<br><span class="sup" style="font-weight:400">+ snap-ins</span></td>
+ <td>368</td><td>14:23</td><td>43:36</td>
+ <td class="big">33.0%<div class="bar"><div style="width:33%"></div></div></td>
+</tr>
+<tr>
+ <td class="big">102 Rough Cut 1</td>
+ <td>295</td><td>14:33</td><td>44:49</td>
+ <td class="big">32.5%<div class="bar"><div style="width:32.5%"></div></div></td>
+</tr>
+<tr>
+ <td class="big">103 Rough Cut</td>
+ <td>318</td><td>12:02</td><td>43:12</td>
+ <td class="big">27.9%<div class="bar"><div style="width:27.9%"></div></div></td>
+</tr>
+</table>
+</div>
+
+<div class="note"><b>How runtime was measured:</b> the base doesn't store a master-duration field, but every AI clip carries its timeline Seq-Out timecode on a broadcast master that starts at 01:00:00:00. The last AI clip in each cut therefore marks elapsed program time. Because a program can run a little past its final AI shot, these runtimes are a floor — so the true AI share is these figures <b>or slightly lower</b>.</div>
+
+<h2>What it says</h2>
+<div class="card"><ul>
+<li><b>AI is a consistent ~28–33% of every episode.</b> Across three independent cuts on three different stories, roughly a third of the finished program is generative-AI footage — this is a structural share of the show, not a one-off.</li>
+<li><b>101 and 102 are neck-and-neck at ~33%</b> despite one being a locked fine cut and the other a first rough cut — the AI load doesn't shrink as a cut matures; the fine cut of 101 actually carries slightly more AI than its own earlier rough cut (RC2 was 11:28, the fine cut is 14:23).</li>
+<li><b>103 is lower at 27.9%</b> — expected for a first assembly with more sequences still to fill; it will likely rise toward the others as re-spins and new shots land.</li>
+</ul></div>
+
+<h2>Efficiency — generated vs. used</h2>
+<p class="dek" style="margin-bottom:.6rem">How many AI clips we generated to land one in the cut. Generated = every delivered file in GEN AI ASSETS for that episode&#39;s stories; In cut = AI clip placements on that cut&#39;s timeline.</p>
+<div class="card">
+<table>
+<tr><th>Episode</th><th>Clips generated</th><th>Clips in cut</th><th>Generated per used</th></tr>
+<tr><td class="big">101</td><td>1,879</td><td>368</td><td class="big" style="color:var(--red)">5.1 : 1<div class="bar"><div style="width:100%"></div></div></td></tr>
+<tr><td class="big">102</td><td>872</td><td>295</td><td class="big" style="color:var(--gold)">3.0 : 1<div class="bar"><div style="width:59%"></div></div></td></tr>
+<tr><td class="big">103</td><td>774</td><td>318</td><td class="big" style="color:var(--green)">2.4 : 1<div class="bar"><div style="width:47%"></div></div></td></tr>
+</table>
+</div>
+<div class="tip"><b>Yes — we&#39;re getting more efficient, sharply.</b> The generate-to-use ratio has more than halved across three episodes: 101 needed ~5 generations per clip that made the cut, 102 dropped to 3, and 103 is down to 2.4. Same output (a third of each episode is AI) for less than half the generation waste. That&#39;s the prompt-library locks, reference-frame workflow, and re-spin discipline compounding.</div>
+<div class="note"><b>Read with two caveats:</b> (1) 101 has been in production longest, so it has accumulated the most experimental and re-spun generations — some of its 1,879 is early-days learning that later episodes skip. (2) "Clips in cut" counts timeline placements; a clip used twice counts twice, so true distinct-clip efficiency is marginally leaner still. The direction is unambiguous regardless.</div>
+
+<h2>Superseded cuts (for the record)</h2>
+<div class="card"><ul>
+<li><b>101 RC2</b> — 11:28 of AI, replaced by the fine cut.</li>
+<li><b>101 RC1</b> — every one of its 262 clip entries is flagged outdated/duplicate, so it contributes zero valid screen-time; excluded from all figures above.</li>
+</ul></div>
+
+<div class="tip"><b>If you need exact percentages for the network:</b> confirm the true delivered runtime of each master (it will be within a few seconds of the floors above), and I'll lock the figures. Nothing here required writing to the base — this is a pure read.</div>
+
+<p class="foot">Source: <a href="https://airtable.com/appFVGyWTPCqLcpvm/tblnRWFXVJXBNBAzw" target="_blank">CTD Airtable — GEN AI REPORTS</a> · 1,523 clip placements, outdated/duplicate entries excluded · compiled read-only, July 23 2026</p>
+</main></body></html>

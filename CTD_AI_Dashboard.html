@@ -1,0 +1,160 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CTD — GEN AI Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#0b0e14; --bg2:#0f131b; --card:#151a23; --card2:#1a212c; --line:#232b38;
+  --ink:#e6edf3; --dim:#8b98a9; --dim2:#5c6773;
+  --blue:#4c9aff; --green:#3fb950; --amber:#e3a008; --red:#f85149; --purple:#a371f7; --teal:#39c5cf;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,#141a26 0%,var(--bg) 55%);color:var(--ink);
+  font:15px/1.55 -apple-system,system-ui,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
+.wrap{max-width:1240px;margin:0 auto;padding:2.4rem 1.6rem 4rem}
+header{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.kick{font:700 .72rem/1 ui-monospace,monospace;letter-spacing:.3em;color:var(--blue)}
+h1{font-size:2rem;margin:.25rem 0 0;letter-spacing:-.01em}
+.sub{color:var(--dim);font-size:.9rem}
+.spacer{flex:1}
+.stamp{color:var(--dim2);font-size:.78rem;text-align:right}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}
+.kpi{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem;position:relative;overflow:hidden}
+.kpi .big{font-size:2rem;font-weight:750;letter-spacing:-.02em;line-height:1.05}
+.kpi .lab{color:var(--dim);font-size:.78rem;margin-top:.35rem}
+.kpi .spark{position:absolute;right:-2px;bottom:-2px;width:96px;height:46px;opacity:.9}
+.kpi.b .big{color:var(--blue)} .kpi.g .big{color:var(--green)} .kpi.p .big{color:var(--purple)} .kpi.a .big{color:var(--amber)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.panel{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem}
+.panel h3{margin:.1rem 0 .2rem;font-size:1rem}
+.panel .cap{color:var(--dim);font-size:.8rem;margin-bottom:.7rem}
+.c6{grid-column:span 6}.c4{grid-column:span 4}.c8{grid-column:span 8}.c12{grid-column:span 12}
+.cwrap{position:relative;height:250px}
+.cwrap.tall{height:320px}
+.legend{display:flex;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:var(--dim);margin-top:.5rem}
+.legend b{color:var(--ink)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.note{color:var(--dim);font-size:.82rem;border-top:1px solid var(--line);margin-top:.8rem;padding-top:.7rem}
+.foot{color:var(--dim2);font-size:.78rem;margin-top:2rem;text-align:center}
+.foot a{color:var(--dim)}
+@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.c6,.c4,.c8{grid-column:span 12}}
+</style></head><body>
+<div class="wrap">
+<header>
+  <div>
+    <div class="kick">CLOSE TO DISASTER · GEN AI</div>
+    <h1>Production Dashboard</h1>
+    <div class="sub">AI in the cuts · efficiency · pipeline · re-spins</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="stamp">Read-only · CTD Airtable<br>Snapshot Jul 23, 2026</div>
+</header>
+
+<div class="kpis">
+  <div class="kpi b"><div class="big">~33%</div><div class="lab">of each episode is AI footage</div><canvas class="spark" id="sp1"></canvas></div>
+  <div class="kpi g"><div class="big">2.4:1</div><div class="lab">generate-to-use · from 5.1:1</div><canvas class="spark" id="sp2"></canvas></div>
+  <div class="kpi p"><div class="big">0.66</div><div class="lab">re-spins / delivered shot</div><canvas class="spark" id="sp3"></canvas></div>
+  <div class="kpi a"><div class="big">712</div><div class="lab">of 1,380 shots delivered</div><canvas class="spark" id="sp4"></canvas></div>
+</div>
+
+<div class="grid">
+  <div class="panel c6">
+    <h3>AI share of each cut</h3>
+    <div class="cap">Screen-time as a % of the finished cut. Holds at ~a third across three episodes.</div>
+    <div class="cwrap"><canvas id="aiShare"></canvas></div>
+  </div>
+
+  <div class="panel c6">
+    <h3>Efficiency & re-spin churn — both improving</h3>
+    <div class="cap">Generate-to-use ratio and re-spin passes per delivered shot. Lower is better; both more than halved after 101.</div>
+    <div class="cwrap"><canvas id="trend"></canvas></div>
+  </div>
+
+  <div class="panel c4">
+    <h3>Pipeline status</h3>
+    <div class="cap">All 1,380 planned shots.</div>
+    <div class="cwrap"><canvas id="pipe"></canvas></div>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--green)"></span>Sent <b>712</b></span>
+      <span><span class="dot" style="background:var(--blue)"></span>First req <b>106</b></span>
+      <span><span class="dot" style="background:var(--amber)"></span>In prog <b>69</b></span>
+      <span><span class="dot" style="background:var(--dim2)"></span>Paused <b>493</b></span>
+    </div>
+  </div>
+
+  <div class="panel c8">
+    <h3>Generated vs. used per episode</h3>
+    <div class="cap">How many clips we generated (left) against how many landed in the cut (right). The gap is shrinking — 101 over-generated, 103 is lean.</div>
+    <div class="cwrap"><canvas id="genUse"></canvas></div>
+  </div>
+
+  <div class="panel c12">
+    <h3>Re-spin load by story</h3>
+    <div class="cap">Delivered clips sent back for changes, by story. FDN and 447 lead — effects-dense reactor and mid-air sequences where physics takes the most passes.</div>
+    <div class="cwrap tall"><canvas id="respinStory"></canvas></div>
+  </div>
+</div>
+
+<div class="foot">Compiled read-only — nothing written to the base · Sources: GEN AI REPORTS · ASSETS · SHOTCODES</div>
+</div>
+
+<script>
+const C={ink:'#e6edf3',dim:'#8b98a9',line:'#232b38',blue:'#4c9aff',green:'#3fb950',amber:'#e3a008',red:'#f85149',purple:'#a371f7',teal:'#39c5cf',dim2:'#5c6773'};
+Chart.defaults.color=C.dim; Chart.defaults.borderColor=C.line; Chart.defaults.font.family="-apple-system,system-ui,sans-serif";
+const grid={color:C.line,drawTicks:false}; const noGrid={display:false};
+const eps=['101','102','103'];
+
+// sparklines
+function spark(id,data,color){new Chart(document.getElementById(id),{type:'line',
+ data:{labels:data.map((_,i)=>i),datasets:[{data,borderColor:color,borderWidth:2,fill:true,
+   backgroundColor:color+'22',tension:.4,pointRadius:0}]},
+ options:{plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false}},
+   elements:{line:{capBezierPoints:true}},maintainAspectRatio:false,responsive:true}});}
+spark('sp1',[27,33,28],C.blue); spark('sp2',[5.1,3.0,2.4],C.green); spark('sp3',[1.58,0.66,0.66],C.purple); spark('sp4',[159,167,220],C.amber);
+
+// AI share bars
+new Chart(document.getElementById('aiShare'),{type:'bar',
+ data:{labels:['101 Fine Cut','102 RC1','103 RC'],datasets:[{data:[33.0,32.5,27.9],
+   backgroundColor:[C.blue,C.blue,C.blue+'cc'],borderRadius:8,barThickness:52}]},
+ options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+   tooltip:{callbacks:{label:c=>c.parsed.y+'% AI'}}},
+   scales:{x:{grid:noGrid},y:{grid,beginAtZero:true,max:50,ticks:{callback:v=>v+'%'}}}}});
+
+// efficiency + churn dual line
+new Chart(document.getElementById('trend'),{type:'line',
+ data:{labels:eps,datasets:[
+   {label:'Generate-to-use (×)',data:[5.1,3.0,2.4],borderColor:C.green,backgroundColor:C.green+'22',
+    tension:.35,borderWidth:3,pointRadius:5,pointBackgroundColor:C.green,yAxisID:'y'},
+   {label:'Re-spins / delivered shot',data:[1.58,0.66,0.66],borderColor:C.purple,backgroundColor:C.purple+'22',
+    tension:.35,borderWidth:3,pointRadius:5,pointBackgroundColor:C.purple,yAxisID:'y'}]},
+ options:{maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8}}},
+   scales:{x:{grid:noGrid},y:{grid,beginAtZero:true,title:{display:true,text:'lower = leaner',color:C.dim2}}}}});
+
+// pipeline doughnut
+new Chart(document.getElementById('pipe'),{type:'doughnut',
+ data:{labels:['Sent to Cream','First request','In progress','Paused / unset'],
+   datasets:[{data:[712,106,69,493],backgroundColor:[C.green,C.blue,C.amber,C.dim2],borderColor:C.card,borderWidth:2}]},
+ options:{maintainAspectRatio:false,cutout:'62%',plugins:{legend:{display:false},
+   tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+' ('+Math.round(c.parsed/1380*100)+'%)'}}}}});
+
+// generated vs used grouped bar
+new Chart(document.getElementById('genUse'),{type:'bar',
+ data:{labels:eps,datasets:[
+   {label:'Generated',data:[1879,872,774],backgroundColor:C.teal+'cc',borderRadius:6},
+   {label:'In the cut',data:[368,295,318],backgroundColor:C.amber,borderRadius:6}]},
+ options:{maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8}}},
+   scales:{x:{grid:noGrid},y:{grid,beginAtZero:true}}}});
+
+// re-spin by story horizontal
+const rs=[['FDN',71,'101'],['447',64,'101'],['HMB',47,'103'],['CHF',34,'101'],['TXC',34,'101'],['SDS',31,'103'],
+ ['MSH',29,'101'],['CCS',27,'103'],['BMF',25,'102'],['PAO',22,'102'],['HKA',19,'102'],['HIN',19,'101'],
+ ['SJE',18,'103'],['TAD',17,'102'],['OTI',14,'102'],['LMR',13,'103'],['AA191',9,'103'],['LPE',7,'102'],['KAR',6,'102']];
+const epColor={'101':C.blue,'102':C.green,'103':C.purple};
+new Chart(document.getElementById('respinStory'),{type:'bar',
+ data:{labels:rs.map(r=>r[0]),datasets:[{data:rs.map(r=>r[1]),
+   backgroundColor:rs.map(r=>epColor[r[2]]),borderRadius:5}]},
+ options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},
+   tooltip:{callbacks:{label:c=>c.parsed.x+' re-spins · ep '+rs[c.dataIndex][2]}}},
+   scales:{x:{grid,beginAtZero:true},y:{grid:noGrid,ticks:{font:{size:11}}}}}});
+</script>
+</body></html>

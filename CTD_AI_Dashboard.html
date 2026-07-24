@@ -104,13 +104,13 @@ h1{font-size:2.5rem;line-height:1.04;margin:.5rem 0 .35rem;letter-spacing:-.025e
   <div class="kpis">
     <div class="kpi rise d1" style="--acc:#8fbcff"><div class="trend">▲ holding</div><div class="big">~33%</div><div class="lab">of each episode is AI footage</div><canvas class="spark" id="sp1"></canvas></div>
     <div class="kpi rise d2" style="--acc:#9bf0b8"><div class="trend">▼ leaner</div><div class="big">2.4:1</div><div class="lab">generate-to-use · down from 5.1:1</div><canvas class="spark" id="sp2"></canvas></div>
-    <div class="kpi rise d3" style="--acc:#d3b8ff"><div class="trend">▼ leaner</div><div class="big">0.66</div><div class="lab">re-spins per delivered shot</div><canvas class="spark" id="sp3"></canvas></div>
-    <div class="kpi rise d4" style="--acc:#ffd07a"><div class="trend">52%</div><div class="big">712</div><div class="lab">of 1,380 shots delivered</div><canvas class="spark" id="sp4"></canvas></div>
+    <div class="kpi rise d3" style="--acc:#d3b8ff"><div class="trend">▼ leaner</div><div class="big">0.46</div><div class="lab">re-spins per used (in-cut) shot</div><canvas class="spark" id="sp3"></canvas></div>
+    <div class="kpi rise d4" style="--acc:#ffd07a"><div class="trend">52%</div><div class="big">712</div><div class="lab">of 1,380 shots sent to Cream</div><canvas class="spark" id="sp4"></canvas></div>
   </div>
 
   <div class="grid">
     <div class="panel c6 rise d2"><h3>AI share of each cut</h3><div class="cap">Screen-time as a % of the finished cut — a structural third, holding across three episodes.</div><div class="cwrap"><canvas id="aiShare"></canvas></div></div>
-    <div class="panel c6 rise d3"><h3>Efficiency &amp; churn — both improving</h3><div class="cap">Generate-to-use ratio and re-spin passes per delivered shot. Lower is leaner; both more than halved after 101.</div><div class="cwrap"><canvas id="trend"></canvas></div></div>
+    <div class="panel c6 rise d3"><h3>Efficiency &amp; churn — both improving</h3><div class="cap">Generate-to-use ratio and re-spin passes per used (in-cut) shot. Lower is leaner — 102 and 103 roughly halved 101.</div><div class="cwrap"><canvas id="trend"></canvas></div></div>
 
     <div class="panel c4 rise d3"><h3>Pipeline status</h3><div class="cap">All 1,380 planned shots.</div><div class="cwrap"><canvas id="pipe"></canvas></div>
       <div class="legend">
@@ -122,7 +122,7 @@ h1{font-size:2.5rem;line-height:1.04;margin:.5rem 0 .35rem;letter-spacing:-.025e
     </div>
     <div class="panel c8 rise d4"><h3>Generated vs. used per episode</h3><div class="cap">Clips generated (left) against clips that landed in the cut (right). The gap is closing — 101 over-generated, 103 is lean.</div><div class="cwrap"><canvas id="genUse"></canvas></div></div>
 
-    <div class="panel c12 rise d5"><h3>Re-spin load by story</h3><div class="cap">Delivered clips sent back for changes. FDN and 447 lead — the effects-dense reactor and mid-air sequences, where getting physics right takes the most passes.</div><div class="cwrap tall"><canvas id="respinStory"></canvas></div></div>
+    <div class="panel c12 rise d5"><h3>Re-spin load by story</h3><div class="cap">Clips sent back for changes. FDN and 447 lead — the effects-dense reactor and mid-air sequences, where getting physics right takes the most passes.</div><div class="cwrap tall"><canvas id="respinStory"></canvas></div></div>
   </div>
 
   <div class="foot">Compiled read-only — nothing written to the base · GEN AI REPORTS · ASSETS · SHOTCODES</div>
@@ -142,7 +142,7 @@ function spark(id,data,color){const el=document.getElementById(id);const g=el.ge
  g.addColorStop(0,color+'55');g.addColorStop(1,color+'00');
  new Chart(el,{type:'line',data:{labels:data.map((_,i)=>i),datasets:[{data,borderColor:color,borderWidth:2,fill:true,backgroundColor:g,tension:.45,pointRadius:0}]},
  options:{plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false}},maintainAspectRatio:false}});}
-spark('sp1',[27,33,28],C.blue);spark('sp2',[5.1,3,2.4],C.green);spark('sp3',[1.58,.66,.66],C.purple);spark('sp4',[100,140,159,167,220],C.amber);
+spark('sp1',[27,33,28],C.blue);spark('sp2',[5.1,3,2.4],C.green);spark('sp3',[.68,.37,.46],C.purple);spark('sp4',[100,140,159,167,220],C.amber);
 
 new Chart(aiShare,{type:'bar',data:{labels:['101 Fine','102 RC1','103 RC'],datasets:[{data:[33,32.5,27.9],
  backgroundColor:ctx=>grad(ctx.chart.ctx,'#7db0ff','#3f6fe0'),borderRadius:10,barThickness:54,borderSkipped:false}]},
@@ -151,7 +151,7 @@ new Chart(aiShare,{type:'bar',data:{labels:['101 Fine','102 RC1','103 RC'],datas
 
 new Chart(trend,{type:'line',data:{labels:['101','102','103'],datasets:[
  {label:'Generate-to-use (×)',data:[5.1,3,2.4],borderColor:C.green,backgroundColor:ctx=>grad(ctx.chart.ctx,'rgba(84,224,138,.2)','rgba(84,224,138,0)'),fill:true,tension:.4,borderWidth:3,pointRadius:5,pointBackgroundColor:C.green,pointBorderColor:'#0b1a12',pointBorderWidth:2},
- {label:'Re-spins / delivered shot',data:[1.58,.66,.66],borderColor:C.purple,backgroundColor:ctx=>grad(ctx.chart.ctx,'rgba(185,140,255,.2)','rgba(185,140,255,0)'),fill:true,tension:.4,borderWidth:3,pointRadius:5,pointBackgroundColor:C.purple,pointBorderColor:'#150e26',pointBorderWidth:2}]},
+ {label:'Re-spins / used shot',data:[.68,.37,.46],borderColor:C.purple,backgroundColor:ctx=>grad(ctx.chart.ctx,'rgba(185,140,255,.2)','rgba(185,140,255,0)'),fill:true,tension:.4,borderWidth:3,pointRadius:5,pointBackgroundColor:C.purple,pointBorderColor:'#150e26',pointBorderWidth:2}]},
  options:{maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8,padding:16}}},
  scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true}}}});
 

@@ -109,7 +109,7 @@ ul{padding-left:1.2rem}li{margin-bottom:.5rem}
 <div class="kpi" style="--acc:#8fbcff"><b>~1/3</b><span>of each finished episode is AI footage</span></div>
 <div class="kpi" style="--acc:#9bf0b8"><b>2.4:1</b><span>generate-to-use ratio (103) — down from 5.1:1</span></div>
 <div class="kpi" style="--acc:#8fd7ff"><b>3,990</b><span>AI clips generated across the series</span></div>
-<div class="kpi" style="--acc:#ffd07a"><b>712</b><span>shots delivered to Cream</span></div>
+<div class="kpi" style="--acc:#ffd07a"><b>712</b><span>shots sent to Cream</span></div>
 </div>
 <div class="card" style="margin-top:.3rem">
 <b>The one-sentence version:</b> generative AI reliably fills about a third of every episode, we&#39;re producing it more than twice as efficiently as when we started, and just over half of all planned shots are already cut-ready and delivered.
@@ -126,9 +126,9 @@ ul{padding-left:1.2rem}li{margin-bottom:.5rem}
 <div class="tip"><b>AI is a structural third of the show.</b> Across three independent cuts on three different stories the share holds at ~28–33%, and it doesn&#39;t shrink as a cut matures — 101&#39;s locked fine cut carries <i>more</i> AI (14:23) than its own earlier rough cut (11:28). 103 sits lower only because it&#39;s a first assembly with sequences still to fill; expect it to climb toward the others.</div>
 
 <h2 id="eff"><span class="n">2</span>Efficiency — are we improving?</h2>
-<p class="sub">Clips generated per clip that lands in the cut. Generated = all delivered files for that episode&#39;s stories; In cut = AI placements on that cut&#39;s timeline.</p>
+<p class="sub">Clips generated per clip that lands in the cut. Generated = all clips delivered for that episode&#39;s stories; Used = AI placements in that cut&#39;s timeline.</p>
 <div class="card"><table>
-<tr><th>Episode</th><th>Generated</th><th>In cut</th><th>Generate-to-use</th></tr>
+<tr><th>Episode</th><th>Generated</th><th>Used (in cut)</th><th>Generate-to-use</th></tr>
 <tr><td class="big">101</td><td>1,879</td><td>368</td><td class="big" style="color:var(--red)">5.1 : 1<div class="bar"><div style="width:100%;background:linear-gradient(90deg,#ff8a5c,var(--red))"></div></div></td></tr>
 <tr><td class="big">102</td><td>872</td><td>295</td><td class="big" style="color:var(--amber)">3.0 : 1<div class="bar"><div style="width:59%;background:linear-gradient(90deg,#ffd07a,var(--amber))"></div></div></td></tr>
 <tr><td class="big">103</td><td>774</td><td>318</td><td class="big" style="color:var(--green)">2.4 : 1<div class="bar barg"><div style="width:47%"></div></div></td></tr>
@@ -152,20 +152,20 @@ ul{padding-left:1.2rem}li{margin-bottom:.5rem}
 <table>
 <tr><th>Generation</th><th>Count</th><th></th></tr>
 <tr><td>Total clips generated (all files)</td><td class="big">3,990</td><td class="sub" style="margin:0">~2.9 files per planned shot</td></tr>
-<tr><td>Re-spin requests (all-time, by note)</td><td class="big">522</td><td class="sub" style="margin:0">~0.66 per delivered shot on recent episodes</td></tr>
+<tr><td>Re-spin requests (all-time, by note)</td><td class="big">522</td><td class="sub" style="margin:0">~0.4 per used shot on recent episodes</td></tr>
 <tr><td>Currently open re-spins (by status)</td><td class="big">142</td><td class="sub" style="margin:0">the rest were re-spun and moved on</td></tr>
 </table>
 </div>
-<div class="tip"><b>Reading the funnel:</b> 712 of 1,380 planned shots (52%) are cut-ready and delivered. The live queue is small — 175 shots either just requested (106) or being generated now (69). The 493 on hold/unset are mostly back-half episodes (104/105) and the story editor&#39;s parking lot, not blockers. Against 1,380 planned shots we&#39;ve generated 3,990 files — the ~2.9× reflects variants, re-spins, and coverage.</div>
+<div class="tip"><b>Reading the funnel:</b> 712 of 1,380 planned shots (52%) are cut-ready and sent to Cream. The live queue is small — 175 shots either just requested (106) or being generated now (69). The 493 on hold/unset are mostly back-half episodes (104/105) and the story editor&#39;s parking lot, not blockers. Against 1,380 planned shots we&#39;ve generated 3,990 files — the ~2.9× reflects variants, re-spins, and coverage.</div>
 
 <h2 id="respin"><span class="n">4</span>Re-spins</h2>
-<p class="sub">Delivered clips sent back for changes — counted by re-spin note (broader than the 142 still flagged, since most get completed and re-statused). Measured against <b>shots delivered</b>, not total generated files: you can only re-spin something you delivered, and a generated-file denominator just rewards over-generation (it made 101 look artificially clean). This is re-spin passes per shot actually sent to Cream.</p>
+<p class="sub">Clips sent back for changes — counted by re-spin note (broader than the 142 still flagged, since most get completed and re-statused). Measured against <b>shots used in the cut</b>, not total generated files: a generated-file denominator just rewards over-generation (it made 101 look artificially clean). This is re-spin passes per shot that actually made the cut.</p>
 <div class="card"><table>
-<tr><th>Episode</th><th>Re-spin requests</th><th>Shots delivered</th><th>Re-spins per delivered shot</th></tr>
-<tr><td class="big">101</td><td>251</td><td>159</td><td class="big" style="color:var(--red)">1.58<div class="bar"><div style="width:100%;background:linear-gradient(90deg,#ff8a5c,var(--red))"></div></div></td></tr>
-<tr><td class="big">102</td><td>110</td><td>167</td><td class="big" style="color:var(--green)">0.66<div class="bar barg"><div style="width:42%"></div></div></td></tr>
-<tr><td class="big">103</td><td>145</td><td>220</td><td class="big" style="color:var(--green)">0.66<div class="bar barg"><div style="width:42%"></div></div></td></tr>
-<tr><td style="font-weight:700">101–103</td><td class="big">506</td><td>546</td><td class="big">0.93</td></tr>
+<tr><th>Episode</th><th>Re-spin requests</th><th>Shots used (in cut)</th><th>Re-spins per used shot</th></tr>
+<tr><td class="big">101</td><td>251</td><td>368</td><td class="big" style="color:var(--red)">0.68<div class="bar"><div style="width:100%;background:linear-gradient(90deg,#ff8a5c,var(--red))"></div></div></td></tr>
+<tr><td class="big">102</td><td>110</td><td>295</td><td class="big" style="color:var(--green)">0.37<div class="bar barg"><div style="width:54%"></div></div></td></tr>
+<tr><td class="big">103</td><td>145</td><td>318</td><td class="big" style="color:var(--green)">0.46<div class="bar barg"><div style="width:68%"></div></div></td></tr>
+<tr><td style="font-weight:700">101–103</td><td class="big">506</td><td>981</td><td class="big">0.52</td></tr>
 </table></div>
 <div class="card">
 <b style="font-size:.72rem;color:var(--dim2);text-transform:uppercase;letter-spacing:.07em">Re-spin load by story (top of the pile)</b>
@@ -181,7 +181,7 @@ ul{padding-left:1.2rem}li{margin-bottom:.5rem}
 <tr><td class="big">BMF · PAO · HKA · SJE · TAD</td><td>102/03</td><td>17–25 each</td><td><div class="bar"><div style="width:30%"></div></div></td></tr>
 </table>
 </div>
-<div class="tip"><b>101 was the learning episode; 102 and 103 have settled.</b> Churn ran 1.58 re-spin passes per delivered shot on 101 — the most rework, while the pipeline was still finding its locks — then dropped to a flat 0.66 on both 102 and 103, less than half. Churn is down and consistent, which tracks the efficiency gain rather than fighting it. (The earlier "18.7%" figure divided by generated files, which unfairly punished 103 for generating leanly.) <b>101&#39;s FDN and 447 are the heaviest single stories</b> (71 and 64 re-spins) — the effects-dense reactor and mid-air sequences, where getting physics right takes the most passes.</div>
+<div class="tip"><b>101 was the learning episode; 102 and 103 have settled.</b> Churn ran 0.68 re-spin passes per shot that made the cut on 101 — the most rework, while the pipeline was still finding its locks — then roughly halved to 0.37 on 102 and 0.46 on 103. Churn is down and well below 101, which tracks the efficiency gain rather than fighting it. (An earlier version divided by generated files, which unfairly punished the leaner episodes.) <b>101&#39;s FDN and 447 are the heaviest single stories</b> (71 and 64 re-spins) — the effects-dense reactor and mid-air sequences, where getting physics right takes the most passes.</div>
 
 <h2 id="ep"><span class="n">5</span>By episode</h2>
 <p class="sub">Everything measured, lined up per episode. AI-in-cut figures exist only where a cut has been assembled (101–103).</p>

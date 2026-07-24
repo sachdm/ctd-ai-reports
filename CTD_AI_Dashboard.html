@@ -4,159 +4,170 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
 :root{
-  --bg:#0b0e14; --bg2:#0f131b; --card:#151a23; --card2:#1a212c; --line:#232b38;
-  --ink:#e6edf3; --dim:#8b98a9; --dim2:#5c6773;
-  --blue:#4c9aff; --green:#3fb950; --amber:#e3a008; --red:#f85149; --purple:#a371f7; --teal:#39c5cf;
+  --bg:#07080c; --panel:rgba(255,255,255,.038); --panel2:rgba(255,255,255,.062);
+  --stroke:rgba(255,255,255,.09); --stroke2:rgba(255,255,255,.15);
+  --ink:#f2f5fa; --dim:#9aa6ba; --dim2:#5f6a7e;
+  --blue:#5b9dff; --cyan:#43e6d0; --green:#54e08a; --amber:#ffb020; --red:#ff5d6c; --purple:#b98cff;
+  --g1:#7c5cff; --g2:#4d9bff; --g3:#37e6c8;
 }
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(1200px 600px at 20% -10%,#141a26 0%,var(--bg) 55%);color:var(--ink);
-  font:15px/1.55 -apple-system,system-ui,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
-.wrap{max-width:1240px;margin:0 auto;padding:2.4rem 1.6rem 4rem}
-header{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem}
-.kick{font:700 .72rem/1 ui-monospace,monospace;letter-spacing:.3em;color:var(--blue)}
-h1{font-size:2rem;margin:.25rem 0 0;letter-spacing:-.01em}
-.sub{color:var(--dim);font-size:.9rem}
-.spacer{flex:1}
-.stamp{color:var(--dim2);font-size:.78rem;text-align:right}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;letter-spacing:-.006em;min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(900px 520px at 12% -8%, rgba(124,92,255,.20), transparent 60%),
+    radial-gradient(760px 480px at 92% 4%, rgba(55,230,200,.13), transparent 62%),
+    radial-gradient(700px 700px at 78% 108%, rgba(77,155,255,.12), transparent 60%),
+    var(--bg)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;opacity:.5;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:44px 44px;-webkit-mask-image:radial-gradient(circle at 50% 18%,#000 0%,transparent 78%);mask-image:radial-gradient(circle at 50% 18%,#000 0%,transparent 78%)}
+
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);
+  background:rgba(10,12,18,.62);border-bottom:1px solid var(--stroke)}
+.nav .in{max-width:1280px;margin:0 auto;padding:.8rem 1.6rem;display:flex;align-items:center;gap:.9rem}
+.brand{display:flex;align-items:center;gap:.55rem;font-weight:700;letter-spacing:.02em}
+.mark{width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,var(--g1),var(--g2) 55%,var(--g3));
+  box-shadow:0 0 22px rgba(93,157,255,.5);position:relative}
+.mark::after{content:"";position:absolute;inset:6px;border-radius:4px;background:var(--bg)}
+.brand small{color:var(--dim);font-weight:600;letter-spacing:.22em;font-size:.62rem;text-transform:uppercase;margin-left:.1rem}
+.live{display:inline-flex;align-items:center;gap:.4rem;color:var(--green);font-size:.7rem;font-weight:700;letter-spacing:.05em;margin-left:.6rem}
+.live i{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(84,224,138,.55)}70%{box-shadow:0 0 0 7px rgba(84,224,138,0)}100%{box-shadow:0 0 0 0 rgba(84,224,138,0)}}
+.navlinks{margin-left:auto;display:flex;align-items:center;gap:.35rem}
+.navlinks a{color:var(--dim);text-decoration:none;font-size:.85rem;font-weight:600;padding:.42rem .85rem;border-radius:99px;transition:.16s;white-space:nowrap}
+.navlinks a:hover{color:var(--ink);background:var(--panel2)}
+.navlinks a.active{color:var(--ink);background:linear-gradient(135deg,rgba(124,92,255,.28),rgba(77,155,255,.22));border:1px solid var(--stroke2)}
+.navlinks a.hub{color:var(--ink);border:1px solid var(--stroke2)}
+
+.wrap{max-width:1280px;margin:0 auto;padding:2.2rem 1.6rem 4rem}
+.hero{margin-bottom:1.7rem}
+.eyebrow{font:700 .7rem/1 ui-monospace,"SF Mono",monospace;letter-spacing:.34em;
+  background:linear-gradient(90deg,var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{font-size:2.5rem;line-height:1.04;margin:.5rem 0 .35rem;letter-spacing:-.025em;font-weight:800}
+.hero p{color:var(--dim);margin:0;font-size:.95rem}
+.stamp{color:var(--dim2)}
+
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}
-.kpi{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem;position:relative;overflow:hidden}
-.kpi .big{font-size:2rem;font-weight:750;letter-spacing:-.02em;line-height:1.05}
-.kpi .lab{color:var(--dim);font-size:.78rem;margin-top:.35rem}
-.kpi .spark{position:absolute;right:-2px;bottom:-2px;width:96px;height:46px;opacity:.9}
-.kpi.b .big{color:var(--blue)} .kpi.g .big{color:var(--green)} .kpi.p .big{color:var(--purple)} .kpi.a .big{color:var(--amber)}
+.kpi{position:relative;border-radius:18px;padding:1.15rem 1.25rem;overflow:hidden;
+  background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--stroke);
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 10px 30px -18px rgba(0,0,0,.8)}
+.kpi::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--acc,var(--blue)),transparent);opacity:.85}
+.kpi .big{font-size:2.05rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--acc,#fff)}
+.kpi .lab{color:var(--dim);font-size:.77rem;margin-top:.4rem;max-width:16ch}
+.kpi .spark{position:absolute;right:8px;bottom:8px;width:104px;height:44px;opacity:.95}
+.kpi .trend{position:absolute;top:1.15rem;right:1.2rem;font-size:.7rem;font-weight:700;color:var(--acc,var(--blue));opacity:.9}
+
 .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
-.panel{background:linear-gradient(160deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem}
-.panel h3{margin:.1rem 0 .2rem;font-size:1rem}
-.panel .cap{color:var(--dim);font-size:.8rem;margin-bottom:.7rem}
+.panel{position:relative;border-radius:20px;padding:1.2rem 1.3rem;
+  background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--stroke);
+  box-shadow:0 10px 40px -24px rgba(0,0,0,.9)}
+.panel h3{margin:.1rem 0 .15rem;font-size:1.02rem;font-weight:700;letter-spacing:-.01em}
+.panel .cap{color:var(--dim);font-size:.8rem;margin-bottom:.75rem;max-width:64ch}
 .c6{grid-column:span 6}.c4{grid-column:span 4}.c8{grid-column:span 8}.c12{grid-column:span 12}
-.cwrap{position:relative;height:250px}
-.cwrap.tall{height:320px}
-.legend{display:flex;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:var(--dim);margin-top:.5rem}
+.cwrap{position:relative;height:250px}.cwrap.tall{height:330px}
+.legend{display:flex;gap:1.1rem;flex-wrap:wrap;font-size:.8rem;color:var(--dim);margin-top:.55rem}
 .legend b{color:var(--ink)}
-.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
-.note{color:var(--dim);font-size:.82rem;border-top:1px solid var(--line);margin-top:.8rem;padding-top:.7rem}
-.foot{color:var(--dim2);font-size:.78rem;margin-top:2rem;text-align:center}
-.foot a{color:var(--dim)}
-@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.c6,.c4,.c8{grid-column:span 12}}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.foot{color:var(--dim2);font-size:.78rem;margin-top:2.2rem;text-align:center}
+
+.rise{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.d1{animation-delay:.05s}.d2{animation-delay:.12s}.d3{animation-delay:.19s}.d4{animation-delay:.26s}.d5{animation-delay:.33s}
+
+@media(max-width:920px){.kpis{grid-template-columns:repeat(2,1fr)}.c6,.c4,.c8{grid-column:span 12}h1{font-size:2rem}.navlinks a:not(.hub){display:none}}
 </style></head><body>
-<a href="index.html" id="backlink" style="position:fixed;top:14px;left:14px;z-index:99999;font:600 13px/1 -apple-system,system-ui,sans-serif;text-decoration:none;color:#fff;background:rgba(18,22,31,.78);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.20);padding:8px 14px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.25)">← All reports</a>
+
+<nav class="nav">
+  <div class="in">
+    <span class="brand"><span class="mark"></span>CTD <small>Gen AI</small></span>
+    <span class="live"><i></i>LIVE</span>
+    <span class="navlinks">
+      <a href="index.html" class="hub">← All reports</a>
+      <a href="CTD_AI_Dashboard.html" class="active">Dashboard</a>
+      <a href="CTD_AI_Master_Report.html">Master</a>
+      <a href="CTD_Active_Shots.html">Shots</a>
+    </span>
+  </div>
+</nav>
 
 <div class="wrap">
-<header>
-  <div>
-    <div class="kick">CLOSE TO DISASTER · GEN AI</div>
-    <h1>Production Dashboard</h1>
-    <div class="sub">AI in the cuts · efficiency · pipeline · re-spins</div>
-  </div>
-  <div class="spacer"></div>
-  <div class="stamp">Read-only · CTD Airtable<br>Snapshot Jul 23, 2026</div>
-</header>
+  <header class="hero rise">
+    <div class="eyebrow">CLOSE TO DISASTER · PRODUCTION SIGNAL</div>
+    <h1>The AI, in numbers.</h1>
+    <p>AI in the cuts · efficiency · pipeline · re-spins &nbsp;—&nbsp; <span class="stamp">read-only from the CTD Airtable · Jul 23, 2026</span></p>
+  </header>
 
-<div class="kpis">
-  <div class="kpi b"><div class="big">~33%</div><div class="lab">of each episode is AI footage</div><canvas class="spark" id="sp1"></canvas></div>
-  <div class="kpi g"><div class="big">2.4:1</div><div class="lab">generate-to-use · from 5.1:1</div><canvas class="spark" id="sp2"></canvas></div>
-  <div class="kpi p"><div class="big">0.66</div><div class="lab">re-spins / delivered shot</div><canvas class="spark" id="sp3"></canvas></div>
-  <div class="kpi a"><div class="big">712</div><div class="lab">of 1,380 shots delivered</div><canvas class="spark" id="sp4"></canvas></div>
-</div>
-
-<div class="grid">
-  <div class="panel c6">
-    <h3>AI share of each cut</h3>
-    <div class="cap">Screen-time as a % of the finished cut. Holds at ~a third across three episodes.</div>
-    <div class="cwrap"><canvas id="aiShare"></canvas></div>
+  <div class="kpis">
+    <div class="kpi rise d1" style="--acc:#8fbcff"><div class="trend">▲ holding</div><div class="big">~33%</div><div class="lab">of each episode is AI footage</div><canvas class="spark" id="sp1"></canvas></div>
+    <div class="kpi rise d2" style="--acc:#9bf0b8"><div class="trend">▼ leaner</div><div class="big">2.4:1</div><div class="lab">generate-to-use · down from 5.1:1</div><canvas class="spark" id="sp2"></canvas></div>
+    <div class="kpi rise d3" style="--acc:#d3b8ff"><div class="trend">▼ leaner</div><div class="big">0.66</div><div class="lab">re-spins per delivered shot</div><canvas class="spark" id="sp3"></canvas></div>
+    <div class="kpi rise d4" style="--acc:#ffd07a"><div class="trend">52%</div><div class="big">712</div><div class="lab">of 1,380 shots delivered</div><canvas class="spark" id="sp4"></canvas></div>
   </div>
 
-  <div class="panel c6">
-    <h3>Efficiency & re-spin churn — both improving</h3>
-    <div class="cap">Generate-to-use ratio and re-spin passes per delivered shot. Lower is better; both more than halved after 101.</div>
-    <div class="cwrap"><canvas id="trend"></canvas></div>
-  </div>
+  <div class="grid">
+    <div class="panel c6 rise d2"><h3>AI share of each cut</h3><div class="cap">Screen-time as a % of the finished cut — a structural third, holding across three episodes.</div><div class="cwrap"><canvas id="aiShare"></canvas></div></div>
+    <div class="panel c6 rise d3"><h3>Efficiency &amp; churn — both improving</h3><div class="cap">Generate-to-use ratio and re-spin passes per delivered shot. Lower is leaner; both more than halved after 101.</div><div class="cwrap"><canvas id="trend"></canvas></div></div>
 
-  <div class="panel c4">
-    <h3>Pipeline status</h3>
-    <div class="cap">All 1,380 planned shots.</div>
-    <div class="cwrap"><canvas id="pipe"></canvas></div>
-    <div class="legend">
-      <span><span class="dot" style="background:var(--green)"></span>Sent <b>712</b></span>
-      <span><span class="dot" style="background:var(--blue)"></span>First req <b>106</b></span>
-      <span><span class="dot" style="background:var(--amber)"></span>In prog <b>69</b></span>
-      <span><span class="dot" style="background:var(--dim2)"></span>Paused <b>493</b></span>
+    <div class="panel c4 rise d3"><h3>Pipeline status</h3><div class="cap">All 1,380 planned shots.</div><div class="cwrap"><canvas id="pipe"></canvas></div>
+      <div class="legend">
+        <span><span class="dot" style="background:var(--green)"></span>Sent <b>712</b></span>
+        <span><span class="dot" style="background:var(--blue)"></span>First req <b>106</b></span>
+        <span><span class="dot" style="background:var(--amber)"></span>In prog <b>69</b></span>
+        <span><span class="dot" style="background:#3a4353"></span>Held <b>493</b></span>
+      </div>
     </div>
+    <div class="panel c8 rise d4"><h3>Generated vs. used per episode</h3><div class="cap">Clips generated (left) against clips that landed in the cut (right). The gap is closing — 101 over-generated, 103 is lean.</div><div class="cwrap"><canvas id="genUse"></canvas></div></div>
+
+    <div class="panel c12 rise d5"><h3>Re-spin load by story</h3><div class="cap">Delivered clips sent back for changes. FDN and 447 lead — the effects-dense reactor and mid-air sequences, where getting physics right takes the most passes.</div><div class="cwrap tall"><canvas id="respinStory"></canvas></div></div>
   </div>
 
-  <div class="panel c8">
-    <h3>Generated vs. used per episode</h3>
-    <div class="cap">How many clips we generated (left) against how many landed in the cut (right). The gap is shrinking — 101 over-generated, 103 is lean.</div>
-    <div class="cwrap"><canvas id="genUse"></canvas></div>
-  </div>
-
-  <div class="panel c12">
-    <h3>Re-spin load by story</h3>
-    <div class="cap">Delivered clips sent back for changes, by story. FDN and 447 lead — effects-dense reactor and mid-air sequences where physics takes the most passes.</div>
-    <div class="cwrap tall"><canvas id="respinStory"></canvas></div>
-  </div>
-</div>
-
-<div class="foot">Compiled read-only — nothing written to the base · Sources: GEN AI REPORTS · ASSETS · SHOTCODES</div>
+  <div class="foot">Compiled read-only — nothing written to the base · GEN AI REPORTS · ASSETS · SHOTCODES</div>
 </div>
 
 <script>
-const C={ink:'#e6edf3',dim:'#8b98a9',line:'#232b38',blue:'#4c9aff',green:'#3fb950',amber:'#e3a008',red:'#f85149',purple:'#a371f7',teal:'#39c5cf',dim2:'#5c6773'};
-Chart.defaults.color=C.dim; Chart.defaults.borderColor=C.line; Chart.defaults.font.family="-apple-system,system-ui,sans-serif";
-const grid={color:C.line,drawTicks:false}; const noGrid={display:false};
-const eps=['101','102','103'];
+const C={ink:'#f2f5fa',dim:'#9aa6ba',dim2:'#5f6a7e',grid:'rgba(255,255,255,.06)',
+ blue:'#5b9dff',cyan:'#43e6d0',green:'#54e08a',amber:'#ffb020',red:'#ff5d6c',purple:'#b98cff'};
+Chart.defaults.color=C.dim;Chart.defaults.font.family="-apple-system,system-ui,sans-serif";Chart.defaults.font.size=11;
+Chart.defaults.plugins.tooltip.backgroundColor='rgba(14,17,24,.94)';
+Chart.defaults.plugins.tooltip.borderColor='rgba(255,255,255,.14)';Chart.defaults.plugins.tooltip.borderWidth=1;
+Chart.defaults.plugins.tooltip.padding=10;Chart.defaults.plugins.tooltip.cornerRadius=9;Chart.defaults.plugins.tooltip.titleColor=C.ink;
+const gridY={color:C.grid,drawTicks:false,drawBorder:false},noG={display:false,drawBorder:false};
+function grad(ctx,c1,c2){const g=ctx.createLinearGradient(0,0,0,240);g.addColorStop(0,c1);g.addColorStop(1,c2);return g;}
 
-// sparklines
-function spark(id,data,color){new Chart(document.getElementById(id),{type:'line',
- data:{labels:data.map((_,i)=>i),datasets:[{data,borderColor:color,borderWidth:2,fill:true,
-   backgroundColor:color+'22',tension:.4,pointRadius:0}]},
- options:{plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false}},
-   elements:{line:{capBezierPoints:true}},maintainAspectRatio:false,responsive:true}});}
-spark('sp1',[27,33,28],C.blue); spark('sp2',[5.1,3.0,2.4],C.green); spark('sp3',[1.58,0.66,0.66],C.purple); spark('sp4',[159,167,220],C.amber);
+function spark(id,data,color){const el=document.getElementById(id);const g=el.getContext('2d').createLinearGradient(0,0,0,44);
+ g.addColorStop(0,color+'55');g.addColorStop(1,color+'00');
+ new Chart(el,{type:'line',data:{labels:data.map((_,i)=>i),datasets:[{data,borderColor:color,borderWidth:2,fill:true,backgroundColor:g,tension:.45,pointRadius:0}]},
+ options:{plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false}},maintainAspectRatio:false}});}
+spark('sp1',[27,33,28],C.blue);spark('sp2',[5.1,3,2.4],C.green);spark('sp3',[1.58,.66,.66],C.purple);spark('sp4',[100,140,159,167,220],C.amber);
 
-// AI share bars
-new Chart(document.getElementById('aiShare'),{type:'bar',
- data:{labels:['101 Fine Cut','102 RC1','103 RC'],datasets:[{data:[33.0,32.5,27.9],
-   backgroundColor:[C.blue,C.blue,C.blue+'cc'],borderRadius:8,barThickness:52}]},
- options:{maintainAspectRatio:false,plugins:{legend:{display:false},
-   tooltip:{callbacks:{label:c=>c.parsed.y+'% AI'}}},
-   scales:{x:{grid:noGrid},y:{grid,beginAtZero:true,max:50,ticks:{callback:v=>v+'%'}}}}});
+new Chart(aiShare,{type:'bar',data:{labels:['101 Fine','102 RC1','103 RC'],datasets:[{data:[33,32.5,27.9],
+ backgroundColor:ctx=>grad(ctx.chart.ctx,'#7db0ff','#3f6fe0'),borderRadius:10,barThickness:54,borderSkipped:false}]},
+ options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y+'% AI'}}},
+ scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true,max:50,ticks:{callback:v=>v+'%'}}}}});
 
-// efficiency + churn dual line
-new Chart(document.getElementById('trend'),{type:'line',
- data:{labels:eps,datasets:[
-   {label:'Generate-to-use (×)',data:[5.1,3.0,2.4],borderColor:C.green,backgroundColor:C.green+'22',
-    tension:.35,borderWidth:3,pointRadius:5,pointBackgroundColor:C.green,yAxisID:'y'},
-   {label:'Re-spins / delivered shot',data:[1.58,0.66,0.66],borderColor:C.purple,backgroundColor:C.purple+'22',
-    tension:.35,borderWidth:3,pointRadius:5,pointBackgroundColor:C.purple,yAxisID:'y'}]},
- options:{maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8}}},
-   scales:{x:{grid:noGrid},y:{grid,beginAtZero:true,title:{display:true,text:'lower = leaner',color:C.dim2}}}}});
+new Chart(trend,{type:'line',data:{labels:['101','102','103'],datasets:[
+ {label:'Generate-to-use (×)',data:[5.1,3,2.4],borderColor:C.green,backgroundColor:ctx=>grad(ctx.chart.ctx,'rgba(84,224,138,.2)','rgba(84,224,138,0)'),fill:true,tension:.4,borderWidth:3,pointRadius:5,pointBackgroundColor:C.green,pointBorderColor:'#0b1a12',pointBorderWidth:2},
+ {label:'Re-spins / delivered shot',data:[1.58,.66,.66],borderColor:C.purple,backgroundColor:ctx=>grad(ctx.chart.ctx,'rgba(185,140,255,.2)','rgba(185,140,255,0)'),fill:true,tension:.4,borderWidth:3,pointRadius:5,pointBackgroundColor:C.purple,pointBorderColor:'#150e26',pointBorderWidth:2}]},
+ options:{maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8,padding:16}}},
+ scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true}}}});
 
-// pipeline doughnut
-new Chart(document.getElementById('pipe'),{type:'doughnut',
- data:{labels:['Sent to Cream','First request','In progress','Paused / unset'],
-   datasets:[{data:[712,106,69,493],backgroundColor:[C.green,C.blue,C.amber,C.dim2],borderColor:C.card,borderWidth:2}]},
- options:{maintainAspectRatio:false,cutout:'62%',plugins:{legend:{display:false},
-   tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+' ('+Math.round(c.parsed/1380*100)+'%)'}}}}});
+new Chart(pipe,{type:'doughnut',data:{labels:['Sent to Cream','First request','In progress','Held'],
+ datasets:[{data:[712,106,69,493],backgroundColor:[C.green,C.blue,C.amber,'#3a4353'],borderColor:'#0b0d13',borderWidth:3,hoverOffset:6}]},
+ options:{maintainAspectRatio:false,cutout:'66%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+' ('+Math.round(c.parsed/1380*100)+'%)'}}}}});
 
-// generated vs used grouped bar
-new Chart(document.getElementById('genUse'),{type:'bar',
- data:{labels:eps,datasets:[
-   {label:'Generated',data:[1879,872,774],backgroundColor:C.teal+'cc',borderRadius:6},
-   {label:'In the cut',data:[368,295,318],backgroundColor:C.amber,borderRadius:6}]},
- options:{maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8}}},
-   scales:{x:{grid:noGrid},y:{grid,beginAtZero:true}}}});
+new Chart(genUse,{type:'bar',data:{labels:['101','102','103'],datasets:[
+ {label:'Generated',data:[1879,872,774],backgroundColor:ctx=>grad(ctx.chart.ctx,'#5ff0dd','#2ab7a6'),borderRadius:8,borderSkipped:false},
+ {label:'In the cut',data:[368,295,318],backgroundColor:ctx=>grad(ctx.chart.ctx,'#ffc24d','#e08e12'),borderRadius:8,borderSkipped:false}]},
+ options:{maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8,padding:16}}},scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true}}}});
 
-// re-spin by story horizontal
-const rs=[['FDN',71,'101'],['447',64,'101'],['HMB',47,'103'],['CHF',34,'101'],['TXC',34,'101'],['SDS',31,'103'],
- ['MSH',29,'101'],['CCS',27,'103'],['BMF',25,'102'],['PAO',22,'102'],['HKA',19,'102'],['HIN',19,'101'],
- ['SJE',18,'103'],['TAD',17,'102'],['OTI',14,'102'],['LMR',13,'103'],['AA191',9,'103'],['LPE',7,'102'],['KAR',6,'102']];
-const epColor={'101':C.blue,'102':C.green,'103':C.purple};
-new Chart(document.getElementById('respinStory'),{type:'bar',
- data:{labels:rs.map(r=>r[0]),datasets:[{data:rs.map(r=>r[1]),
-   backgroundColor:rs.map(r=>epColor[r[2]]),borderRadius:5}]},
- options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},
-   tooltip:{callbacks:{label:c=>c.parsed.x+' re-spins · ep '+rs[c.dataIndex][2]}}},
-   scales:{x:{grid,beginAtZero:true},y:{grid:noGrid,ticks:{font:{size:11}}}}}});
+const rs=[['FDN',71,C.blue],['447',64,C.blue],['HMB',47,C.purple],['CHF',34,C.blue],['TXC',34,C.blue],['SDS',31,C.purple],['MSH',29,C.blue],['CCS',27,C.purple],['BMF',25,C.green],['PAO',22,C.green],['HKA',19,C.green],['HIN',19,C.blue],['SJE',18,C.purple],['TAD',17,C.green],['OTI',14,C.green],['LMR',13,C.purple],['AA191',9,C.purple],['LPE',7,C.green],['KAR',6,C.green]];
+new Chart(respinStory,{type:'bar',data:{labels:rs.map(r=>r[0]),datasets:[{data:rs.map(r=>r[1]),
+ backgroundColor:rs.map(r=>r[2]),borderRadius:6,borderSkipped:false}]},
+ options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+' re-spins'}}},
+ scales:{x:{grid:gridY,beginAtZero:true},y:{grid:noG,ticks:{font:{size:11}}}}}});
 </script>
 </body></html>

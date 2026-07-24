@@ -109,7 +109,7 @@ ul{padding-left:1.2rem}li{margin-bottom:.5rem}
 <div class="kpi" style="--acc:#8fbcff"><b>~1/3</b><span>of each finished episode is AI footage</span></div>
 <div class="kpi" style="--acc:#9bf0b8"><b>2.4:1</b><span>generate-to-use ratio (103) — down from 5.1:1</span></div>
 <div class="kpi" style="--acc:#8fd7ff"><b>3,991</b><span>AI clips generated across the series</span></div>
-<div class="kpi" style="--acc:#ffd07a"><b>712</b><span>shots sent to Cream</span></div>
+<div class="kpi" style="--acc:#ffd07a"><b>712</b><span>shotcodes sent to Cream</span></div>
 </div>
 <div class="card" style="margin-top:.3rem">
 <b>The one-sentence version:</b> generative AI reliably fills about a third of every episode, we&#39;re producing it more than twice as efficiently as when we started, and just over half of all planned shots are already cut-ready and delivered.
@@ -137,26 +137,26 @@ ul{padding-left:1.2rem}li{margin-bottom:.5rem}
 <div class="note"><b>Two caveats for honesty:</b> (1) 101 has been in production longest and carries the most one-time experimental and re-spun generations — some of its 5.1:1 was tuition later episodes skip. (2) "In cut" counts timeline placements; a clip used twice counts twice, so true distinct-clip efficiency is marginally leaner. The trend is unambiguous either way.</div>
 
 <h2 id="pipe"><span class="n">3</span>Production pipeline</h2>
-<p class="sub">Every planned shot (GEN AI SHOTCODES) and every generated file (GEN AI ASSETS), by status.</p>
+<p class="sub">Every planned shotcode (GEN AI SHOTCODES) and every generated file (GEN AI ASSETS), by status.</p>
 <div class="card">
 <table>
-<tr><th>Stage</th><th>Count</th><th>Share of planned shots</th></tr>
+<tr><th>Stage</th><th>Count</th><th>Share of planned shotcodes</th></tr>
 <tr><td><span class="pill p-sent">SENT TO CREAM</span></td><td class="big">712</td><td>52%<div class="bar barg"><div style="width:52%"></div></div></td></tr>
 <tr><td><span class="pill p-first">FIRST REQUEST</span></td><td class="big">108</td><td>8%<div class="bar"><div style="width:8%"></div></div></td></tr>
 <tr><td><span class="pill p-prog">IN PROGRESS</span></td><td class="big">69</td><td>5%<div class="bar"><div style="width:5%"></div></div></td></tr>
 <tr><td><span class="pill p-hold">PAUSED / CANCELLED / UNSET</span></td><td class="big">494</td><td>36%<div class="bar"><div style="width:36%"></div></div></td></tr>
-<tr><td style="font-weight:700">Total planned shots</td><td class="big">1,383</td><td class="sub" style="margin:0">across all episodes</td></tr>
+<tr><td style="font-weight:700">Total planned shotcodes</td><td class="big">1,383</td><td class="sub" style="margin:0">across all episodes</td></tr>
 </table>
 </div>
 <div class="card">
 <table>
 <tr><th>Generation</th><th>Count</th><th></th></tr>
-<tr><td>Total clips generated (all files)</td><td class="big">3,991</td><td class="sub" style="margin:0">~2.9 files per planned shot</td></tr>
+<tr><td>Total clips generated (all files)</td><td class="big">3,991</td><td class="sub" style="margin:0">~2.9 files per planned shotcode</td></tr>
 <tr><td>Re-spin requests (all-time, by note)</td><td class="big">522</td><td class="sub" style="margin:0">~0.4 per used shot on recent episodes</td></tr>
 <tr><td>Currently open re-spins (by status)</td><td class="big">142</td><td class="sub" style="margin:0">the rest were re-spun and moved on</td></tr>
 </table>
 </div>
-<div class="tip"><b>Reading the funnel:</b> 712 of 1,383 planned shots (52%) are cut-ready and sent to Cream. The live queue is small — 177 shots either just requested (108) or being generated now (69). The 494 on hold/unset are mostly back-half episodes (104/105) and the story editor&#39;s parking lot, not blockers. Against 1,383 planned shots we&#39;ve generated 3,991 files — the ~2.9× reflects variants, re-spins, and coverage.</div>
+<div class="tip"><b>Reading the funnel:</b> 712 of 1,383 planned shotcodes (52%) are cut-ready and sent to Cream. The live queue is small — 177 shotcodes either just requested (108) or being generated now (69). The 494 on hold/unset are mostly back-half episodes (104/105) and the story editor&#39;s parking lot, not blockers. Against 1,383 planned shotcodes we&#39;ve generated 3,991 files — the ~2.9× reflects variants, re-spins, and coverage.</div>
 
 <h2 id="respin"><span class="n">4</span>Re-spins</h2>
 <p class="sub">Clips sent back for changes — counted by re-spin note (broader than the 142 still flagged, since most get completed and re-statused). Measured against <b>shots used in the cut</b>, not total generated files: a generated-file denominator just rewards over-generation (it made 101 look artificially clean). This is re-spin passes per shot that actually made the cut.</p>
@@ -200,7 +200,7 @@ ul{padding-left:1.2rem}li{margin-bottom:.5rem}
 <li><b>AI share:</b> sum of AI clip durations per cut (GEN AI REPORTS), excluding rows flagged outdated or duplicate, over the runtime taken from each cut&#39;s final Seq-Out timecode.</li>
 <li><b>Efficiency:</b> total delivered files per episode&#39;s stories (GEN AI ASSETS, matched by story-code) divided by AI placements in that episode&#39;s cut (GEN AI REPORTS).</li>
 <li><b>Pipeline:</b> live status counts from GEN AI SHOTCODES; re-spin count from GEN AI ASSETS re-spin statuses.</li>
-<li><b>Scope:</b> 1,523 clip placements, 3,991 generated files, 1,383 planned shots read. Two figures are floors (runtime, placements-as-clips) and are flagged where they appear; both bias the same direction and don&#39;t change any conclusion.</li>
+<li><b>Scope:</b> 1,523 clip placements, 3,991 generated files, 1,383 planned shotcodes read. Two figures are floors (runtime, placements-as-clips) and are flagged where they appear; both bias the same direction and don&#39;t change any conclusion.</li>
 </ul></div>
 
 <p class="foot">Compiled read-only — nothing was written to the base · Sources: <a href="https://airtable.com/appFVGyWTPCqLcpvm/tblnRWFXVJXBNBAzw" target="_blank">GEN AI REPORTS</a> · <a href="https://airtable.com/appFVGyWTPCqLcpvm/tbl0Fz1aBHogdb3kN" target="_blank">GEN AI ASSETS</a> · <a href="https://airtable.com/appFVGyWTPCqLcpvm/tblkmmLzuQvQsytut" target="_blank">GEN AI SHOTCODES</a> · July 23 2026</p>

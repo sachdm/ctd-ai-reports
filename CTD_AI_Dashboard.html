@@ -72,6 +72,7 @@ h1{font-size:2.5rem;line-height:1.04;margin:.5rem 0 .35rem;letter-spacing:-.025e
 .legend{display:flex;gap:1.1rem;flex-wrap:wrap;font-size:.8rem;color:var(--dim);margin-top:.55rem}
 .legend b{color:var(--ink)}
 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.th{text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)}
 .foot{color:var(--dim2);font-size:.78rem;margin-top:2.2rem;text-align:center}
 
 .rise{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
@@ -109,15 +110,17 @@ h1{font-size:2.5rem;line-height:1.04;margin:.5rem 0 .35rem;letter-spacing:-.025e
   </div>
 
   <div class="grid">
-    <div class="panel c6 rise d2"><h3>AI share of each cut</h3><div class="cap">Screen-time as a % of the finished cut — a structural third, holding across three episodes.</div><div class="cwrap"><canvas id="aiShare"></canvas></div></div>
+    <div class="panel c12 rise d2" style="border-color:rgba(255,176,32,.35)"><h3>Production report <span style="color:var(--dim2);font-weight:400;font-size:.8rem">— for Tim · throughput, runway &amp; risk</span></h3><div class="cap">Built from measured delivery rate, not estimates. "Shots" = shotcodes (planned shots in the show); one shotcode may take several rendered clips.</div><div id="timTop"></div><div style="overflow-x:auto;margin-top:.9rem"><table style="width:100%;border-collapse:collapse;font-size:.82rem"><thead><tr><th class="th">Ep</th><th class="th">Shots left</th><th class="th">2nd delivery due</th><th class="th">Forecast at current rate</th><th class="th">Gap</th><th class="th">Rate needed</th></tr></thead><tbody id="timBody"></tbody></table></div><div id="timNote"></div></div>
+
+    <div class="panel c6 rise d2"><h3>AI in each cut</h3><div class="cap">Minutes of AI footage in the latest cut of each episode (GEN AI REPORTS, outdated/duplicate rows excluded). <b>104 is now cut</b> — 17.1 min, second only to 102. Against a ~43–45 min runtime that is roughly 30–44% of each episode. 105–108 are not assembled yet.</div><div class="cwrap"><canvas id="aiShare"></canvas></div></div>
     <div class="panel c6 rise d3"><h3>Efficiency &amp; churn — both improving</h3><div class="cap">Generate-to-use ratio and re-spin passes per used (in-cut) shot. Lower is leaner — 102 and 103 roughly halved 101.</div><div class="cwrap"><canvas id="trend"></canvas></div></div>
 
     <div class="panel c4 rise d3"><h3>Pipeline status</h3><div class="cap">All 1,582 planned shotcodes.</div><div class="cwrap"><canvas id="pipe"></canvas></div>
       <div class="legend">
         <span><span class="dot" style="background:var(--green)"></span>Sent <b>895</b></span>
-        <span><span class="dot" style="background:var(--blue)"></span>First req <b>174</b></span>
+        <span><span class="dot" style="background:var(--blue)"></span>First req <b>149</b></span>
         <span><span class="dot" style="background:var(--amber)"></span>Active <b>39</b></span>
-        <span><span class="dot" style="background:#3a4353"></span>Held <b>474</b></span>
+        <span><span class="dot" style="background:#3a4353"></span>Held <b>499</b></span>
       </div>
     </div>
     <div class="panel c8 rise d4"><h3>Clips generated per episode</h3><div class="cap">Total AI clips generated per episode, live from the render log (GEN AI ASSETS). 101 front-loaded the volume; 104–105 are ramping; 106 &amp; 108 have no renders yet.</div><div class="cwrap"><canvas id="genUse"></canvas></div></div>
@@ -129,6 +132,8 @@ h1{font-size:2.5rem;line-height:1.04;margin:.5rem 0 .35rem;letter-spacing:-.025e
     <div class="panel c6 rise d4"><h3>Calendar — AI milestones</h3><div class="cap">First-request windows and 2nd-delivery dates. Today is highlighted.</div><div id="calBody"></div></div>
 
     <div class="panel c12 rise d4"><h3>Delivery schedule <span style="color:var(--dim2);font-weight:400;font-size:.8rem">— AI milestones, from the production calendar</span></h3><div class="cap">First-request windows and 2nd-delivery dates per episode. <a href="ctd_schedule.csv" download style="color:var(--blue);text-decoration:none;font-weight:600">Download for Sheets (.csv)</a></div><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.82rem"><thead><tr><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Ep</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Title</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">1st requests</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">2nd delivery due</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Status</th></tr></thead><tbody id="schedBody"></tbody></table></div></div>
+
+    <div class="panel c12 rise d5"><h3>Master timeline <span style="color:var(--dim2);font-weight:400;font-size:.8rem">— AI work against every delivery</span></h3><div class="cap">Each bar is an episode's remaining AI work at the measured rate of 9.6 shots/weekday, laid against its delivery date. ◆ = 2nd delivery due. Red bar end = forecast overruns the date.</div><div id="tlBody"></div></div>
 
     <div class="panel c12 rise d5"><h3>Re-spin load by story</h3><div class="cap">Clips sent back for changes. FDN and 447 lead — the effects-dense reactor and mid-air sequences, where getting physics right takes the most passes.</div><div class="cwrap tall"><canvas id="respinStory"></canvas></div></div>
   </div>
@@ -153,10 +158,10 @@ function spark(id,data,color){const el=document.getElementById(id);const g=el.ge
  options:{plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false}},maintainAspectRatio:false}});}
 
 
-new Chart(aiShare,{type:'bar',data:{labels:['101 Fine','102 RC1','103 RC'],datasets:[{data:[33,32.5,27.9],
- backgroundColor:ctx=>grad(ctx.chart.ctx,'#7db0ff','#3f6fe0'),borderRadius:10,barThickness:54,borderSkipped:false}]},
- options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y+'% AI'}}},
- scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true,max:50,ticks:{callback:v=>v+'%'}}}}});
+new Chart(aiShare,{type:'bar',data:{labels:['101 PL','102 PL','103 FC','104 RC'],datasets:[{data:[12.8,19.0,14.3,17.1],
+ backgroundColor:ctx=>grad(ctx.chart.ctx,'#7db0ff','#3f6fe0'),borderRadius:10,barThickness:46,borderSkipped:false}]},
+ options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y+' min of AI in the cut'}}},
+ scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true,ticks:{callback:v=>v+'m'}}}}});
 
 new Chart(trend,{type:'line',data:{labels:['101','102','103'],datasets:[
  {label:'Generate-to-use (×)',data:[5.1,3,2.4],borderColor:C.green,backgroundColor:ctx=>grad(ctx.chart.ctx,'rgba(84,224,138,.2)','rgba(84,224,138,0)'),fill:true,tension:.4,borderWidth:3,pointRadius:5,pointBackgroundColor:C.green,pointBorderColor:'#0b1a12',pointBorderWidth:2},
@@ -165,7 +170,7 @@ new Chart(trend,{type:'line',data:{labels:['101','102','103'],datasets:[
  scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true}}}});
 
 new Chart(pipe,{type:'doughnut',data:{labels:['Sent to Cream','First request','In prod (active)','Held'],
- datasets:[{data:[895,174,39,474],backgroundColor:[C.green,C.blue,C.amber,'#3a4353'],borderColor:'#0b0d13',borderWidth:3,hoverOffset:6}]},
+ datasets:[{data:[895,149,39,499],backgroundColor:[C.green,C.blue,C.amber,'#3a4353'],borderColor:'#0b0d13',borderWidth:3,hoverOffset:6}]},
  options:{maintainAspectRatio:false,cutout:'66%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+' ('+Math.round(c.parsed/1582*100)+'%)'}}}}});
 
 new Chart(genUse,{type:'bar',data:{labels:['101','102','103','104','105','106','107','108'],datasets:[
@@ -173,7 +178,7 @@ new Chart(genUse,{type:'bar',data:{labels:['101','102','103','104','105','106','
  options:{maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8,padding:16}}},scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true}}}});
 
 const ep=['101','102','103','104','105','106','107','108'];
-const eSent=[160,202,258,191,74,0,1,0], eAct=[2,0,56,94,61,0,0,0], eNS=[6,0,0,6,66,109,63,132], eHeld=[14,10,17,17,15,0,0,0];
+const eSent=[160,202,258,191,74,0,1,0], eAct=[2,0,56,69,61,0,0,0], eNS=[6,0,0,6,66,109,63,132], eHeld=[14,10,17,42,15,0,0,0];
 new Chart(epStatus,{type:'bar',data:{labels:ep,datasets:[
  {label:'Sent to Cream',data:eSent,backgroundColor:C.green,borderRadius:4,stack:'s'},
  {label:'Active (in prod)',data:eAct,backgroundColor:C.blue,borderRadius:4,stack:'s'},
@@ -197,12 +202,29 @@ new Chart(respinStory,{type:'bar',data:{labels:rs.map(r=>r[0]),datasets:[{data:r
  scales:{x:{grid:gridY,beginAtZero:true},y:{grid:noG,ticks:{font:{size:11}}}}}});
 
 const team=[['Marty',['104','105']],['JJ',['103']],['Sacha',['103','105','106']],['Will',['103','104']],['Kieran',['103','104']]];
-const todo={'101':8,'102':0,'103':56,'104':100,'105':127,'106':109,'107':63,'108':132};
+const todo={'101':8,'102':0,'103':56,'104':75,'105':127,'106':109,'107':63,'108':132};
 const epc={'103':C.blue,'104':C.red,'105':C.amber,'106':C.purple,'101':C.green,'102':C.green,'107':C.dim2,'108':C.dim2};
 document.getElementById('teamBody').innerHTML=team.map(function(t){var load=t[1].reduce(function(a,e){return a+(todo[e]||0);},0);var eps=t[1].map(function(e){return '<span style="font-size:.68rem;font-weight:700;padding:.1rem .45rem;border-radius:99px;background:'+(epc[e]||C.dim2)+'22;color:'+(epc[e]||C.dim)+';margin-right:3px">'+e+'</span>';}).join('');var w=Math.round(load/132*100);return '<div style="display:flex;align-items:center;gap:.6rem;padding:.42rem 0;border-bottom:1px solid #1b2436"><span style="font-weight:700;min-width:4.2rem;font-size:.86rem">'+t[0]+'</span><span style="min-width:7rem">'+eps+'</span><span style="flex:1;height:7px;background:#141b28;border-radius:99px;overflow:hidden"><span style="display:block;height:100%;width:'+w+'%;background:linear-gradient(90deg,'+C.blue+','+C.purple+')"></span></span><span style="color:var(--dim);font-size:.76rem;min-width:5.2rem;text-align:right">'+load+' to do</span></div>';}).join('')+'<div style="color:var(--dim2);font-size:.72rem;padding-top:.5rem">107 &amp; 108 have no owner assigned yet — 195 shots unallocated.</div>';
 const MS={'2026-08-14':[['105','2nd delivery - PUSHED','r']],'2026-08-10':[['107','1st requests','b']],'2026-08-17':[['108','1st requests','b']],'2026-08-20':[['104','FC due','a']],'2026-08-21':[['103','PL due','a']],'2026-09-03':[['106','2nd delivery','g']],'2026-09-17':[['107','2nd delivery','g']],'2026-09-24':[['108','2nd delivery','g']],'2026-07-30':[['106','1st requests','b']]};
 const MC={r:C.red,b:C.blue,g:C.green,a:C.amber};const TODAY='2026-08-14';
 function month(y,m,name){var first=new Date(Date.UTC(y,m,1)).getUTCDay();first=(first+6)%7;var days=new Date(Date.UTC(y,m+1,0)).getUTCDate();var h='<div style="margin-bottom:.7rem"><div style="font-weight:700;font-size:.8rem;margin-bottom:.3rem">'+name+'</div><div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px">';['M','T','W','T','F','S','S'].forEach(function(d){h+='<div style="color:var(--dim2);font-size:.6rem;text-align:center;padding:2px">'+d+'</div>';});for(var i=0;i<first;i++)h+='<div></div>';for(var d=1;d<=days;d++){var key=y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');var ev=MS[key];var isT=key===TODAY;var bg=isT?'background:'+C.amber+'33;border:1px solid '+C.amber:(ev?'background:'+MC[ev[0][2]]+'22':'');h+='<div title="'+(ev?ev[0][0]+' '+ev[0][1]:'')+'" style="text-align:center;font-size:.66rem;padding:3px 0;border-radius:4px;'+bg+';color:'+(ev?MC[ev[0][2]]:'var(--dim)')+';font-weight:'+(ev||isT?'700':'400')+'">'+d+'</div>';}return h+'</div></div>';}
 document.getElementById('calBody').innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">'+month(2026,7,'August 2026')+month(2026,8,'September 2026')+'</div><div style="display:flex;gap:.8rem;flex-wrap:wrap;font-size:.68rem;color:var(--dim);margin-top:.3rem"><span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'+C.blue+';margin-right:4px"></i>1st requests</span><span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'+C.green+';margin-right:4px"></i>2nd delivery</span><span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'+C.red+';margin-right:4px"></i>pushed</span><span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'+C.amber+';margin-right:4px"></i>today / cut due</span></div>';
+
+/* ---- Production report for Tim ---- */
+document.getElementById('timTop').innerHTML='<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:.5rem">'+[['9.6','shots delivered / weekday','last 30 days',C.blue],['71','clips rendered / weekday','last 30 days',C.cyan],['570','shots still to make','across 101-108',C.amber],['Nov 5','all AI complete','at current rate',C.red]].map(function(k){return '<div style="background:rgba(255,255,255,.04);border:1px solid var(--stroke);border-radius:12px;padding:.7rem .85rem"><div style="font-size:1.5rem;font-weight:800;letter-spacing:-.03em;color:'+k[3]+'">'+k[0]+'</div><div style="color:var(--dim);font-size:.72rem;margin-top:.15rem">'+k[1]+'</div><div style="color:var(--dim2);font-size:.65rem">'+k[2]+'</div></div>';}).join('')+'</div>';
+var TIM=[['103',56,'Jul 2','Aug 24','53d late','—'],['104',75,'Jul 10','Sep 3','55d late','—'],['105',127,'pushed — TBC','Sep 22','no date set','—'],['106',109,'Sep 3','Oct 7','34d late','26.2/day'],['107',63,'Sep 17','Oct 16','29d late','17.9/day'],['108',132,'Sep 24','Nov 5','42d late','19.4/day']];
+document.getElementById('timBody').innerHTML=TIM.map(function(r){var td='padding:6px 8px;border-bottom:1px solid #202b40';var late=r[4].indexOf('late')>=0;return '<tr><td style="'+td+';font-weight:700">'+r[0]+'</td><td style="'+td+'">'+r[1]+'</td><td style="'+td+'">'+r[2]+'</td><td style="'+td+'">'+r[3]+'</td><td style="'+td+';color:'+(late?C.red:C.amber)+';font-weight:700">'+r[4]+'</td><td style="'+td+';color:var(--dim)">'+r[5]+'</td></tr>';}).join('');
+document.getElementById('timNote').innerHTML='<div style="margin-top:.9rem;padding:.75rem .9rem;background:rgba(255,93,108,.10);border:1px solid rgba(255,93,108,.3);border-radius:10px;font-size:.82rem;line-height:1.5"><b style="color:'+C.red+'">The headline:</b> at the measured rate of <b>9.6 shots/weekday</b>, the 570 remaining shots finish around <b>5 Nov</b> — about <b>six weeks past</b> the final delivery date (24 Sep). Hitting 24 Sep needs <b>19.7 shots/weekday</b> — roughly <b>2× current throughput</b>.<br><b style="color:'+C.amber+'">Where it binds:</b> 106 needs 26/day for 14 remaining weekdays and has not started. 107 &amp; 108 (195 shots) have no artist assigned. 103 and 104 are already past their delivery dates and still carry 131 shots between them.<br><b style="color:'+C.green+'">For context:</b> the 60-day rate was 12.5/day, so the recent 9.6 reflects a slowdown, not the ceiling. Rate assumes weekdays only and counts a shot once its first clip is delivered.</div>';
+
+/* ---- Master timeline ---- */
+var TL=[['101','MELTDOWN',0],['102','UNDER PRESSURE',0],['103','RISKY BUSINESS',56],['104','NO WAY OUT',75],['105','NATURE UNLEASHED',127],['106','BREAKING POINT',109],['107','ONE WRONG MOVE',63],['108','HIDDEN JEOPARDY',132]];
+var T0=new Date('2026-04-01').getTime(),T1=new Date('2026-11-30').getTime();function px(d){return (new Date(d).getTime()-T0)/(T1-T0)*100;}
+var DUE={'101':'2026-05-25','102':'2026-06-16','103':'2026-07-02','104':'2026-07-10','105':null,'106':'2026-09-03','107':'2026-09-17','108':'2026-09-24'};
+var FC={'101':'2026-05-25','102':'2026-06-16','103':'2026-08-24','104':'2026-09-03','105':'2026-09-22','106':'2026-10-07','107':'2026-10-16','108':'2026-11-05'};
+var ST={'101':'2026-04-08','102':'2026-05-13','103':'2026-06-01','104':'2026-06-08','105':'2026-07-13','106':'2026-08-14','107':'2026-08-14','108':'2026-08-17'};
+var MN=['Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'];var hdr='<div style="position:relative;height:16px;margin-left:9rem;margin-bottom:4px">'+MN.map(function(m,i){return '<span style="position:absolute;left:'+px('2026-'+String(i+4).padStart(2,'0')+'-01')+'%;font-size:.62rem;color:var(--dim2)">'+m+'</span>';}).join('')+'</div>';var todayL=px('2026-08-14');
+var rows=TL.map(function(r){var ep=r[0],left=r[2],due=DUE[ep],fc=FC[ep],st=ST[ep];var a=px(st),b=px(fc||due),late=fc&&due&&(new Date(fc)>new Date(due));var col=left===0?C.green:(late?C.red:C.blue);var bar='<div style="position:absolute;left:'+a+'%;width:'+Math.max(1,b-a)+'%;height:10px;top:3px;border-radius:99px;background:linear-gradient(90deg,'+C.blue+'88,'+col+')"></div>';var dm=due?'<div title="2nd delivery due" style="position:absolute;left:'+px(due)+'%;top:0;color:'+(late?C.red:C.green)+';font-size:.7rem;transform:translateX(-50%)">&#9670;</div>':'';return '<div style="display:flex;align-items:center;gap:.5rem;padding:.22rem 0"><span style="width:2.2rem;font-weight:700;font-size:.8rem">'+ep+'</span><span style="width:6.6rem;color:var(--dim);font-size:.68rem;overflow:hidden;white-space:nowrap">'+r[1]+'</span><span style="flex:1;position:relative;height:16px;background:rgba(255,255,255,.03);border-radius:99px">'+bar+dm+'<span style="position:absolute;left:'+todayL+'%;top:-2px;height:20px;width:1px;background:'+C.amber+'"></span></span><span style="width:4.2rem;text-align:right;color:'+(left?C.amber:C.green)+';font-size:.7rem;font-weight:700">'+(left?left+' left':'done')+'</span></div>';}).join('');
+document.getElementById('tlBody').innerHTML=hdr+rows+'<div style="display:flex;gap:1rem;flex-wrap:wrap;font-size:.68rem;color:var(--dim);margin-top:.5rem"><span style="color:'+C.amber+'">| today</span><span>&#9670; 2nd delivery due</span><span><i style="display:inline-block;width:10px;height:6px;border-radius:2px;background:'+C.green+';margin-right:4px"></i>delivered</span><span><i style="display:inline-block;width:10px;height:6px;border-radius:2px;background:'+C.red+';margin-right:4px"></i>forecast overruns delivery</span></div>';
+
 </script>
 </body></html>

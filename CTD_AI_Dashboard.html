@@ -105,7 +105,7 @@ h1{font-size:2.5rem;line-height:1.04;margin:.5rem 0 .35rem;letter-spacing:-.025e
     <div class="kpi rise d1" style="--acc:#8fbcff"><div class="trend">▲ holding</div><div class="big">~33%</div><div class="lab">of each assembled cut is AI footage</div></div>
     <div class="kpi rise d2" style="--acc:#9bf0b8"><div class="trend">▼ leaner</div><div class="big">2.4:1</div><div class="lab">generate-to-use · down from 5.1:1</div></div>
     <div class="kpi rise d3" style="--acc:#d3b8ff"><div class="trend">▼ leaner</div><div class="big">0.46</div><div class="lab">re-spins per used (in-cut) shot</div></div>
-    <div class="kpi rise d4" style="--acc:#ffd07a"><div class="trend">56%</div><div class="big">889</div><div class="lab">of 1,582 shotcodes sent to Cream</div></div>
+    <div class="kpi rise d4" style="--acc:#ffd07a"><div class="trend">57%</div><div class="big">895</div><div class="lab">of 1,582 shotcodes sent to Cream</div></div>
   </div>
 
   <div class="grid">
@@ -114,17 +114,21 @@ h1{font-size:2.5rem;line-height:1.04;margin:.5rem 0 .35rem;letter-spacing:-.025e
 
     <div class="panel c4 rise d3"><h3>Pipeline status</h3><div class="cap">All 1,582 planned shotcodes.</div><div class="cwrap"><canvas id="pipe"></canvas></div>
       <div class="legend">
-        <span><span class="dot" style="background:var(--green)"></span>Sent <b>889</b></span>
+        <span><span class="dot" style="background:var(--green)"></span>Sent <b>895</b></span>
         <span><span class="dot" style="background:var(--blue)"></span>First req <b>174</b></span>
         <span><span class="dot" style="background:var(--amber)"></span>Active <b>39</b></span>
-        <span><span class="dot" style="background:#3a4353"></span>Held <b>480</b></span>
+        <span><span class="dot" style="background:#3a4353"></span>Held <b>474</b></span>
       </div>
     </div>
-    <div class="panel c8 rise d4"><h3>Clips generated per episode</h3><div class="cap">Clips generated (left) against clips that landed in the cut (right). The gap is closing — 101 over-generated, 103 is lean.</div><div class="cwrap"><canvas id="genUse"></canvas></div></div>
+    <div class="panel c8 rise d4"><h3>Clips generated per episode</h3><div class="cap">Total AI clips generated per episode, live from the render log (GEN AI ASSETS). 101 front-loaded the volume; 104–105 are ramping; 106 &amp; 108 have no renders yet.</div><div class="cwrap"><canvas id="genUse"></canvas></div></div>
 
     <div class="panel c12 rise d4"><h3>Where every episode stands</h3><div class="cap">Full pipeline across all eight episodes as of Aug 14 — sent to the cut, in active AI production (first request / in progress / vetting), and not yet started. 104 carries the heaviest live load; 106–108 have not begun.</div><div class="cwrap tall"><canvas id="epStatus"></canvas></div></div>
 
-    <div class="panel c12 rise d4"><h3>Delivery schedule <span style="color:var(--dim2);font-weight:400;font-size:.8rem">-- AI milestones, from the production calendar</span></h3><div class="cap">First-request windows and 2nd-delivery dates per episode. <a href="ctd_schedule.csv" download style="color:var(--blue);text-decoration:none;font-weight:600">Download for Sheets (.csv)</a></div><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.82rem"><thead><tr><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Ep</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Title</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">1st requests</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">2nd delivery due</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Status</th></tr></thead><tbody id="schedBody"></tbody></table></div></div>
+    <div class="panel c6 rise d4"><h3>Who's working on what</h3><div class="cap">Artist allocation by episode. Bar shows that episode's outstanding AI load (active + not started).</div><div id="teamBody"></div></div>
+
+    <div class="panel c6 rise d4"><h3>Calendar — AI milestones</h3><div class="cap">First-request windows and 2nd-delivery dates. Today is highlighted.</div><div id="calBody"></div></div>
+
+    <div class="panel c12 rise d4"><h3>Delivery schedule <span style="color:var(--dim2);font-weight:400;font-size:.8rem">— AI milestones, from the production calendar</span></h3><div class="cap">First-request windows and 2nd-delivery dates per episode. <a href="ctd_schedule.csv" download style="color:var(--blue);text-decoration:none;font-weight:600">Download for Sheets (.csv)</a></div><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.82rem"><thead><tr><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Ep</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Title</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">1st requests</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">2nd delivery due</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Status</th></tr></thead><tbody id="schedBody"></tbody></table></div></div>
 
     <div class="panel c12 rise d5"><h3>Re-spin load by story</h3><div class="cap">Clips sent back for changes. FDN and 447 lead — the effects-dense reactor and mid-air sequences, where getting physics right takes the most passes.</div><div class="cwrap tall"><canvas id="respinStory"></canvas></div></div>
   </div>
@@ -133,8 +137,9 @@ h1{font-size:2.5rem;line-height:1.04;margin:.5rem 0 .35rem;letter-spacing:-.025e
 </div>
 
 <script>
-const C={ink:'#f2f5fa',dim:'#9aa6ba',dim2:'#5f6a7e',grid:'rgba(255,255,255,.06)',
+window.C={ink:'#f2f5fa',dim:'#9aa6ba',dim2:'#5f6a7e',grid:'rgba(255,255,255,.06)',
  blue:'#5b9dff',cyan:'#43e6d0',green:'#54e08a',amber:'#ffb020',red:'#ff5d6c',purple:'#b98cff'};
+var C=window.C;
 Chart.defaults.color=C.dim;Chart.defaults.font.family="-apple-system,system-ui,sans-serif";Chart.defaults.font.size=11;
 Chart.defaults.plugins.tooltip.backgroundColor='rgba(14,17,24,.94)';
 Chart.defaults.plugins.tooltip.borderColor='rgba(255,255,255,.14)';Chart.defaults.plugins.tooltip.borderWidth=1;
@@ -160,7 +165,7 @@ new Chart(trend,{type:'line',data:{labels:['101','102','103'],datasets:[
  scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true}}}});
 
 new Chart(pipe,{type:'doughnut',data:{labels:['Sent to Cream','First request','In prod (active)','Held'],
- datasets:[{data:[889,174,39,480],backgroundColor:[C.green,C.blue,C.amber,'#3a4353'],borderColor:'#0b0d13',borderWidth:3,hoverOffset:6}]},
+ datasets:[{data:[895,174,39,474],backgroundColor:[C.green,C.blue,C.amber,'#3a4353'],borderColor:'#0b0d13',borderWidth:3,hoverOffset:6}]},
  options:{maintainAspectRatio:false,cutout:'66%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+' ('+Math.round(c.parsed/1582*100)+'%)'}}}}});
 
 new Chart(genUse,{type:'bar',data:{labels:['101','102','103','104','105','106','107','108'],datasets:[
@@ -168,7 +173,7 @@ new Chart(genUse,{type:'bar',data:{labels:['101','102','103','104','105','106','
  options:{maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8,padding:16}}},scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true}}}});
 
 const ep=['101','102','103','104','105','106','107','108'];
-const eSent=[160,202,260,189,74,0,1,0], eAct=[2,0,56,94,61,0,0,0], eNS=[6,0,0,6,66,109,63,132], eHeld=[14,10,17,17,15,0,0,0];
+const eSent=[160,202,258,191,74,0,1,0], eAct=[2,0,56,94,61,0,0,0], eNS=[6,0,0,6,66,109,63,132], eHeld=[14,10,17,17,15,0,0,0];
 new Chart(epStatus,{type:'bar',data:{labels:ep,datasets:[
  {label:'Sent to Cream',data:eSent,backgroundColor:C.green,borderRadius:4,stack:'s'},
  {label:'Active (in prod)',data:eAct,backgroundColor:C.blue,borderRadius:4,stack:'s'},
@@ -176,8 +181,12 @@ new Chart(epStatus,{type:'bar',data:{labels:ep,datasets:[
  {label:'Held / cut',data:eHeld,backgroundColor:'#3a4353',borderRadius:4,stack:'s'}]},
  options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8,padding:14}},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.x}}},
  scales:{x:{grid:gridY,stacked:true,beginAtZero:true},y:{grid:noG,stacked:true}}}});
-const sched=[['101','MELTDOWN','-','May 25','Delivered'],['102','UNDER PRESSURE','May 13','Jun 16','Delivered'],['103','RISKY BUSINESS','Jun 1','Jul 2','Finishing'],['104','NO WAY OUT','Jun 8','Jul 10','Behind - active backlog'],['105','NATURE UNLEASHED','Jul 13','Aug 14','Due today'],['106','BREAKING POINT','Jul 30-Aug 7','Sep 3','Not started'],['107','ONE WRONG MOVE','Aug 10','Sep 17','Not started'],['108','HIDDEN JEOPARDY','Aug 17','Sep 24','Not started']];
-const sc={'Delivered':C.green,'Finishing':C.blue,'Due today':C.amber,'Behind - active backlog':C.red,'Not started':C.dim2};
+</script>
+<script>
+var C=window.C||{ink:"#f2f5fa",dim:"#9aa6ba",dim2:"#5f6a7e",blue:"#5b9dff",cyan:"#43e6d0",green:"#54e08a",amber:"#ffb020",red:"#ff5d6c",purple:"#b98cff"};
+
+const sched=[['101','MELTDOWN','-','May 25','Delivered'],['102','UNDER PRESSURE','May 13','Jun 16','Delivered'],['103','RISKY BUSINESS','Jun 1','Jul 2','Finishing'],['104','NO WAY OUT','Jun 8','Jul 10','Behind - active backlog'],['105','NATURE UNLEASHED','Jul 13','Aug 14 — pushed','Pushed — date TBC'],['106','BREAKING POINT','Jul 30-Aug 7','Sep 3','Not started'],['107','ONE WRONG MOVE','Aug 10','Sep 17','Not started'],['108','HIDDEN JEOPARDY','Aug 17','Sep 24','Not started']];
+const sc={'Delivered':C.green,'Finishing':C.blue,'Pushed — date TBC':C.amber,'Behind - active backlog':C.red,'Not started':C.dim2};
 document.getElementById('schedBody').innerHTML=sched.map(function(r){var td='padding:6px 8px;border-bottom:1px solid #202b40';return '<tr><td style="'+td+';font-weight:700">'+r[0]+'</td><td style="'+td+';color:var(--dim)">'+r[1]+'</td><td style="'+td+'">'+r[2]+'</td><td style="'+td+'">'+r[3]+'</td><td style="'+td+';color:'+(sc[r[4]]||C.dim)+';font-weight:600">'+r[4]+'</td></tr>';}).join('');
 
 
@@ -186,5 +195,14 @@ new Chart(respinStory,{type:'bar',data:{labels:rs.map(r=>r[0]),datasets:[{data:r
  backgroundColor:rs.map(r=>r[2]),borderRadius:6,borderSkipped:false}]},
  options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.x+' re-spins'}}},
  scales:{x:{grid:gridY,beginAtZero:true},y:{grid:noG,ticks:{font:{size:11}}}}}});
+
+const team=[['Marty',['104','105']],['JJ',['103']],['Sacha',['103','105','106']],['Will',['103','104']],['Kieran',['103','104']]];
+const todo={'101':8,'102':0,'103':56,'104':100,'105':127,'106':109,'107':63,'108':132};
+const epc={'103':C.blue,'104':C.red,'105':C.amber,'106':C.purple,'101':C.green,'102':C.green,'107':C.dim2,'108':C.dim2};
+document.getElementById('teamBody').innerHTML=team.map(function(t){var load=t[1].reduce(function(a,e){return a+(todo[e]||0);},0);var eps=t[1].map(function(e){return '<span style="font-size:.68rem;font-weight:700;padding:.1rem .45rem;border-radius:99px;background:'+(epc[e]||C.dim2)+'22;color:'+(epc[e]||C.dim)+';margin-right:3px">'+e+'</span>';}).join('');var w=Math.round(load/132*100);return '<div style="display:flex;align-items:center;gap:.6rem;padding:.42rem 0;border-bottom:1px solid #1b2436"><span style="font-weight:700;min-width:4.2rem;font-size:.86rem">'+t[0]+'</span><span style="min-width:7rem">'+eps+'</span><span style="flex:1;height:7px;background:#141b28;border-radius:99px;overflow:hidden"><span style="display:block;height:100%;width:'+w+'%;background:linear-gradient(90deg,'+C.blue+','+C.purple+')"></span></span><span style="color:var(--dim);font-size:.76rem;min-width:5.2rem;text-align:right">'+load+' to do</span></div>';}).join('')+'<div style="color:var(--dim2);font-size:.72rem;padding-top:.5rem">107 &amp; 108 have no owner assigned yet — 195 shots unallocated.</div>';
+const MS={'2026-08-14':[['105','2nd delivery - PUSHED','r']],'2026-08-10':[['107','1st requests','b']],'2026-08-17':[['108','1st requests','b']],'2026-08-20':[['104','FC due','a']],'2026-08-21':[['103','PL due','a']],'2026-09-03':[['106','2nd delivery','g']],'2026-09-17':[['107','2nd delivery','g']],'2026-09-24':[['108','2nd delivery','g']],'2026-07-30':[['106','1st requests','b']]};
+const MC={r:C.red,b:C.blue,g:C.green,a:C.amber};const TODAY='2026-08-14';
+function month(y,m,name){var first=new Date(Date.UTC(y,m,1)).getUTCDay();first=(first+6)%7;var days=new Date(Date.UTC(y,m+1,0)).getUTCDate();var h='<div style="margin-bottom:.7rem"><div style="font-weight:700;font-size:.8rem;margin-bottom:.3rem">'+name+'</div><div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px">';['M','T','W','T','F','S','S'].forEach(function(d){h+='<div style="color:var(--dim2);font-size:.6rem;text-align:center;padding:2px">'+d+'</div>';});for(var i=0;i<first;i++)h+='<div></div>';for(var d=1;d<=days;d++){var key=y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');var ev=MS[key];var isT=key===TODAY;var bg=isT?'background:'+C.amber+'33;border:1px solid '+C.amber:(ev?'background:'+MC[ev[0][2]]+'22':'');h+='<div title="'+(ev?ev[0][0]+' '+ev[0][1]:'')+'" style="text-align:center;font-size:.66rem;padding:3px 0;border-radius:4px;'+bg+';color:'+(ev?MC[ev[0][2]]:'var(--dim)')+';font-weight:'+(ev||isT?'700':'400')+'">'+d+'</div>';}return h+'</div></div>';}
+document.getElementById('calBody').innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">'+month(2026,7,'August 2026')+month(2026,8,'September 2026')+'</div><div style="display:flex;gap:.8rem;flex-wrap:wrap;font-size:.68rem;color:var(--dim);margin-top:.3rem"><span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'+C.blue+';margin-right:4px"></i>1st requests</span><span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'+C.green+';margin-right:4px"></i>2nd delivery</span><span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'+C.red+';margin-right:4px"></i>pushed</span><span><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:'+C.amber+';margin-right:4px"></i>today / cut due</span></div>';
 </script>
 </body></html>

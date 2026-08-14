@@ -1,103 +1,155 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CTD — GEN AI Reports</title>
-<style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CTD — GEN AI Reports</title><style>
 :root{
   --bg:#07080c; --panel:rgba(255,255,255,.038); --panel2:rgba(255,255,255,.062);
-  --stroke:rgba(255,255,255,.09); --stroke2:rgba(255,255,255,.15);
+  --stroke:rgba(255,255,255,.09); --stroke2:rgba(255,255,255,.15); --line:rgba(255,255,255,.09);
   --ink:#f2f5fa; --dim:#9aa6ba; --dim2:#5f6a7e;
-  --blue:#5b9dff; --green:#54e08a; --amber:#ffb020; --purple:#b98cff;
+  --blue:#5b9dff; --green:#54e08a; --amber:#ffb020; --purple:#b98cff; --red:#ff6b6b; --cyan:#43e6d0;
   --g1:#7c5cff; --g2:#4d9bff; --g3:#37e6c8;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);
-  font:16px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;
+  font:16px/1.62 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",system-ui,sans-serif;
   min-height:100vh;-webkit-font-smoothing:antialiased;letter-spacing:-.006em;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0;z-index:-2;
-  background:radial-gradient(900px 520px at 12% -8%,rgba(124,92,255,.22),transparent 60%),radial-gradient(760px 480px at 92% 4%,rgba(55,230,200,.14),transparent 62%),radial-gradient(700px 700px at 78% 108%,rgba(77,155,255,.13),transparent 60%),var(--bg)}
+  background:radial-gradient(900px 520px at 12% -8%,rgba(124,92,255,.22),transparent 60%),
+             radial-gradient(760px 480px at 92% 4%,rgba(55,230,200,.14),transparent 62%),
+             radial-gradient(700px 700px at 78% 108%,rgba(77,155,255,.13),transparent 60%),var(--bg)}
 body::after{content:"";position:fixed;inset:0;z-index:-1;opacity:.5;pointer-events:none;
-  background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
-  background-size:44px 44px;-webkit-mask-image:radial-gradient(circle at 50% 12%,#000 0%,transparent 74%);mask-image:radial-gradient(circle at 50% 12%,#000 0%,transparent 74%)}
-.wrap{max-width:980px;margin:0 auto;padding:3rem 1.6rem 5rem}
-.brand{display:flex;align-items:center;gap:.55rem;font-weight:700;letter-spacing:.02em;font-size:1rem;margin-bottom:2.4rem}
-.mark{width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg,var(--g1),var(--g2) 55%,var(--g3));box-shadow:0 0 24px rgba(93,157,255,.55);position:relative}
-.mark::after{content:"";position:absolute;inset:6px;border-radius:5px;background:var(--bg)}
-.brand small{color:var(--dim);font-weight:600;letter-spacing:.22em;font-size:.62rem;text-transform:uppercase;margin-left:.1rem}
-.kick{font:700 .72rem/1 ui-monospace,"SF Mono",monospace;letter-spacing:.3em;background:linear-gradient(90deg,var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
-h1{font-size:2.9rem;margin:.5rem 0 .35rem;letter-spacing:-.03em;font-weight:800;line-height:1.03}
-.dek{color:var(--dim);max-width:62ch;margin:0 0 2.2rem}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-a.card{position:relative;display:block;text-decoration:none;color:inherit;overflow:hidden;
-  background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--stroke);border-radius:18px;padding:1.35rem 1.45rem;transition:.18s;
-  box-shadow:0 10px 40px -28px rgba(0,0,0,.9)}
-a.card::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg,transparent,var(--acc,var(--blue)),transparent);opacity:.75}
-a.card:hover{border-color:var(--stroke2);transform:translateY(-3px);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04))}
-a.card.feat{grid-column:span 2;background:linear-gradient(120deg,rgba(124,92,255,.16),rgba(77,155,255,.08),var(--panel))}
-.tag{font:700 .64rem/1 ui-monospace,"SF Mono",monospace;letter-spacing:.15em;color:var(--dim2)}
-.card h2{font-size:1.18rem;margin:.5rem 0 .3rem;font-weight:750;letter-spacing:-.01em;border:0;padding:0}
-.card.feat h2{font-size:1.55rem}
-.card p{color:var(--dim);font-size:.88rem;margin:0}
-.arrow{color:var(--blue);font-size:.85rem;margin-top:.7rem;display:inline-block;font-weight:600}
-.kpis{display:flex;gap:1.8rem;flex-wrap:wrap;margin:1.4rem 0 0}
-.kpis div{font-size:.8rem;color:var(--dim)}
-.kpis b{display:block;font-size:1.6rem;color:var(--ink);font-weight:800;letter-spacing:-.03em}
-.foot{color:var(--dim2);font-size:.78rem;margin-top:2.6rem;text-align:center}
-@media(max-width:720px){.grid{grid-template-columns:1fr}a.card.feat{grid-column:span 1}h1{font-size:2.2rem}}
+  background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:44px 44px;
+  -webkit-mask-image:radial-gradient(circle at 50% 12%,#000 0%,transparent 74%);
+  mask-image:radial-gradient(circle at 50% 12%,#000 0%,transparent 74%)}
+
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px) saturate(1.4);
+  -webkit-backdrop-filter:blur(18px) saturate(1.4);background:rgba(10,12,18,.72);
+  border-bottom:1px solid var(--line)}
+.nav .in{max-width:1120px;margin:0 auto;padding:.75rem 1.6rem;display:flex;align-items:center;gap:.9rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.5rem;font-weight:700;letter-spacing:.02em;font-size:.95rem}
+.mark{width:24px;height:24px;border-radius:8px;background:linear-gradient(135deg,var(--g1),var(--g2) 55%,var(--g3));
+  box-shadow:0 0 22px rgba(93,157,255,.5);position:relative;flex:none}
+.mark::after{content:"";position:absolute;inset:5px;border-radius:4px;background:var(--bg)}
+.brand small{color:var(--dim);font-weight:600;letter-spacing:.2em;font-size:.58rem;text-transform:uppercase}
+.live{display:inline-flex;align-items:center;gap:.35rem;font:700 .58rem/1 ui-monospace,"SF Mono",monospace;
+  letter-spacing:.18em;color:var(--green);border:1px solid rgba(84,224,138,.3);
+  background:rgba(84,224,138,.08);padding:.32rem .5rem;border-radius:999px}
+.live i{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+.navlinks{margin-left:auto;display:flex;gap:.15rem;flex-wrap:wrap}
+.navlinks a{color:var(--dim);text-decoration:none;font-size:.82rem;font-weight:600;
+  padding:.34rem .6rem;border-radius:9px;transition:.15s;white-space:nowrap}
+.navlinks a:hover{color:var(--ink);background:rgba(255,255,255,.06)}
+.navlinks a.active{color:var(--ink);background:rgba(255,255,255,.09)}
+.navlinks a.hub{color:var(--dim2)}
+
+.wrap{max-width:1120px;margin:0 auto;padding:2.4rem 1.6rem 5rem}
+.narrow{max-width:900px}
+.hero{margin-bottom:2.2rem}
+.eyebrow,.kick{font:700 .68rem/1 ui-monospace,"SF Mono",monospace;letter-spacing:.28em;
+  background:linear-gradient(90deg,var(--g2),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{font-size:2.7rem;margin:.55rem 0 .4rem;letter-spacing:-.03em;font-weight:800;line-height:1.04}
+.dek,.hero p{color:var(--dim);max-width:70ch;margin:0}
+.stamp{color:var(--dim2);font-size:.82rem}
+
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--stroke);
+  border-radius:18px;padding:1.3rem 1.4rem;box-shadow:0 10px 40px -28px rgba(0,0,0,.9)}
+h2{font-size:1.5rem;font-weight:780;letter-spacing:-.02em;margin:2.6rem 0 .5rem;
+  padding-top:1.6rem;border-top:1px solid var(--stroke)}
+h2 .n{color:var(--dim2);font:700 .78rem/1 ui-monospace,monospace;letter-spacing:.2em;
+  display:block;margin-bottom:.5rem}
+h3{font-size:1.02rem;font-weight:720;letter-spacing:-.01em;margin:0 0 .9rem}
+p{margin:.7rem 0}
+.sub{color:var(--dim);font-size:.88rem;margin:.2rem 0 1rem}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:1.4rem 0 0}
+.kpi{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--stroke);
+  border-radius:16px;padding:1rem 1.1rem;position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--acc,var(--blue)),transparent);opacity:.8}
+.kpi b{display:block;font-size:1.85rem;font-weight:820;letter-spacing:-.035em;line-height:1.1}
+.kpi span{color:var(--dim);font-size:.78rem;display:block;margin-top:.15rem}
+.kpi em{font-style:normal;color:var(--dim2);font-size:.7rem;display:block;margin-top:.35rem}
+
+table{width:100%;border-collapse:collapse;margin:.4rem 0 .2rem;font-size:.9rem}
+th{text-align:left;color:var(--dim2);font:700 .66rem/1.4 ui-monospace,monospace;letter-spacing:.14em;
+  text-transform:uppercase;padding:.55rem .7rem;border-bottom:1px solid var(--stroke)}
+td{padding:.6rem .7rem;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tbody tr:hover{background:rgba(255,255,255,.025)}
+.big{font-weight:750}
+.mono{font:600 .84rem/1.4 ui-monospace,"SF Mono",monospace}
+
+.bar{height:7px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;min-width:70px}
+.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--g2),var(--g3))}
+
+.tag{font:700 .6rem/1 ui-monospace,monospace;letter-spacing:.12em;padding:.3rem .5rem;
+  border-radius:6px;display:inline-block;white-space:nowrap}
+.t-green{color:#8ff0b6;background:rgba(84,224,138,.13)}
+.t-blue{color:#a9cdff;background:rgba(91,157,255,.14)}
+.t-amber{color:#ffd28a;background:rgba(255,176,32,.14)}
+.t-red{color:#ffb0b0;background:rgba(255,107,107,.15)}
+.t-dim{color:var(--dim);background:rgba(255,255,255,.06)}
+.t-purple{color:#dcc4ff;background:rgba(185,140,255,.15)}
+
+.note{color:var(--dim);font-size:.85rem;border-left:2px solid var(--stroke2);
+  padding:.1rem 0 .1rem .9rem;margin:1rem 0}
+.foot{color:var(--dim2);font-size:.78rem;margin-top:3rem;padding-top:1.4rem;
+  border-top:1px solid var(--stroke);text-align:center}
+a{color:var(--blue)}
+@media(max-width:820px){
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  h1{font-size:2.1rem}
+  .wrap{padding:1.6rem 1rem 4rem}
+  table{font-size:.82rem}
+  td,th{padding:.5rem .4rem}
+}
+@media print{
+  body::before,body::after{display:none}
+  body{background:#fff;color:#111}
+  .nav{display:none}
+}
+
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:1.6rem}
+a.tile{position:relative;display:block;text-decoration:none;color:inherit;overflow:hidden;
+  background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--stroke);
+  border-radius:18px;padding:1.35rem 1.45rem;transition:.18s;box-shadow:0 10px 40px -28px rgba(0,0,0,.9)}
+a.tile::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--acc,var(--blue)),transparent);opacity:.8}
+a.tile:hover{border-color:var(--stroke2);transform:translateY(-3px);
+  background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04))}
+a.tile.feat{grid-column:span 2;background:linear-gradient(120deg,rgba(124,92,255,.16),rgba(77,155,255,.08),var(--panel))}
+.tile .lbl{font:700 .62rem/1 ui-monospace,monospace;letter-spacing:.15em;color:var(--dim2)}
+.tile h2{font-size:1.16rem;margin:.5rem 0 .3rem;font-weight:750;letter-spacing:-.01em;border:0;padding:0}
+.tile.feat h2{font-size:1.5rem}
+.tile p{color:var(--dim);font-size:.87rem;margin:0}
+.arrow{color:var(--blue);font-size:.84rem;margin-top:.7rem;display:inline-block;font-weight:600}
+.inline{display:flex;gap:1.6rem;flex-wrap:wrap;margin:1.2rem 0 0}
+.inline div{font-size:.78rem;color:var(--dim)}
+.inline b{display:block;font-size:1.5rem;color:var(--ink);font-weight:820;letter-spacing:-.03em}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}a.tile.feat{grid-column:span 1}}
 </style></head><body>
-<div class="wrap">
-<div class="brand"><span class="mark"></span>CTD <small>Gen AI</small></div>
+<nav class="nav"><div class="in"><span class="brand"><span class="mark"></span>CTD <small>Gen AI</small></span><span class="live"><i></i>LIVE</span><span class="navlinks"><a href="index.html" class="hub active">← All reports</a><a href="CTD_AI_Dashboard.html">Dashboard</a><a href="CTD_Calendar.html">Calendar</a><a href="CTD_AI_Master_Report.html">Master</a><a href="CTD_Active_Shots.html">Shots</a><a href="CTD_AI_In_The_Cuts.html">In the Cuts</a><a href="CTD_AI_Meeting_Report.html">Accuracy</a><a href="CTD_AI_Team_Notes.html">Team Notes</a></span></div></nav>
+<div class="wrap narrow">
 <div class="kick">CLOSE TO DISASTER · GEN AI</div>
 <h1>Production Reports</h1>
-<p class="dek">Read-only reporting on the generative-AI pipeline — how much AI is in the cuts, how efficiently we're generating it, re-spin load, and the state of every shot. Sourced from the CTD Airtable.</p>
+<p class="dek">Read-only reporting on the generative-AI pipeline — how much AI is in the cuts, how
+efficiently we're generating it, re-spin load, the state of every shot, and the full production
+calendar. Sourced from the CTD Airtable and the 08.12 day-to-day schedule.</p>
 
-<div class="grid">
-  <a class="card feat" href="CTD_AI_Dashboard.html" style="--acc:var(--purple)">
-    <div class="tag">LIVE · DARK · CHARTS</div>
-    <h2>Production Dashboard →</h2>
-    <p>Visual overview: AI share, efficiency &amp; churn trends, pipeline split, and re-spin load by story.</p>
-    <div class="kpis">
-      <div><b>~33%</b>AI per episode</div>
-      <div><b>2.4:1</b>generate-to-use</div>
-      <div><b>0.46</b>re-spins/used shot</div>
-      <div><b>870</b>sent to Cream</div>
-    </div>
-  </a>
-
-  <a class="card" href="CTD_AI_Master_Report.html" style="--acc:var(--blue)">
-    <div class="tag">FULL BREAKDOWN</div>
-    <h2>Master Report</h2>
-    <p>Every metric with method &amp; sources — cuts, efficiency, pipeline, re-spins, by episode.</p>
-    <span class="arrow">Open →</span>
-  </a>
-
-  <a class="card" href="CTD_Active_Shots.html" style="--acc:var(--amber)">
-    <div class="tag">WORKLOAD</div>
-    <h2>Active Shots</h2>
-    <p>Every open shot + re-spin, grouped by story, with the workload analysis.</p>
-    <span class="arrow">Open →</span>
-  </a>
-
-  <a class="card" href="CTD_AI_Meeting_Report.html" style="--acc:var(--green)">
-    <div class="tag">ACCURACY</div>
-    <h2>Accuracy Audit</h2>
-    <p>Creative direction vs. the historical record — overview, full audit, continuity.</p>
-    <span class="arrow">Open →</span>
-  </a>
-
-  <a class="card" href="CTD_AI_In_The_Cuts.html" style="--acc:var(--cyan,#43e6d0)">
-    <div class="tag">FOCUS</div>
-    <h2>AI in the Cuts</h2>
-    <p>AI share and efficiency, on its own.</p>
-    <span class="arrow">Open →</span>
-  </a>
-
-  <a class="card" href="CTD_AI_Master_Report.pdf" style="--acc:var(--dim)">
-    <div class="tag">PRINT</div>
-    <h2>Master Report (PDF)</h2>
-    <p>Print version for the meeting handout.</p>
-    <span class="arrow">Download →</span>
-  </a>
+<div class="grid2">
+<a class="tile feat" href="CTD_AI_Dashboard.html" style="--acc:var(--purple)"><div class="lbl">LIVE · DARK · CHARTS</div><h2>Production Dashboard →</h2><p>Visual overview: AI share, efficiency &amp; churn trends, pipeline split, tooling and re-spin load by story.</p><div class="inline">
+      <div><b>35.9%</b>AI per episode</div>
+      <div><b>1.75:1</b>generate-to-use (104)</div>
+      <div><b>895</b>shotcodes at Cream</div>
+      <div><b>5,032</b>clips generated</div>
+      </div></a>
+<a class="tile" href="CTD_Calendar.html" style="--acc:var(--cyan)"><div class="lbl">NEW · SCHEDULE</div><h2>Production Calendar</h2><p>Every dated thing on the show — AI requests, deliveries, shoot days, cut deadlines, edit weeks and holidays.</p><span class="arrow">Open &rarr;</span></a>
+<a class="tile" href="CTD_AI_Master_Report.html" style="--acc:var(--blue)"><div class="lbl">FULL BREAKDOWN</div><h2>Master Report</h2><p>Every metric with method &amp; sources — cuts, efficiency, pipeline, re-spins, by episode.</p><span class="arrow">Open &rarr;</span></a>
+<a class="tile" href="CTD_Active_Shots.html" style="--acc:var(--amber)"><div class="lbl">WORKLOAD</div><h2>Active Shots</h2><p>Every open shot grouped by episode and story, with assignees and network priorities.</p><span class="arrow">Open &rarr;</span></a>
+<a class="tile" href="CTD_AI_In_The_Cuts.html" style="--acc:var(--cyan)"><div class="lbl">FOCUS</div><h2>AI in the Cuts</h2><p>AI share and generate-to-use efficiency, on its own.</p><span class="arrow">Open &rarr;</span></a>
+<a class="tile" href="CTD_AI_Meeting_Report.html" style="--acc:var(--green)"><div class="lbl">ACCURACY</div><h2>Accuracy Audit</h2><p>Creative direction vs. the historical record — overview, full audit, continuity.</p><span class="arrow">Open &rarr;</span></a>
+<a class="tile" href="CTD_AI_Team_Notes.html" style="--acc:var(--green)"><div class="lbl">QUICK REFERENCE</div><h2>Team Notes</h2><p>The short list: what to change before generating, episodes 102–108.</p><span class="arrow">Open &rarr;</span></a>
+<a class="tile" href="CTD_AI_Master_Report.pdf" style="--acc:var(--dim)"><div class="lbl">PRINT</div><h2>Master Report (PDF)</h2><p>Print version for the meeting handout.</p><span class="arrow">Open &rarr;</span></a>
+<a class="tile" href="ctd_schedule.csv" style="--acc:var(--dim)"><div class="lbl">DATA</div><h2>Episode summary (.csv)</h2><p>One row per episode: requests, delivery dates, shot counts, generation and AI share.</p><span class="arrow">Open &rarr;</span></a>
 </div>
-
-<div class="foot">Updated Aug 14, 2026 · Read-only — nothing written to the base · GEN AI REPORTS · ASSETS · SHOTCODES</div>
-</div></body></html>
+<div class="foot">Compiled read-only from the CTD Airtable — nothing was written to the base · GEN AI SHOTCODES · GEN AI ASSETS · GEN AI REPORTS · CUTS TO NETWORK · SHOOT DATES · day-to-day schedule 08.12 · August 14, 2026</div></div></body></html>

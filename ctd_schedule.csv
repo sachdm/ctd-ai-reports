@@ -1,9 +1,9 @@
-Episode,Title,1st Requests,2nd Delivery Due,AI Status,Shots Sent,Shots Active,Not Started,Total
-101,MELTDOWN,-,May 25,Delivered,160,2,6,182
-102,UNDER PRESSURE,May 13,Jun 16,Delivered,202,0,0,212
-103,RISKY BUSINESS,Jun 1,Jul 2,Finishing,260,56,0,333
-104,NO WAY OUT,Jun 8,Jul 10,Behind - active backlog,189,94,6,306
-105,NATURE UNLEASHED,Jul 13,Aug 14,Due today,74,61,66,216
-106,BREAKING POINT,Jul 30-Aug 7,Sep 3,Not started,0,0,109,109
-107,ONE WRONG MOVE,Aug 10,Sep 17,Not started,1,0,63,64
-108,HIDDEN JEOPARDY,Aug 17,Sep 24,Not started,0,0,132,132
+Episode,Title,1st Requests,2nd Delivery Due,AI Status,Shots Sent,Shots Active,Not Started,Held/Cancelled,Total Shotcodes,Clips Generated,Re-spins,Latest Cut,AI Share %
+101,MELTDOWN,—,May 25,Locked — AI delivered,160,2,7,14,183,1896,812,Picture Lock (conformed) 2026-07-24,29.7
+102,UNDER PRESSURE,May 13–20,Jun 16,Locked — AI delivered,202,0,2,10,214,1163,501,Picture Lock 2026-08-12,41.1
+103,RISKY BUSINESS,Jun 1–5,Jul 2,Behind — active backlog,258,56,2,17,333,1050,200,Fine Cut 2026-08-07,33.3
+104,NO WAY OUT,Jun 2–8,Jul 10,Behind — active backlog,191,69,6,42,308,624,109,Rough Cut 2026-07-27,38.9
+105,NATURE UNLEASHED,Jul 13–17,Aug 14,2nd delivery due today,74,61,66,15,216,269,0,—,
+106,BREAKING POINT,Jul 30–Aug 7,Sep 3,1st requests out,0,0,110,0,110,0,0,—,
+107,ONE WRONG MOVE,Aug 10–13,Sep 17,1st requests out,1,0,63,0,64,6,0,—,
+108,HIDDEN JEOPARDY,Aug 17–21,Sep 24,Requests start Aug 17,0,0,132,0,132,0,0,—,

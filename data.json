@@ -1,0 +1,1239 @@
+{
+ "generated": "2026-08-14",
+ "counts": {
+  "shotcodes": 1597,
+  "assets": 5032,
+  "placements": 3892,
+  "episodes": 8,
+  "stories": 112,
+  "cuts": 34,
+  "shootDays": 21
+ },
+ "pipeline": {
+  "Not started": 416,
+  "Sent to Cream": 895,
+  "First request": 145,
+  "PAUSE": 52,
+  "Cancelled": 46,
+  "In Progress": 27,
+  "Vetting": 16
+ },
+ "sentToCream": 895,
+ "activeTotal": 188,
+ "notStartedTotal": 416,
+ "heldTotal": 98,
+ "assetsTotal": 5032,
+ "assetsIngested": 4974,
+ "respinsTotal": 1622,
+ "openRespins": 123,
+ "missingPrompt": 4,
+ "tools": {
+  "Chat GPT": 3619,
+  "Krea": 3900,
+  "Nano Banana": 274,
+  "Kling": 53
+ },
+ "creators": {
+  "WS": 1433,
+  "Marty": 282,
+  "JJ": 785,
+  "SM": 1185,
+  "Sacha": 20,
+  "KDK": 118,
+  "Paul": 311,
+  "PAUL/IAN": 461,
+  "james": 409,
+  "Will": 25,
+  "Unassigned": 3
+ },
+ "epShot": {
+  "101": {
+   "total": 183,
+   "sent": 160,
+   "active": 2,
+   "notStarted": 7,
+   "held": 14,
+   "byStatus": {
+    "Sent to Cream": 160,
+    "PAUSE": 9,
+    "Cancelled": 5,
+    "Not started": 7,
+    "First request": 2
+   }
+  },
+  "102": {
+   "total": 214,
+   "sent": 202,
+   "active": 0,
+   "notStarted": 2,
+   "held": 10,
+   "byStatus": {
+    "Sent to Cream": 202,
+    "PAUSE": 6,
+    "Not started": 2,
+    "Cancelled": 4
+   }
+  },
+  "103": {
+   "total": 333,
+   "sent": 258,
+   "active": 56,
+   "notStarted": 2,
+   "held": 17,
+   "byStatus": {
+    "Sent to Cream": 258,
+    "First request": 21,
+    "Cancelled": 2,
+    "In Progress": 19,
+    "Vetting": 16,
+    "PAUSE": 15,
+    "Not started": 2
+   }
+  },
+  "104": {
+   "total": 308,
+   "sent": 191,
+   "active": 69,
+   "notStarted": 6,
+   "held": 42,
+   "byStatus": {
+    "Sent to Cream": 191,
+    "PAUSE": 7,
+    "Not started": 6,
+    "Cancelled": 35,
+    "First request": 61,
+    "In Progress": 8
+   }
+  },
+  "105": {
+   "total": 216,
+   "sent": 74,
+   "active": 61,
+   "notStarted": 66,
+   "held": 15,
+   "byStatus": {
+    "Not started": 66,
+    "PAUSE": 15,
+    "Sent to Cream": 74,
+    "First request": 61
+   }
+  },
+  "106": {
+   "total": 110,
+   "sent": 0,
+   "active": 0,
+   "notStarted": 110,
+   "held": 0,
+   "byStatus": {
+    "Not started": 110
+   }
+  },
+  "107": {
+   "total": 64,
+   "sent": 1,
+   "active": 0,
+   "notStarted": 63,
+   "held": 0,
+   "byStatus": {
+    "Not started": 63,
+    "Sent to Cream": 1
+   }
+  },
+  "108": {
+   "total": 132,
+   "sent": 0,
+   "active": 0,
+   "notStarted": 132,
+   "held": 0,
+   "byStatus": {
+    "Not started": 132
+   }
+  },
+  "unassigned": {
+   "total": 37,
+   "sent": 9,
+   "active": 0,
+   "notStarted": 28,
+   "held": 0,
+   "byStatus": {
+    "Not started": 28,
+    "Sent to Cream": 9
+   }
+  }
+ },
+ "epAsset": {
+  "101": {
+   "generated": 1896,
+   "ingested": 1896,
+   "respins": 812,
+   "openRespins": 0,
+   "distinctShotcodes": 150,
+   "firstOutput": "2026-04-08",
+   "lastOutput": "2026-08-04"
+  },
+  "102": {
+   "generated": 1163,
+   "ingested": 1163,
+   "respins": 501,
+   "openRespins": 12,
+   "distinctShotcodes": 191,
+   "firstOutput": "2026-05-25",
+   "lastOutput": "2026-08-12"
+  },
+  "103": {
+   "generated": 1050,
+   "ingested": 1050,
+   "respins": 200,
+   "openRespins": 25,
+   "distinctShotcodes": 255,
+   "firstOutput": "2026-06-05",
+   "lastOutput": "2026-08-13"
+  },
+  "104": {
+   "generated": 624,
+   "ingested": 568,
+   "respins": 109,
+   "openRespins": 85,
+   "distinctShotcodes": 189,
+   "firstOutput": "2026-06-05",
+   "lastOutput": "2026-08-14"
+  },
+  "105": {
+   "generated": 269,
+   "ingested": 267,
+   "respins": 0,
+   "openRespins": 0,
+   "distinctShotcodes": 74,
+   "firstOutput": "2026-07-23",
+   "lastOutput": "2026-08-13"
+  },
+  "106": {
+   "generated": 0,
+   "ingested": 0,
+   "respins": 0,
+   "openRespins": 0,
+   "distinctShotcodes": 0,
+   "firstOutput": null,
+   "lastOutput": null
+  },
+  "107": {
+   "generated": 6,
+   "ingested": 6,
+   "respins": 0,
+   "openRespins": 0,
+   "distinctShotcodes": 1,
+   "firstOutput": "2026-07-16",
+   "lastOutput": "2026-07-16"
+  },
+  "108": {
+   "generated": 0,
+   "ingested": 0,
+   "respins": 0,
+   "openRespins": 0,
+   "distinctShotcodes": 0,
+   "firstOutput": null,
+   "lastOutput": null
+  },
+  "unassigned": {
+   "generated": 24,
+   "ingested": 24,
+   "respins": 0,
+   "openRespins": 1,
+   "distinctShotcodes": 5,
+   "firstOutput": "2026-06-10",
+   "lastOutput": "2026-07-30"
+  }
+ },
+ "epCut": {
+  "101": {
+   "stage": "Picture Lock (conformed)",
+   "stageCode": "PL",
+   "date": "2026-07-24",
+   "key": "CTD_101_PL_20260724",
+   "conformed": true,
+   "placements": 338,
+   "aiSeconds": 766.39,
+   "aiTime": "12:46",
+   "runtimeSeconds": 2582.42,
+   "runtime": "43:02",
+   "share": 29.7,
+   "generated": 1896,
+   "genToUse": 5.61,
+   "respins": 812,
+   "respinsPerUsed": 2.4
+  },
+  "102": {
+   "stage": "Picture Lock",
+   "stageCode": "PL",
+   "date": "2026-08-12",
+   "key": "CTD_102_PL_20260812",
+   "conformed": false,
+   "placements": 471,
+   "aiSeconds": 1137.2,
+   "aiTime": "18:57",
+   "runtimeSeconds": 2766.29,
+   "runtime": "46:06",
+   "share": 41.1,
+   "generated": 1163,
+   "genToUse": 2.47,
+   "respins": 501,
+   "respinsPerUsed": 1.06
+  },
+  "103": {
+   "stage": "Fine Cut",
+   "stageCode": "FC",
+   "date": "2026-08-07",
+   "key": "CTD_103_FC_20260807",
+   "conformed": false,
+   "placements": 415,
+   "aiSeconds": 859.91,
+   "aiTime": "14:20",
+   "runtimeSeconds": 2580.92,
+   "runtime": "43:01",
+   "share": 33.3,
+   "generated": 1050,
+   "genToUse": 2.53,
+   "respins": 200,
+   "respinsPerUsed": 0.48
+  },
+  "104": {
+   "stage": "Rough Cut",
+   "stageCode": "RC",
+   "date": "2026-07-27",
+   "key": "CTD_104_RC_20260727",
+   "conformed": false,
+   "placements": 357,
+   "aiSeconds": 1026.53,
+   "aiTime": "17:07",
+   "runtimeSeconds": 2640.17,
+   "runtime": "44:00",
+   "share": 38.9,
+   "generated": 624,
+   "genToUse": 1.75,
+   "respins": 109,
+   "respinsPerUsed": 0.31
+  },
+  "105": null,
+  "106": null,
+  "107": null,
+  "108": null
+ },
+ "allCuts": [
+  {
+   "key": "CTD_101_RC2_20260626",
+   "ep": "101",
+   "stage": "RC2",
+   "stageLabel": "Rough Cut 2",
+   "date": "2026-06-26",
+   "placements": 280,
+   "aiSeconds": 688.34,
+   "runtimeSeconds": 2654.42,
+   "maxSeqOut": "01:44:14:10",
+   "share": 25.9,
+   "order": 2
+  },
+  {
+   "key": "CTD_101_FC_20260713",
+   "ep": "101",
+   "stage": "FC",
+   "stageLabel": "Fine Cut",
+   "date": "2026-07-13",
+   "placements": 341,
+   "aiSeconds": 770.6,
+   "runtimeSeconds": 2616.29,
+   "maxSeqOut": "01:43:36:07",
+   "share": 29.5,
+   "order": 3
+  },
+  {
+   "key": "CTD_101_SNAPINS_20260714",
+   "ep": "101",
+   "stage": "SNAPINS",
+   "stageLabel": "Snap-ins",
+   "date": "2026-07-14",
+   "placements": 27,
+   "aiSeconds": 92.2,
+   "runtimeSeconds": 262.54,
+   "maxSeqOut": "01:04:22:13",
+   "share": 35.1,
+   "order": 3
+  },
+  {
+   "key": "CTD_101_PL_20260724",
+   "ep": "101",
+   "stage": "PL",
+   "stageLabel": "Picture Lock",
+   "date": "2026-07-24",
+   "placements": 338,
+   "aiSeconds": 766.39,
+   "runtimeSeconds": 2582.42,
+   "maxSeqOut": "01:43:02:10",
+   "share": 29.7,
+   "order": 4
+  },
+  {
+   "key": "CTD_101_CONFORM",
+   "ep": "101",
+   "stage": "CONFORM",
+   "stageLabel": "Conform",
+   "date": null,
+   "placements": 338,
+   "aiSeconds": 764.5,
+   "runtimeSeconds": 2582.42,
+   "maxSeqOut": "01:43:02:10",
+   "share": 29.6,
+   "order": 5
+  },
+  {
+   "key": "CTD_102_RC1_20260701",
+   "ep": "102",
+   "stage": "RC1",
+   "stageLabel": "Rough Cut 1",
+   "date": "2026-07-01",
+   "placements": 295,
+   "aiSeconds": 873.3,
+   "runtimeSeconds": 2689.38,
+   "maxSeqOut": "01:44:49:09",
+   "share": 32.5,
+   "order": 1
+  },
+  {
+   "key": "CTD_102_FC_20260729",
+   "ep": "102",
+   "stage": "FC",
+   "stageLabel": "Fine Cut",
+   "date": "2026-07-29",
+   "placements": 450,
+   "aiSeconds": 1145.36,
+   "runtimeSeconds": 2599.25,
+   "maxSeqOut": "01:43:19:06",
+   "share": 44.1,
+   "order": 3
+  },
+  {
+   "key": "CTD_102_PL_20260812",
+   "ep": "102",
+   "stage": "PL",
+   "stageLabel": "Picture Lock",
+   "date": "2026-08-12",
+   "placements": 471,
+   "aiSeconds": 1137.2,
+   "runtimeSeconds": 2766.29,
+   "maxSeqOut": "01:46:06:07",
+   "share": 41.1,
+   "order": 4
+  },
+  {
+   "key": "CTD_103_RC_20260721",
+   "ep": "103",
+   "stage": "RC",
+   "stageLabel": "Rough Cut",
+   "date": "2026-07-21",
+   "placements": 318,
+   "aiSeconds": 722.39,
+   "runtimeSeconds": 2592.42,
+   "maxSeqOut": "01:43:12:10",
+   "share": 27.9,
+   "order": 1
+  },
+  {
+   "key": "CTD_103_FC_20260807",
+   "ep": "103",
+   "stage": "FC",
+   "stageLabel": "Fine Cut",
+   "date": "2026-08-07",
+   "placements": 415,
+   "aiSeconds": 859.91,
+   "runtimeSeconds": 2580.92,
+   "maxSeqOut": "01:43:00:22",
+   "share": 33.3,
+   "order": 3
+  },
+  {
+   "key": "CTD_104_RC_20260727",
+   "ep": "104",
+   "stage": "RC",
+   "stageLabel": "Rough Cut",
+   "date": "2026-07-27",
+   "placements": 357,
+   "aiSeconds": 1026.53,
+   "runtimeSeconds": 2640.17,
+   "maxSeqOut": "01:44:00:04",
+   "share": 38.9,
+   "order": 1
+  }
+ ],
+ "latestCut": {
+  "101": "CTD_101_PL_20260724",
+  "102": "CTD_102_PL_20260812",
+  "103": "CTD_103_FC_20260807",
+  "104": "CTD_104_RC_20260727",
+  "105": null,
+  "106": null,
+  "107": null,
+  "108": null
+ },
+ "aiShare": {
+  "avg": 35.8,
+  "min": 29.7,
+  "max": 41.1,
+  "measured": [
+   "101",
+   "102",
+   "103",
+   "104"
+  ],
+  "totalPlacements": 1581,
+  "totalAiSeconds": 3790.0,
+  "totalRuntimeSeconds": 10569.8,
+  "weighted": 35.9
+ },
+ "respinByStory": [
+  {
+   "story": "Fukushima Nuclear Disaster",
+   "code": "FDN",
+   "ep": "101",
+   "n": 295
+  },
+  {
+   "story": "Air France Flight 447",
+   "code": "447",
+   "ep": "101",
+   "n": 175
+  },
+  {
+   "story": "OceanGate Titan Implosion",
+   "code": "OTI",
+   "ep": "102",
+   "n": 132
+  },
+  {
+   "story": "Mount St. Helens Eruption",
+   "code": "MSH",
+   "ep": "101",
+   "n": 112
+  },
+  {
+   "story": "Tenerife Airport Disaster",
+   "code": "TAD",
+   "ep": "102",
+   "n": 112
+  },
+  {
+   "story": "Boston Molasses Flood",
+   "code": "BMF",
+   "ep": "102",
+   "n": 99
+  },
+  {
+   "story": "Texas City Disaster",
+   "code": "TXC",
+   "ep": "101",
+   "n": 93
+  },
+  {
+   "story": "Sampoong Department Store Collapse",
+   "code": "SDS",
+   "ep": "103",
+   "n": 88
+  },
+  {
+   "story": "Lac-Megantic Rail Disaster",
+   "code": "LMR",
+   "ep": "103",
+   "n": 81
+  },
+  {
+   "story": "Hindenburg",
+   "code": "HIN",
+   "ep": "101",
+   "n": 77
+  },
+  {
+   "story": "Piper Alpha Oil Rig Disaster",
+   "code": "PAO",
+   "ep": "102",
+   "n": 69
+  },
+  {
+   "story": "China Floods",
+   "code": "CHF",
+   "ep": "101",
+   "n": 60
+  },
+  {
+   "story": "Triangle Shirtwaist Factory",
+   "code": "TSF",
+   "ep": "104",
+   "n": 45
+  },
+  {
+   "story": "Loma Prieta Earthquake",
+   "code": "LPE",
+   "ep": "102",
+   "n": 43
+  },
+  {
+   "story": "Korean Air Lines Flight 007",
+   "code": "KAL007",
+   "ep": "104",
+   "n": 42
+  },
+  {
+   "story": "Hurricane Katrina",
+   "code": "HKA",
+   "ep": "102",
+   "n": 40
+  },
+  {
+   "story": "San Juanico LPG Explosion",
+   "code": "SJE",
+   "ep": "103",
+   "n": 29
+  },
+  {
+   "story": "I-35 Mississippi River Bridge Collapse",
+   "code": "MRB",
+   "ep": "104",
+   "n": 22
+  },
+  {
+   "story": "Krakatoa Eruption",
+   "code": "KAR",
+   "ep": "102",
+   "n": 6
+  },
+  {
+   "story": "American Airlines Flight 191",
+   "code": "AA191",
+   "ep": "103",
+   "n": 2
+  }
+ ],
+ "cutEvents": [
+  {
+   "ep": "101",
+   "stage": "RC1",
+   "name": "101 RC1",
+   "date": "2026-06-02",
+   "delivered": true,
+   "notes": "https://docs.google.com/document/d/1T1o8GowGXdtQkoCLxE22TVXuyxFkKxPE/edit?usp=drive_link&ouid=110382626186996233631&rtpof=true&sd=true"
+  },
+  {
+   "ep": "103",
+   "stage": "DELIVER",
+   "name": "103 DELIVER",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "102",
+   "stage": "DELIVER",
+   "name": "102 DELIVER",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "101",
+   "stage": "RC2",
+   "name": "101 RC2 (Story 1-2)",
+   "date": "2026-06-18",
+   "delivered": true,
+   "notes": "https://docs.google.com/document/d/1hGMNt4QBNDj0xXbgIZgB1S8ce5HyMjdL/edit?usp=drive_link&ouid=110382626186996233631&rtpof=true&sd=true"
+  },
+  {
+   "ep": "103",
+   "stage": "RC1",
+   "name": "103 RC1",
+   "date": "2026-07-21",
+   "delivered": true,
+   "notes": "https://docs.google.com/document/d/1lCgh8UN8Ms-erA-c6vOc3qKyh34DGvYM/edit?usp=drive_link&ouid=110382626186996233631&rtpof=true&sd=true"
+  },
+  {
+   "ep": "105",
+   "stage": "RC1",
+   "name": "105 RC1",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "101",
+   "stage": "PL",
+   "name": "101 PL",
+   "date": "2026-07-24",
+   "delivered": true,
+   "notes": "https://docs.google.com/document/d/1jTTcJdfKsqpZLfOaXRxAzzg9awIGzMZ0/edit?usp=drive_link&ouid=110382626186996233631&rtpof=true&sd=true"
+  },
+  {
+   "ep": "102",
+   "stage": "PL",
+   "name": "102 PL",
+   "date": "2026-08-12",
+   "delivered": true,
+   "notes": "https://docs.google.com/document/d/1Em5IXqW7RmoQjaYoedsF8zhCYxOH8QRh/edit?usp=drive_link&ouid=110382626186996233631&rtpof=true&sd=true"
+  },
+  {
+   "ep": "104",
+   "stage": "FC",
+   "name": "104 FC",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "106",
+   "stage": "RC1",
+   "name": "106 RC1",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "108",
+   "stage": "DELIVER",
+   "name": "108 DELIVER",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "107",
+   "stage": "FC",
+   "name": "107 FC",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "104",
+   "stage": "RC1",
+   "name": "104 RC1",
+   "date": "2026-07-27",
+   "delivered": true,
+   "notes": "https://docs.google.com/document/d/1HSd_5pmysIclASDjeBkWe-fvk3YsEHiH/edit?usp=drive_link&ouid=110382626186996233631&rtpof=true&sd=true"
+  },
+  {
+   "ep": "107",
+   "stage": "PL",
+   "name": "107 PL",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "101",
+   "stage": "FC",
+   "name": "101 FC",
+   "date": "2026-07-13",
+   "delivered": true,
+   "notes": "https://docs.google.com/document/d/1DxWZ8pcANyyd5nm6ouOYco2CBpJuRoki/edit?usp=drive_link&ouid=110382626186996233631&rtpof=true&sd=true"
+  },
+  {
+   "ep": "104",
+   "stage": "DELIVER",
+   "name": "104 DELIVER",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "107",
+   "stage": "DELIVER",
+   "name": "107 DELIVER",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "105",
+   "stage": "FC",
+   "name": "105 FC",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "104",
+   "stage": "PL",
+   "name": "104 PL",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "106",
+   "stage": "PL",
+   "name": "106 PL",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "101",
+   "stage": "RC2",
+   "name": "101 RC2",
+   "date": "2026-06-26",
+   "delivered": true,
+   "notes": "https://docs.google.com/document/d/1nmVUGO9nE2WnLrA3tUgwn1On2rOMWYdC/edit?usp=drive_link&ouid=110382626186996233631&rtpof=true&sd=true"
+  },
+  {
+   "ep": "106",
+   "stage": "FC",
+   "name": "106 FC",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "105",
+   "stage": "DELIVER",
+   "name": "105 DELIVER",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "103",
+   "stage": "FC",
+   "name": "103 FC",
+   "date": "2026-08-07",
+   "delivered": true,
+   "notes": "https://docs.google.com/document/d/1HAYIMcna99b7BGdjW6RYvTPZMm3vw4dV/edit?usp=drive_link&ouid=110382626186996233631&rtpof=true&sd=true"
+  },
+  {
+   "ep": "102",
+   "stage": "RC1",
+   "name": "102 RC1",
+   "date": "2026-07-01",
+   "delivered": true,
+   "notes": "https://docs.google.com/document/d/1VQkd_DWQJZSft15UUXo-i1td7K2in4xg/edit?usp=drive_link&ouid=110382626186996233631&rtpof=true&sd=true"
+  },
+  {
+   "ep": "108",
+   "stage": "FC",
+   "name": "108 FC",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "108",
+   "stage": "PL",
+   "name": "108 PL",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "101",
+   "stage": "DELIVER",
+   "name": "101 DELIVER",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "103",
+   "stage": "PL",
+   "name": "103 PL",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "108",
+   "stage": "RC1",
+   "name": "108 RC1",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "106",
+   "stage": "DELIVER",
+   "name": "106 DELIVER",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "102",
+   "stage": "FC",
+   "name": "102 FC",
+   "date": "2026-07-29",
+   "delivered": true,
+   "notes": "https://docs.google.com/document/d/1htxdnWH9L-K4ccoesNI9l66CiL5f2epf/edit?usp=drive_link&ouid=110382626186996233631&rtpof=true&sd=true"
+  },
+  {
+   "ep": "107",
+   "stage": "RC1",
+   "name": "107 RC1",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  },
+  {
+   "ep": "105",
+   "stage": "PL",
+   "name": "105 PL",
+   "date": null,
+   "delivered": false,
+   "notes": null
+  }
+ ],
+ "shootEvents": [
+  {
+   "day": "SD01",
+   "date": "2026-04-10",
+   "eps": [
+    "101",
+    "102"
+   ],
+   "gb": 1584.24,
+   "camRolls": "A001 - A009\nB001 - B009\n\n"
+  },
+  {
+   "day": "SD02",
+   "date": "2026-04-11",
+   "eps": [
+    "101",
+    "102"
+   ],
+   "gb": 1526.8600000000001,
+   "camRolls": "A010 - A018\nB010 - B018"
+  },
+  {
+   "day": "SD03",
+   "date": "2026-04-12",
+   "eps": [
+    "101",
+    "102"
+   ],
+   "gb": 1636.35,
+   "camRolls": "A019 - A027\nB019 - B027"
+  },
+  {
+   "day": "SD04",
+   "date": "2026-04-14",
+   "eps": [
+    "101",
+    "102"
+   ],
+   "gb": 1348.45,
+   "camRolls": "A028 - A036\nB028 - B036"
+  },
+  {
+   "day": "SD05",
+   "date": "2026-04-15",
+   "eps": [
+    "101",
+    "102"
+   ],
+   "gb": 1162.39,
+   "camRolls": "A037 - A043\nB037 - B043"
+  },
+  {
+   "day": "SD06",
+   "date": "2026-05-18",
+   "eps": [
+    "101",
+    "102",
+    "103",
+    "104"
+   ],
+   "gb": 1609.99,
+   "camRolls": "A044 - A052\nB044 - B052"
+  },
+  {
+   "day": "SD07",
+   "date": "2026-05-19",
+   "eps": [
+    "103",
+    "104"
+   ],
+   "gb": 1504.65,
+   "camRolls": "A053 - A062\nB053 - B062\n"
+  },
+  {
+   "day": "SD08",
+   "date": "2026-05-20",
+   "eps": [
+    "103",
+    "104"
+   ],
+   "gb": 1539.8200000000002,
+   "camRolls": "A063 - A072\nB063 - B072"
+  },
+  {
+   "day": "SD09",
+   "date": "2026-05-22",
+   "eps": [
+    "103",
+    "104"
+   ],
+   "gb": 1439.9699999999998,
+   "camRolls": "A073 - A082\nB073 - B072\n"
+  },
+  {
+   "day": "SD10",
+   "date": "2026-05-23",
+   "eps": [
+    "101",
+    "102",
+    "103",
+    "104"
+   ],
+   "gb": 1396.83,
+   "camRolls": "A083 - A091\nB083 - B091\n"
+  },
+  {
+   "day": "SD11",
+   "date": "2026-06-30",
+   "eps": [
+    "102",
+    "105",
+    "106",
+    "107",
+    "108"
+   ],
+   "gb": 1630.76,
+   "camRolls": "A092 - A100\nB092 - B100\n"
+  },
+  {
+   "day": "SD12",
+   "date": "2026-07-01",
+   "eps": [
+    "101",
+    "102",
+    "103",
+    "105",
+    "106",
+    "107",
+    "108"
+   ],
+   "gb": 1350.94,
+   "camRolls": "A101 - A109\nB101 - B109\n"
+  },
+  {
+   "day": "SD13",
+   "date": "2026-07-02",
+   "eps": [
+    "101",
+    "102",
+    "103",
+    "105",
+    "106",
+    "107",
+    "108"
+   ],
+   "gb": 1383.2800000000002,
+   "camRolls": "A110 - A118\nB110 - B118\n"
+  },
+  {
+   "day": "SD14",
+   "date": "2026-07-03",
+   "eps": [
+    "101",
+    "102",
+    "103",
+    "105",
+    "106",
+    "107",
+    "108"
+   ],
+   "gb": 1429.74,
+   "camRolls": "A119 - A126\nB119 - B126\n"
+  },
+  {
+   "day": "SD15",
+   "date": "2026-07-05",
+   "eps": [
+    "105",
+    "106",
+    "107",
+    "108"
+   ],
+   "gb": 1450.85,
+   "camRolls": "A127 - A134\nB127 - B134\n"
+  },
+  {
+   "day": "SD16",
+   "date": "2026-07-06",
+   "eps": [
+    "101",
+    "102",
+    "103",
+    "105",
+    "106",
+    "107",
+    "108"
+   ],
+   "gb": 1511.4900000000002,
+   "camRolls": "A135 - A143\nB135 - B143\n\n\n"
+  },
+  {
+   "day": "SD17",
+   "date": "2026-07-07",
+   "eps": [
+    "101",
+    "102",
+    "103",
+    "105",
+    "106",
+    "107",
+    "108"
+   ],
+   "gb": 1555.9299999999998,
+   "camRolls": "A144 - A152\nB144 - B152"
+  },
+  {
+   "day": "SD18",
+   "date": "2026-07-08",
+   "eps": [
+    "102",
+    "103",
+    "105",
+    "106",
+    "107",
+    "108"
+   ],
+   "gb": 1542.85,
+   "camRolls": "A153 - A160\nB153 - B160"
+  },
+  {
+   "day": "SD19",
+   "date": "2026-07-09",
+   "eps": [
+    "101",
+    "102",
+    "103",
+    "104",
+    "105",
+    "106",
+    "107",
+    "108"
+   ],
+   "gb": 1540.76,
+   "camRolls": "A161 - A169\nB161 - B169\n"
+  },
+  {
+   "day": "SD20",
+   "date": "2026-07-10",
+   "eps": [
+    "101",
+    "102",
+    "103",
+    "104",
+    "105",
+    "106",
+    "107",
+    "108"
+   ],
+   "gb": 1554.62,
+   "camRolls": "A170 - A177\nB170 - B177\n"
+  },
+  {
+   "day": "SD21",
+   "date": "2026-07-11",
+   "eps": [
+    "105",
+    "106",
+    "107",
+    "108"
+   ],
+   "gb": 1416.21,
+   "camRolls": "A178 - A184\nB178 - B184\n"
+  }
+ ],
+ "titles": {
+  "101": "MELTDOWN",
+  "102": "UNDER PRESSURE",
+  "103": "RISKY BUSINESS",
+  "104": "NO WAY OUT",
+  "105": "NATURE UNLEASHED",
+  "106": "BREAKING POINT",
+  "107": "ONE WRONG MOVE",
+  "108": "HIDDEN JEOPARDY"
+ },
+ "unassigned": {
+  "shotcodes": {
+   "total": 37,
+   "sent": 9,
+   "active": 0,
+   "notStarted": 28,
+   "held": 0,
+   "byStatus": {
+    "Not started": 28,
+    "Sent to Cream": 9
+   }
+  },
+  "assets": {
+   "generated": 24,
+   "ingested": 24,
+   "respins": 0,
+   "openRespins": 1,
+   "distinctShotcodes": 5,
+   "firstOutput": "2026-06-10",
+   "lastOutput": "2026-07-30"
+  }
+ },
+ "reconcile": {
+  "shotcodesPerEp": 1560,
+  "shotcodesUnassigned": 37,
+  "sentPerEp": 886,
+  "sentUnassigned": 9,
+  "activePerEp": 188,
+  "notStartedPerEp": 388,
+  "notStartedUnassigned": 28,
+  "heldPerEp": 98,
+  "assetsPerEp": 5008,
+  "assetsUnassigned": 24
+ },
+ "scheduleMeta": {
+  "source": "CTD WORKING Day-to-Day Schedule.08.12.xlsx",
+  "editors": {
+   "101": "Ian Sit",
+   "102": "Bill Towgood",
+   "103": "David Grout",
+   "104": "Rob Chandler",
+   "105": "Ian Sit",
+   "106": "Bill Towgood",
+   "107": "Branko Vasovic",
+   "108": "Rob Chandler"
+  },
+  "storyEditors": {
+   "101": "Steph Weimar",
+   "102": "Hugh Hardy",
+   "103": "Brooks Gray",
+   "104": "Peter St. Laurent/Lara Fitzgerald",
+   "105": "Steph Weimar/Mike",
+   "106": "Hugh Hardy",
+   "107": "Brooks Gray",
+   "108": "Lara Fitzgerald"
+  },
+  "columns": [
+   "SHOOT DAYS",
+   "AI ASSETS",
+   "101",
+   "102",
+   "103",
+   "104",
+   "105",
+   "106",
+   "107",
+   "108",
+   "MISC NOTES",
+   "MISC NOTES 2",
+   "MISC NOTES 3",
+   "MISC NOTES 4",
+   "MISC NOTES 5"
+  ],
+  "sheets": [
+   "08.12"
+  ]
+ },
+ "scheduleDays": 260
+}

@@ -1,0 +1,1196 @@
+Date,Weekday,Category,Episode,Entry,Source
+2026-02-02,Mon,story,,RESEARCH,schedule
+2026-02-09,Mon,story,,RESEARCH,schedule
+2026-02-16,Mon,story,101,101 Outline,schedule
+2026-02-17,Tue,story,101,101 Outline,schedule
+2026-02-18,Wed,story,101,101 Outline,schedule
+2026-02-19,Thu,story,101,101 Outline,schedule
+2026-02-20,Fri,story,101,101 Outline,schedule
+2026-02-23,Mon,story,101,101 Script,schedule
+2026-02-24,Tue,story,101,101 Script,schedule
+2026-02-25,Wed,story,101,101 Script,schedule
+2026-02-26,Thu,story,101,101 Script,schedule
+2026-02-27,Fri,story,101,101 Script,schedule
+2026-03-02,Mon,story,101,101 Script,schedule
+2026-03-02,Mon,story,102,102 Outline,schedule
+2026-03-03,Tue,story,101,101 Script,schedule
+2026-03-03,Tue,story,102,102 Outline,schedule
+2026-03-04,Wed,note,,Interview Looks to History,schedule
+2026-03-04,Wed,story,101,101 Script,schedule
+2026-03-04,Wed,story,102,102 Outline,schedule
+2026-03-05,Thu,story,101,101 Script,schedule
+2026-03-05,Thu,story,102,102 Outline,schedule
+2026-03-06,Fri,story,101,101 Script,schedule
+2026-03-06,Fri,story,102,102 Outline,schedule
+2026-03-09,Mon,story,101,101 - Draft Script to History,schedule
+2026-03-09,Mon,story,102,102 Outline,schedule
+2026-03-10,Tue,story,101,101 Script,schedule
+2026-03-10,Tue,story,102,102 Outline,schedule
+2026-03-11,Wed,story,101,101 Script,schedule
+2026-03-11,Wed,story,102,102 - Draft Outline to History,schedule
+2026-03-12,Thu,story,101,101 Script,schedule
+2026-03-12,Thu,story,102,102 Outline,schedule
+2026-03-13,Fri,story,101,101 Script,schedule
+2026-03-13,Fri,story,102,102 Outline,schedule
+2026-03-16,Mon,due,101,101 - Draft Script notes Due,schedule
+2026-03-16,Mon,story,102,102 Script,schedule
+2026-03-16,Mon,story,103,103 Outline,schedule
+2026-03-17,Tue,story,102,102 Script,schedule
+2026-03-17,Tue,story,103,103 Outline,schedule
+2026-03-18,Wed,story,102,102 Script,schedule
+2026-03-18,Wed,story,103,103 Outline,schedule
+2026-03-19,Thu,story,102,102 Script,schedule
+2026-03-19,Thu,story,103,103 Outline,schedule
+2026-03-20,Fri,due,102,102 - Draft Outline Notes Due,schedule
+2026-03-20,Fri,story,102,102 Script,schedule
+2026-03-20,Fri,story,103,103 Outline,schedule
+2026-03-23,Mon,story,102,102 Script,schedule
+2026-03-23,Mon,story,103,103 - Draft Outline to History,schedule
+2026-03-23,Mon,story,104,104 Outline,schedule
+2026-03-24,Tue,due,103,103 - Draft Outline Notes Due,schedule
+2026-03-24,Tue,story,102,102 Script,schedule
+2026-03-24,Tue,story,103,103 Outline,schedule
+2026-03-24,Tue,story,104,104 Outline,schedule
+2026-03-25,Wed,story,102,102 Script,schedule
+2026-03-25,Wed,story,103,103 Outline,schedule
+2026-03-25,Wed,story,104,104 Outline,schedule
+2026-03-26,Thu,story,102,102 Script,schedule
+2026-03-26,Thu,story,103,103 Outline,schedule
+2026-03-26,Thu,story,104,104 - Draft outline to History,schedule
+2026-03-27,Fri,story,102,102 Script,schedule
+2026-03-27,Fri,story,103,103 Outline,schedule
+2026-03-27,Fri,story,104,104 Outline,schedule
+2026-03-29,Sun,story,102,102 - Draft Script to History,schedule
+2026-03-30,Mon,story,102,102 Script,schedule
+2026-03-30,Mon,story,104,104 Outline,schedule
+2026-03-31,Tue,due,102,102 - Script Notes Due,schedule
+2026-03-31,Tue,story,102,102 Script,schedule
+2026-03-31,Tue,story,104,104 Outline,schedule
+2026-04-01,Wed,story,102,102 Script,schedule
+2026-04-01,Wed,story,104,104 Outline,schedule
+2026-04-02,Thu,due,104,104 - Draft outline notes due,schedule
+2026-04-02,Thu,story,102,102 Script,schedule
+2026-04-02,Thu,story,104,104 Outline,schedule
+2026-04-03,Fri,holiday,,EASTER - CANADA,schedule
+2026-04-06,Mon,shoot,,Director Prep,schedule
+2026-04-06,Mon,story,105,105 Outline,schedule
+2026-04-06,Mon,story,106,106 Outline,schedule
+2026-04-07,Tue,shoot,,Director Prep,schedule
+2026-04-07,Tue,story,105,105 Outline,schedule
+2026-04-07,Tue,story,106,106 Outline,schedule
+2026-04-08,Wed,shoot,,Travel,schedule
+2026-04-08,Wed,story,105,105 Outline,schedule
+2026-04-08,Wed,story,106,106 Outline,schedule
+2026-04-09,Thu,shoot,,Pre-Light,schedule
+2026-04-09,Thu,story,103,103 Script,schedule
+2026-04-09,Thu,story,104,104 Script,schedule
+2026-04-09,Thu,story,105,105 Outline,schedule
+2026-04-09,Thu,story,106,106 Outline,schedule
+2026-04-10,Fri,shoot,101,"SD01 — Ep 101, 102 · 1,584 GB",airtable
+2026-04-10,Fri,shoot,,SHOOT Ep 1/2,schedule
+2026-04-10,Fri,story,103,103 Script,schedule
+2026-04-10,Fri,story,104,104 Script,schedule
+2026-04-10,Fri,story,105,105 Outline,schedule
+2026-04-10,Fri,story,106,106 Outline,schedule
+2026-04-11,Sat,shoot,101,"SD02 — Ep 101, 102 · 1,527 GB",airtable
+2026-04-11,Sat,shoot,,SHOOT Ep 1/2,schedule
+2026-04-12,Sun,shoot,101,"SD03 — Ep 101, 102 · 1,636 GB",airtable
+2026-04-12,Sun,shoot,,SHOOT Ep 1/2,schedule
+2026-04-12,Sun,story,105,105 - Draft Outline to History,schedule
+2026-04-13,Mon,shoot,,DOWN,schedule
+2026-04-13,Mon,story,103,103 Script,schedule
+2026-04-13,Mon,story,104,104 Script,schedule
+2026-04-13,Mon,story,105,105 Outline,schedule
+2026-04-13,Mon,story,106,106 Outline,schedule
+2026-04-14,Tue,due,105,105 - Draft Outline notes due,schedule
+2026-04-14,Tue,shoot,101,"SD04 — Ep 101, 102 · 1,348 GB",airtable
+2026-04-14,Tue,shoot,,SHOOT Ep 1/2,schedule
+2026-04-14,Tue,story,103,103 Script,schedule
+2026-04-14,Tue,story,104,104 Script,schedule
+2026-04-14,Tue,story,105,105 Outline,schedule
+2026-04-14,Tue,story,106,106 Outline,schedule
+2026-04-15,Wed,shoot,101,"SD05 — Ep 101, 102 · 1,162 GB",airtable
+2026-04-15,Wed,shoot,,SHOOT Ep 1/2,schedule
+2026-04-15,Wed,story,103,103 Script,schedule
+2026-04-15,Wed,story,104,104 Script,schedule
+2026-04-15,Wed,story,105,105 Outline,schedule
+2026-04-15,Wed,story,106,106 - Draft outline to History,schedule
+2026-04-16,Thu,shoot,,Travel,schedule
+2026-04-16,Thu,story,103,103 Script,schedule
+2026-04-16,Thu,story,104,104 Script,schedule
+2026-04-16,Thu,story,105,105 Outline,schedule
+2026-04-16,Thu,story,106,106 Outline,schedule
+2026-04-17,Fri,due,106,106 - Draft outline Notes Due,schedule
+2026-04-17,Fri,story,103,103 Script,schedule
+2026-04-17,Fri,story,104,104 Script,schedule
+2026-04-17,Fri,story,105,105 Outline,schedule
+2026-04-17,Fri,story,106,106 Outline,schedule
+2026-04-20,Mon,edit,101,101 Edit Week 1,schedule
+2026-04-20,Mon,story,103,103 Script,schedule
+2026-04-20,Mon,story,104,104 Script,schedule
+2026-04-20,Mon,story,105,105 Script,schedule
+2026-04-20,Mon,story,106,106 Outline,schedule
+2026-04-21,Tue,edit,101,101 Edit Week 1,schedule
+2026-04-21,Tue,story,103,103 Script,schedule
+2026-04-21,Tue,story,104,104 Script,schedule
+2026-04-21,Tue,story,105,105 Script,schedule
+2026-04-21,Tue,story,106,106 Outline,schedule
+2026-04-22,Wed,edit,101,101 Edit Week 1,schedule
+2026-04-22,Wed,story,103,103 Script,schedule
+2026-04-22,Wed,story,104,104 Script,schedule
+2026-04-22,Wed,story,105,105 Script,schedule
+2026-04-22,Wed,story,106,106 Script,schedule
+2026-04-23,Thu,edit,101,101 Edit Week 1,schedule
+2026-04-23,Thu,story,103,103 Script,schedule
+2026-04-23,Thu,story,104,104 Script,schedule
+2026-04-23,Thu,story,105,105 Script,schedule
+2026-04-23,Thu,story,106,106 Script,schedule
+2026-04-24,Fri,edit,101,101 Edit Week 1,schedule
+2026-04-24,Fri,story,103,103 Script,schedule
+2026-04-24,Fri,story,104,104 Script,schedule
+2026-04-24,Fri,story,105,105 Script,schedule
+2026-04-24,Fri,story,106,106 Script,schedule
+2026-04-27,Mon,edit,101,101 Edit Week 2,schedule
+2026-04-27,Mon,story,103,103 Script,schedule
+2026-04-27,Mon,story,104,104 Script,schedule
+2026-04-27,Mon,story,105,105 Script,schedule
+2026-04-27,Mon,story,106,106 Script,schedule
+2026-04-27,Mon,story,107,107 Outline,schedule
+2026-04-27,Mon,story,108,108 Outline,schedule
+2026-04-28,Tue,edit,101,101 Edit Week 2,schedule
+2026-04-28,Tue,story,103,103 - Draft Script to History,schedule
+2026-04-28,Tue,story,104,104 Script,schedule
+2026-04-28,Tue,story,105,105 Script,schedule
+2026-04-28,Tue,story,106,106 Script,schedule
+2026-04-28,Tue,story,107,107 Outline,schedule
+2026-04-28,Tue,story,108,108 Outline,schedule
+2026-04-29,Wed,edit,101,101 Edit Week 2,schedule
+2026-04-29,Wed,story,103,103 Script,schedule
+2026-04-29,Wed,story,104,104 Script,schedule
+2026-04-29,Wed,story,105,105 Script,schedule
+2026-04-29,Wed,story,106,106 Script,schedule
+2026-04-29,Wed,story,107,107 Outline,schedule
+2026-04-29,Wed,story,108,108 Outline,schedule
+2026-04-30,Thu,due,103,103 - Draft Script notes Due,schedule
+2026-04-30,Thu,edit,101,101 Edit Week 2,schedule
+2026-04-30,Thu,story,103,103 Script,schedule
+2026-04-30,Thu,story,104,104 - Draft Script to History,schedule
+2026-04-30,Thu,story,105,105 Script,schedule
+2026-04-30,Thu,story,106,106 Script,schedule
+2026-04-30,Thu,story,107,107 Outline,schedule
+2026-04-30,Thu,story,108,108 Outline,schedule
+2026-05-01,Fri,edit,101,101 Edit Week 2,schedule
+2026-05-01,Fri,story,103,103 Script,schedule
+2026-05-01,Fri,story,105,105 Script,schedule
+2026-05-01,Fri,story,106,106 Script,schedule
+2026-05-01,Fri,story,107,107 Outline,schedule
+2026-05-01,Fri,story,104,108 Outline,schedule
+2026-05-02,Sat,story,107,107 - Draft outline to History,schedule
+2026-05-04,Mon,due,104,104 - Draft Script notes Due,schedule
+2026-05-04,Mon,edit,101,101 Edit Week 3,schedule
+2026-05-04,Mon,story,103,103 - V2 Script to History,schedule
+2026-05-04,Mon,story,105,105 - Draft Script to History,schedule
+2026-05-04,Mon,story,106,106 Script,schedule
+2026-05-04,Mon,story,107,107 Outline,schedule
+2026-05-04,Mon,story,104,108 Outline,schedule
+2026-05-05,Tue,due,107,107 - Draft Outline notes due,schedule
+2026-05-05,Tue,edit,101,101 Edit Week 3,schedule
+2026-05-05,Tue,story,104,104 Script,schedule
+2026-05-05,Tue,story,105,105 Script,schedule
+2026-05-05,Tue,story,106,106 Script,schedule
+2026-05-05,Tue,story,107,107 Outline,schedule
+2026-05-05,Tue,story,108,108 - Draft outline to History,schedule
+2026-05-06,Wed,edit,101,101 Edit Week 3,schedule
+2026-05-06,Wed,story,104,104 Script,schedule
+2026-05-06,Wed,story,105,105 Script,schedule
+2026-05-06,Wed,story,106,106 Script,schedule
+2026-05-06,Wed,story,107,107 Outline,schedule
+2026-05-06,Wed,story,108,108 Outline,schedule
+2026-05-07,Thu,due,105,105 - Draft Script notes Due,schedule
+2026-05-07,Thu,edit,101,101 Edit Week 3,schedule
+2026-05-07,Thu,story,104,104 - V2 Script to History,schedule
+2026-05-07,Thu,story,105,105 Script,schedule
+2026-05-07,Thu,story,106,106 - Draft Script to History,schedule
+2026-05-07,Thu,story,107,107 Outline,schedule
+2026-05-07,Thu,story,108,108 Outline,schedule
+2026-05-08,Fri,due,108,108 - Draft Outline notes due,schedule
+2026-05-08,Fri,edit,101,101 Edit Week 3,schedule
+2026-05-08,Fri,story,105,105 Script,schedule
+2026-05-08,Fri,story,106,106 Script,schedule
+2026-05-08,Fri,story,107,107 Outline,schedule
+2026-05-08,Fri,story,108,108 Outline,schedule
+2026-05-11,Mon,edit,101,101 Edit Week 4,schedule
+2026-05-11,Mon,story,106,106 Script,schedule
+2026-05-11,Mon,story,107,107 Script,schedule
+2026-05-11,Mon,story,108,108 Script,schedule
+2026-05-12,Tue,due,106,106 - Draft Script notes Due,schedule
+2026-05-12,Tue,edit,101,101 Edit Week 4,schedule
+2026-05-12,Tue,story,106,106 Script,schedule
+2026-05-12,Tue,story,107,107 Script,schedule
+2026-05-12,Tue,story,108,108 Script,schedule
+2026-05-13,Wed,ai,102,102 1st Requests,schedule
+2026-05-13,Wed,edit,101,101 Edit Week 4,schedule
+2026-05-13,Wed,edit,102,Edit Prep,schedule
+2026-05-13,Wed,story,107,107 Script,schedule
+2026-05-13,Wed,story,108,108 Script,schedule
+2026-05-14,Thu,ai,102,102 1st Requests,schedule
+2026-05-14,Thu,edit,101,101 Edit Week 4,schedule
+2026-05-14,Thu,edit,102,Edit Prep,schedule
+2026-05-14,Thu,shoot,,Director Prep,schedule
+2026-05-14,Thu,story,107,107 Script,schedule
+2026-05-14,Thu,story,108,108 Script,schedule
+2026-05-15,Fri,ai,102,102 1st Requests,schedule
+2026-05-15,Fri,edit,101,101 Edit Week 4,schedule
+2026-05-15,Fri,edit,102,Edit Prep,schedule
+2026-05-15,Fri,shoot,,Director Prep,schedule
+2026-05-15,Fri,story,107,107 Script,schedule
+2026-05-15,Fri,story,108,108 Script,schedule
+2026-05-16,Sat,shoot,,TRAVEL,schedule
+2026-05-17,Sun,shoot,,PRE-LIGHT,schedule
+2026-05-18,Mon,holiday,,VICTORIA DAY - CAN,schedule
+2026-05-18,Mon,shoot,101,"SD06 — Ep 101, 102, 103, 104 · 1,610 GB",airtable
+2026-05-18,Mon,shoot,,SHOOT Ep 3/4,schedule
+2026-05-19,Tue,ai,102,102 1st Requests,schedule
+2026-05-19,Tue,edit,101,101 Edit Week 5,schedule
+2026-05-19,Tue,edit,102,Edit Prep,schedule
+2026-05-19,Tue,shoot,103,"SD07 — Ep 103, 104 · 1,505 GB",airtable
+2026-05-19,Tue,shoot,,SHOOT Ep 3/4,schedule
+2026-05-19,Tue,story,107,107 Script,schedule
+2026-05-19,Tue,story,108,108 Script,schedule
+2026-05-20,Wed,ai,102,102 1st Requests,schedule
+2026-05-20,Wed,edit,101,101 Edit Week 5,schedule
+2026-05-20,Wed,edit,102,Edit Prep,schedule
+2026-05-20,Wed,shoot,103,"SD08 — Ep 103, 104 · 1,540 GB",airtable
+2026-05-20,Wed,shoot,,SHOOT Ep 3/4,schedule
+2026-05-20,Wed,story,107,107 Script,schedule
+2026-05-20,Wed,story,108,108 Script,schedule
+2026-05-21,Thu,edit,101,101 Edit Week 5,schedule
+2026-05-21,Thu,edit,102,102 Edit Week 1,schedule
+2026-05-21,Thu,shoot,,DOWN,schedule
+2026-05-21,Thu,story,107,107 Script,schedule
+2026-05-21,Thu,story,108,108 Script,schedule
+2026-05-22,Fri,edit,101,101 Edit Week 5,schedule
+2026-05-22,Fri,edit,102,102 Edit Week 1,schedule
+2026-05-22,Fri,shoot,103,"SD09 — Ep 103, 104 · 1,440 GB",airtable
+2026-05-22,Fri,shoot,,SHOOT Ep 3/4,schedule
+2026-05-22,Fri,story,107,107 Script,schedule
+2026-05-22,Fri,story,108,108 Script,schedule
+2026-05-23,Sat,shoot,101,"SD10 — Ep 101, 102, 103, 104 · 1,397 GB",airtable
+2026-05-23,Sat,shoot,,SHOOT Ep 3/4,schedule
+2026-05-24,Sun,shoot,,TRAVEL,schedule
+2026-05-25,Mon,ai,101,101 2nd Delivery DUE,schedule
+2026-05-25,Mon,edit,101,101 Edit Week 6,schedule
+2026-05-25,Mon,edit,102,102 Edit Week 1,schedule
+2026-05-25,Mon,holiday,,MEMORIAL DAY - USA,schedule
+2026-05-25,Mon,story,107,107 Script,schedule
+2026-05-25,Mon,story,108,108 Script,schedule
+2026-05-26,Tue,edit,101,101 Edit Week 6,schedule
+2026-05-26,Tue,edit,102,102 Edit Week 1,schedule
+2026-05-26,Tue,story,107,107 Script,schedule
+2026-05-26,Tue,story,108,108 Script,schedule
+2026-05-27,Wed,edit,101,101 Edit Week 6,schedule
+2026-05-27,Wed,edit,102,102 Edit Week 1,schedule
+2026-05-27,Wed,story,107,107 Script,schedule
+2026-05-27,Wed,story,108,108 Script,schedule
+2026-05-28,Thu,edit,101,101 Edit Week 6,schedule
+2026-05-28,Thu,edit,102,102 Edit Week 2,schedule
+2026-05-28,Thu,story,107,107 - Draft Script to History,schedule
+2026-05-28,Thu,story,108,108 - Draft Script to History,schedule
+2026-05-29,Fri,due,101,101 IRC1 Due,schedule
+2026-05-29,Fri,due,108,108 - Draft Script notes Due,schedule
+2026-05-29,Fri,edit,102,102 Edit Week 2,schedule
+2026-05-29,Fri,story,107,107 Script,schedule
+2026-05-29,Fri,story,108,108 Script,schedule
+2026-06-01,Mon,ai,103,103 1st Requests,schedule
+2026-06-01,Mon,due,107,107 - Draft Script notes due,schedule
+2026-06-01,Mon,edit,101,101 Edit Week 7,schedule
+2026-06-01,Mon,edit,102,102 Edit Week 2,schedule
+2026-06-01,Mon,edit,103,103 Edit Prep,schedule
+2026-06-01,Mon,story,108,108 Script,schedule
+2026-06-02,Tue,ai,103,103/104 1st Requests,schedule
+2026-06-02,Tue,cut,101,101 RC1 delivered to network,airtable
+2026-06-02,Tue,due,101,101 RC1 Due,schedule
+2026-06-02,Tue,edit,102,102 Edit Week 2,schedule
+2026-06-02,Tue,edit,103,103 Edit Prep,schedule
+2026-06-02,Tue,edit,104,104 Edit Prep,schedule
+2026-06-03,Wed,ai,103,103/104 1st Requests,schedule
+2026-06-03,Wed,edit,102,102 Edit Week 2,schedule
+2026-06-03,Wed,edit,103,103 Edit Prep,schedule
+2026-06-03,Wed,edit,104,104 Edit Prep,schedule
+2026-06-03,Wed,shoot,101,DOWN,schedule
+2026-06-04,Thu,ai,103,103/104 1st Requests,schedule
+2026-06-04,Thu,edit,102,102 Edit Week 3,schedule
+2026-06-04,Thu,edit,103,103 Edit Prep,schedule
+2026-06-04,Thu,edit,104,104 Edit Prep,schedule
+2026-06-04,Thu,shoot,101,DOWN,schedule
+2026-06-05,Fri,ai,103,103/104 1st Requests,schedule
+2026-06-05,Fri,due,101,101 RC1 - History/Corus/Legal Notes Due,schedule
+2026-06-05,Fri,edit,102,102 Edit Week 3,schedule
+2026-06-05,Fri,edit,103,103 Edit Prep,schedule
+2026-06-05,Fri,edit,104,104 Edit Prep,schedule
+2026-06-05,Fri,shoot,101,DOWN,schedule
+2026-06-08,Mon,ai,104,104 1st Requests,schedule
+2026-06-08,Mon,edit,102,102 Edit Week 3,schedule
+2026-06-08,Mon,edit,103,103 Edit Week 1,schedule
+2026-06-08,Mon,edit,104,Edit Prep,schedule
+2026-06-08,Mon,shoot,101,DOWN,schedule
+2026-06-09,Tue,edit,102,102 Edit Week 3,schedule
+2026-06-09,Tue,edit,103,103 Edit Week 1,schedule
+2026-06-09,Tue,shoot,101,DOWN,schedule
+2026-06-10,Wed,edit,102,102 Edit Week 3,schedule
+2026-06-10,Wed,edit,103,103 Edit Week 1,schedule
+2026-06-10,Wed,edit,104,104 Edit Week 1,schedule
+2026-06-10,Wed,shoot,101,DOWN,schedule
+2026-06-11,Thu,edit,101,101 Edit Week 7,schedule
+2026-06-11,Thu,edit,102,102 Edit Week 4,schedule
+2026-06-11,Thu,edit,103,103 Edit Week 1,schedule
+2026-06-11,Thu,edit,104,104 Edit Week 1,schedule
+2026-06-12,Fri,edit,101,101 Edit Week 7,schedule
+2026-06-12,Fri,edit,102,102 Edit Week 4,schedule
+2026-06-12,Fri,edit,103,103 Edit Week 1,schedule
+2026-06-14,Sun,edit,104,104 Edit Week 1,schedule
+2026-06-15,Mon,edit,101,101 Edit Week 7,schedule
+2026-06-15,Mon,edit,102,102 Edit Week 4,schedule
+2026-06-15,Mon,edit,103,103 Edit Week 2,schedule
+2026-06-16,Tue,ai,102,102 2nd Delivery DUE,schedule
+2026-06-16,Tue,edit,101,101 Edit Week 8,schedule
+2026-06-16,Tue,edit,102,102 Edit Week 4,schedule
+2026-06-16,Tue,edit,103,103 Edit Week 2,schedule
+2026-06-17,Wed,edit,101,101 Edit Week 8,schedule
+2026-06-17,Wed,edit,102,102 Edit Week 4,schedule
+2026-06-17,Wed,edit,103,103 Edit Week 2,schedule
+2026-06-17,Wed,edit,104,104 Edit Week 1,schedule
+2026-06-18,Thu,cut,101,101 RC2 delivered to network,airtable
+2026-06-18,Thu,edit,101,101 Edit Week 8,schedule
+2026-06-18,Thu,edit,102,102 Edit Week 5,schedule
+2026-06-18,Thu,edit,103,103 Edit Week 2,schedule
+2026-06-18,Thu,edit,104,104 Edit Week 1,schedule
+2026-06-19,Fri,edit,101,101 Edit Week 8,schedule
+2026-06-19,Fri,edit,102,102 Edit Week 5,schedule
+2026-06-19,Fri,edit,103,103 Edit Week 2,schedule
+2026-06-19,Fri,edit,104,104 Edit Week 2,schedule
+2026-06-19,Fri,holiday,,JUNETEENTH - USA,schedule
+2026-06-20,Sat,edit,102,102 Edit Week 5,schedule
+2026-06-21,Sun,edit,101,101 Edit Week 8,schedule
+2026-06-21,Sun,edit,102,102 Edit Week 5,schedule
+2026-06-22,Mon,edit,101,101 Edit Week 9,schedule
+2026-06-22,Mon,edit,102,102 Edit Week 5,schedule
+2026-06-22,Mon,edit,103,103 Edit Week 3,schedule
+2026-06-22,Mon,edit,104,104 Edit Week 2,schedule
+2026-06-23,Tue,edit,101,101 Edit Week 9,schedule
+2026-06-23,Tue,edit,102,102 Edit Week 6,schedule
+2026-06-23,Tue,edit,103,103 Edit Week 3,schedule
+2026-06-23,Tue,edit,104,104 Edit Week 2,schedule
+2026-06-24,Wed,edit,101,101 Edit Week 9,schedule
+2026-06-24,Wed,edit,102,102 Edit Week 6,schedule
+2026-06-24,Wed,edit,103,103 Edit Week 3,schedule
+2026-06-25,Thu,due,101,101 IRC2 Due,schedule
+2026-06-25,Thu,edit,102,102 Edit Week 6,schedule
+2026-06-25,Thu,edit,103,103 Edit Week 3,schedule
+2026-06-25,Thu,shoot,,Director Prep,schedule
+2026-06-26,Fri,cut,101,101 RC2 delivered to network,airtable
+2026-06-26,Fri,due,101,101 RC2 Due,schedule
+2026-06-26,Fri,edit,102,102 Edit Week 6,schedule
+2026-06-26,Fri,edit,103,103 Edit Week 3,schedule
+2026-06-26,Fri,edit,104,104 Edit Week 2,schedule
+2026-06-26,Fri,shoot,,Director Prep,schedule
+2026-06-28,Sun,crew,,Debbie OOO,schedule
+2026-06-28,Sun,edit,103,103 Edit Week 4,schedule
+2026-06-28,Sun,edit,104,104 Edit Week 2,schedule
+2026-06-28,Sun,shoot,,TRAVEL,schedule
+2026-06-29,Mon,crew,,Debbie OOO,schedule
+2026-06-29,Mon,due,102,102 IRC1 Due,schedule
+2026-06-29,Mon,edit,103,103 Edit Week 4,schedule
+2026-06-29,Mon,edit,104,104 Edit Week 3,schedule
+2026-06-29,Mon,shoot,101,DOWN,schedule
+2026-06-29,Mon,shoot,,Pre-Light,schedule
+2026-06-30,Tue,crew,,Debbie OOO,schedule
+2026-06-30,Tue,due,101,101 RC2 - History/Corus/Legal Notes Due,schedule
+2026-06-30,Tue,edit,102,102 Edit Week 7,schedule
+2026-06-30,Tue,edit,103,103 Edit Week 4,schedule
+2026-06-30,Tue,edit,104,104 Edit Week 3,schedule
+2026-06-30,Tue,shoot,101,DOWN,schedule
+2026-06-30,Tue,shoot,102,"SD11 — Ep 102, 105, 106, 107, 108 · 1,631 GB",airtable
+2026-06-30,Tue,shoot,,SHOOT Ep 5-8,schedule
+2026-07-01,Wed,crew,,Debbie OOO,schedule
+2026-07-01,Wed,cut,102,102 RC1 delivered to network,airtable
+2026-07-01,Wed,due,102,102 RC1 Due,schedule
+2026-07-01,Wed,holiday,102,CANADA DAY / 102 RC1 Due,schedule
+2026-07-01,Wed,shoot,101,DOWN,schedule
+2026-07-01,Wed,shoot,101,"SD12 — Ep 101, 102, 103, 105, 106, 107, 108 · 1,351 GB",airtable
+2026-07-01,Wed,shoot,,SHOOT Ep 5-8,schedule
+2026-07-02,Thu,ai,103,103 2nd Delivery DUE,schedule
+2026-07-02,Thu,crew,,Debbie OOO,schedule
+2026-07-02,Thu,edit,103,103 Edit Week 4,schedule
+2026-07-02,Thu,edit,104,104 Edit Week 3,schedule
+2026-07-02,Thu,shoot,101,DOWN,schedule
+2026-07-02,Thu,shoot,101,"SD13 — Ep 101, 102, 103, 105, 106, 107, 108 · 1,383 GB",airtable
+2026-07-02,Thu,shoot,,SHOOT Ep 5-8,schedule
+2026-07-03,Fri,crew,,Debbie OOO,schedule
+2026-07-03,Fri,edit,103,103 Edit Week 4,schedule
+2026-07-03,Fri,holiday,,INDEPENDENCE DAY - USA CANADA DAY REPLACEMENT HOLIDAY,schedule
+2026-07-03,Fri,shoot,101,DOWN,schedule
+2026-07-03,Fri,shoot,101,"SD14 — Ep 101, 102, 103, 105, 106, 107, 108 · 1,430 GB",airtable
+2026-07-03,Fri,shoot,,SHOOT Ep 5-8,schedule
+2026-07-04,Sat,crew,,Debbie OOO,schedule
+2026-07-04,Sat,shoot,,DOWN,schedule
+2026-07-05,Sun,crew,,Debbie OOO,schedule
+2026-07-05,Sun,edit,104,104 Edit Week 3,schedule
+2026-07-05,Sun,shoot,105,"SD15 — Ep 105, 106, 107, 108 · 1,451 GB",airtable
+2026-07-05,Sun,shoot,,SHOOT Ep 5-8,schedule
+2026-07-06,Mon,crew,,Debbie OOO,schedule
+2026-07-06,Mon,crew,,Ian off,schedule
+2026-07-06,Mon,due,102,102 RC1 - History/Corus/Legal Notes Due,schedule
+2026-07-06,Mon,edit,101,101 Edit Week 10,schedule
+2026-07-06,Mon,edit,103,103 Edit Week 5,schedule
+2026-07-06,Mon,edit,104,104 Edit Week 3,schedule
+2026-07-06,Mon,shoot,102,DOWN,schedule
+2026-07-06,Mon,shoot,101,"SD16 — Ep 101, 102, 103, 105, 106, 107, 108 · 1,511 GB",airtable
+2026-07-06,Mon,shoot,,SHOOT Ep 5-8,schedule
+2026-07-07,Tue,crew,,Debbie OOO,schedule
+2026-07-07,Tue,crew,,Ian off,schedule
+2026-07-07,Tue,edit,101,101 Edit Week 10,schedule
+2026-07-07,Tue,edit,103,103 Edit Week 5,schedule
+2026-07-07,Tue,edit,104,104 Edit Week 4,schedule
+2026-07-07,Tue,edit,102,SE Edit Prep,schedule
+2026-07-07,Tue,shoot,101,"SD17 — Ep 101, 102, 103, 105, 106, 107, 108 · 1,556 GB",airtable
+2026-07-07,Tue,shoot,,SHOOT Ep 5-8,schedule
+2026-07-08,Wed,crew,,Debbie OOO,schedule
+2026-07-08,Wed,crew,,Ian off,schedule
+2026-07-08,Wed,edit,101,101 Edit Week 10,schedule
+2026-07-08,Wed,edit,103,103 Edit Week 5,schedule
+2026-07-08,Wed,edit,104,104 Edit Week 4,schedule
+2026-07-08,Wed,edit,102,SE Edit Prep,schedule
+2026-07-08,Wed,shoot,102,"SD18 — Ep 102, 103, 105, 106, 107, 108 · 1,543 GB",airtable
+2026-07-08,Wed,shoot,,SHOOT Ep 5-8,schedule
+2026-07-09,Thu,crew,,Debbie OOO,schedule
+2026-07-09,Thu,crew,,Ian off,schedule
+2026-07-09,Thu,due,101,101 IFC Due,schedule
+2026-07-09,Thu,edit,102,102 Edit Week 7,schedule
+2026-07-09,Thu,edit,103,103 Edit Week 5,schedule
+2026-07-09,Thu,edit,104,104 Edit Week 4,schedule
+2026-07-09,Thu,shoot,101,"SD19 — Ep 101, 102, 103, 104, 105, 106, 107, 108 · 1,541 GB",airtable
+2026-07-09,Thu,shoot,,SHOOT Ep 5-8,schedule
+2026-07-10,Fri,ai,104,104 2nd Delivery DUE,schedule
+2026-07-10,Fri,crew,,Debbie OOO,schedule
+2026-07-10,Fri,crew,,Ian off,schedule
+2026-07-10,Fri,edit,101,101 Edit Week 10,schedule
+2026-07-10,Fri,edit,102,102 Edit Week 7,schedule
+2026-07-10,Fri,edit,103,103 Edit Week 5,schedule
+2026-07-10,Fri,edit,104,104 Edit Week 4,schedule
+2026-07-10,Fri,shoot,101,"SD20 — Ep 101, 102, 103, 104, 105, 106, 107, 108 · 1,555 GB",airtable
+2026-07-10,Fri,shoot,,SHOOT Ep 5-8,schedule
+2026-07-11,Sat,crew,,Debbie OOO,schedule
+2026-07-11,Sat,shoot,105,"SD21 — Ep 105, 106, 107, 108 · 1,416 GB",airtable
+2026-07-11,Sat,shoot,,SHOOT Ep 5-8,schedule
+2026-07-12,Sun,crew,,Debbie OOO,schedule
+2026-07-12,Sun,shoot,,TRAVEL,schedule
+2026-07-13,Mon,ai,105,105 1st Requests,schedule
+2026-07-13,Mon,crew,,Debbie OOO,schedule
+2026-07-13,Mon,cut,101,101 FC delivered to network,airtable
+2026-07-13,Mon,due,101,101 FC Due,schedule
+2026-07-13,Mon,edit,102,102 Edit Week 7,schedule
+2026-07-13,Mon,edit,103,103 Edit Week 6,schedule
+2026-07-13,Mon,edit,104,104 Edit Week 5,schedule
+2026-07-13,Mon,edit,105,105 Edit Prep,schedule
+2026-07-14,Tue,ai,105,105 1st Requests,schedule
+2026-07-14,Tue,due,103,103 IRC1 Due,schedule
+2026-07-14,Tue,edit,101,101 Edit Week 11,schedule
+2026-07-14,Tue,edit,102,102 Edit Week 8,schedule
+2026-07-14,Tue,edit,104,104 Edit Week 5,schedule
+2026-07-14,Tue,edit,105,105 Edit Prep,schedule
+2026-07-15,Wed,ai,105,105 1st Requests,schedule
+2026-07-15,Wed,edit,102,102 Edit Week 8,schedule
+2026-07-15,Wed,edit,103,103 Edit Week 6,schedule
+2026-07-15,Wed,edit,104,104 Edit Week 5,schedule
+2026-07-15,Wed,edit,105,105 Edit Prep,schedule
+2026-07-15,Wed,shoot,101,DOWN,schedule
+2026-07-16,Thu,ai,105,105 1st Requests,schedule
+2026-07-16,Thu,due,101,101 FC - History/Corus/Legal Notes Due,schedule
+2026-07-16,Thu,edit,102,102 Edit Week 8,schedule
+2026-07-16,Thu,edit,103,103 Edit Week 6,schedule
+2026-07-16,Thu,edit,104,104 Edit Week 5,schedule
+2026-07-16,Thu,edit,105,105 Edit Prep,schedule
+2026-07-16,Thu,shoot,101,DOWN,schedule
+2026-07-17,Fri,ai,105,105 1st Requests,schedule
+2026-07-17,Fri,crew,,Beata off,schedule
+2026-07-17,Fri,edit,102,102 Edit Week 8,schedule
+2026-07-17,Fri,edit,103,103 Edit Week 6,schedule
+2026-07-17,Fri,edit,104,104 Edit Week 5,schedule
+2026-07-17,Fri,edit,105,105 Edit Prep,schedule
+2026-07-17,Fri,shoot,101,DOWN,schedule
+2026-07-18,Sat,crew,,Beata off,schedule
+2026-07-19,Sun,crew,,Beata off,schedule
+2026-07-20,Mon,crew,,Beata off,schedule
+2026-07-20,Mon,edit,101,101 Edit Week 11,schedule
+2026-07-20,Mon,edit,102,102 Edit Week 8,schedule
+2026-07-20,Mon,edit,103,103 Edit Week 7,schedule
+2026-07-20,Mon,edit,104,104 Edit Week 6,schedule
+2026-07-21,Tue,crew,,Beata off,schedule
+2026-07-21,Tue,cut,103,103 RC1 delivered to network,airtable
+2026-07-21,Tue,due,103,103 RC1 Due,schedule
+2026-07-21,Tue,due,104,104 IRC1 Due,schedule
+2026-07-21,Tue,edit,101,101 Edit Week 11,schedule
+2026-07-21,Tue,edit,102,102 Edit Week 9,schedule
+2026-07-22,Wed,crew,,Beata off,schedule
+2026-07-22,Wed,due,101,101 IPL Due,schedule
+2026-07-22,Wed,edit,102,102 Edit Week 9,schedule
+2026-07-22,Wed,edit,104,104 Edit Week 6,schedule
+2026-07-22,Wed,edit,103,105 Edit Week 1,schedule
+2026-07-23,Thu,crew,,Beata off,schedule
+2026-07-23,Thu,due,103,103 RC1 - History/Corus/Legal Notes Due,schedule
+2026-07-23,Thu,edit,101,101 Edit Week 12,schedule
+2026-07-23,Thu,edit,102,102 Edit Week 9,schedule
+2026-07-23,Thu,edit,104,104 Edit Week 6,schedule
+2026-07-23,Thu,edit,103,105 Edit Week 1,schedule
+2026-07-24,Fri,crew,,Beata off,schedule
+2026-07-24,Fri,cut,101,101 PL delivered to network,airtable
+2026-07-24,Fri,due,101,101 PL Due,schedule
+2026-07-24,Fri,due,101,101 PL Due & 104 RC1 Due,schedule
+2026-07-24,Fri,edit,102,102 Edit Week 9,schedule
+2026-07-24,Fri,edit,104,104 Edit Week 6,schedule
+2026-07-24,Fri,edit,103,105 Edit Week 1,schedule
+2026-07-25,Sat,crew,,Beata off,schedule
+2026-07-25,Sat,edit,102,102 Edit Week 9,schedule
+2026-07-26,Sun,crew,,Beata off,schedule
+2026-07-26,Sun,edit,102,102 Edit Week 10,schedule
+2026-07-27,Mon,crew,,Beata off,schedule
+2026-07-27,Mon,crew,,Marty off,schedule
+2026-07-27,Mon,cut,104,104 RC1 delivered to network,airtable
+2026-07-27,Mon,due,102,102 IFC Due,schedule
+2026-07-27,Mon,due,104,104 RC1 Due,schedule
+2026-07-27,Mon,edit,103,103 Edit Week 7,schedule
+2026-07-27,Mon,edit,105,105 Edit Week 1,schedule
+2026-07-28,Tue,crew,,Beata off,schedule
+2026-07-28,Tue,crew,,Marty off,schedule
+2026-07-28,Tue,edit,102,102 Edit Week 10,schedule
+2026-07-28,Tue,edit,103,103 Edit Week 7,schedule
+2026-07-28,Tue,edit,105,105 Edit Week 1,schedule
+2026-07-28,Tue,shoot,104,DOWN,schedule
+2026-07-29,Wed,crew,,Beata off,schedule
+2026-07-29,Wed,crew,,Marty off,schedule
+2026-07-29,Wed,cut,102,102 FC delivered to network,airtable
+2026-07-29,Wed,due,102,102 FC Due,schedule
+2026-07-29,Wed,due,102,102 FC Due & 104 RC1 - History/Corus/Legal Notes Due,schedule
+2026-07-29,Wed,edit,103,103 Edit Week 7,schedule
+2026-07-29,Wed,edit,104,104 Edit Prep,schedule
+2026-07-29,Wed,edit,105,105 Edit Week 2,schedule
+2026-07-30,Thu,ai,106,106 1st Requests,schedule
+2026-07-30,Thu,crew,,Beata off,schedule
+2026-07-30,Thu,crew,,Marty off,schedule
+2026-07-30,Thu,edit,103,103 Edit Week 8,schedule
+2026-07-30,Thu,edit,104,104 Edit Prep,schedule
+2026-07-30,Thu,edit,105,105 Edit Week 2,schedule
+2026-07-30,Thu,edit,106,106 Edit Prep,schedule
+2026-07-30,Thu,shoot,102,DOWN,schedule
+2026-07-31,Fri,ai,106,106 1st Requests,schedule
+2026-07-31,Fri,crew,,Beata off,schedule
+2026-07-31,Fri,crew,,Brooks off,schedule
+2026-07-31,Fri,crew,,Marty off,schedule
+2026-07-31,Fri,due,102,102 FC History/Corus/Legal Notes Due,schedule
+2026-07-31,Fri,edit,103,103 Edit Week 8,schedule
+2026-07-31,Fri,edit,104,104 Edit Prep,schedule
+2026-07-31,Fri,edit,105,105 Edit Week 2,schedule
+2026-07-31,Fri,edit,106,106 Edit Prep,schedule
+2026-07-31,Fri,shoot,102,DOWN,schedule
+2026-08-02,Sun,edit,104,104 Edit Week 7,schedule
+2026-08-03,Mon,edit,103,103 Edit Week 8,schedule
+2026-08-03,Mon,holiday,,CIVIC HOLIDAY - CAN,schedule
+2026-08-03,Mon,shoot,101,DOWN,schedule
+2026-08-04,Tue,edit,101,101 Conform,schedule
+2026-08-04,Tue,edit,102,102 Edit Week 10,schedule
+2026-08-04,Tue,edit,103,103 Edit Week 8,schedule
+2026-08-04,Tue,edit,104,104 Edit Week 7,schedule
+2026-08-04,Tue,edit,105,105 Edit Week 2,schedule
+2026-08-05,Wed,ai,106,106 1st Requests,schedule
+2026-08-05,Wed,due,103,103 IFC Due,schedule
+2026-08-05,Wed,edit,101,101 Conform,schedule
+2026-08-05,Wed,edit,102,102 Edit Week 11,schedule
+2026-08-05,Wed,edit,104,104 Edit Week 7,schedule
+2026-08-05,Wed,edit,105,105 Edit Week 2,schedule
+2026-08-06,Thu,ai,106,106 1st Requests,schedule
+2026-08-06,Thu,crew,,Matt Booi Off,schedule
+2026-08-06,Thu,due,102,102 IPL Due,schedule
+2026-08-06,Thu,edit,101,101 VO,schedule
+2026-08-06,Thu,edit,103,103 Edit Week 9,schedule
+2026-08-06,Thu,edit,104,104 Edit Week 7,schedule
+2026-08-06,Thu,edit,105,105 Edit Week 3,schedule
+2026-08-06,Thu,edit,106,106 Edit Prep?,schedule
+2026-08-07,Fri,ai,106,106 1st Requests,schedule
+2026-08-07,Fri,crew,,Matt Booi Off,schedule
+2026-08-07,Fri,crew,,Max Off,schedule
+2026-08-07,Fri,cut,103,103 FC delivered to network,airtable
+2026-08-07,Fri,due,103,103 FC Due,schedule
+2026-08-07,Fri,edit,101,101 Conform,schedule
+2026-08-07,Fri,edit,102,102 Edit Week 11,schedule
+2026-08-07,Fri,edit,104,104 Edit Week 7,schedule
+2026-08-07,Fri,edit,105,105 Edit Week 3,schedule
+2026-08-07,Fri,edit,106,106 Edit Prep?,schedule
+2026-08-08,Sat,crew,,Matt Booi Off,schedule
+2026-08-08,Sat,crew,,Max Off,schedule
+2026-08-08,Sat,edit,105,105 Edit Week 3,schedule
+2026-08-09,Sun,crew,,Matt Booi Off,schedule
+2026-08-09,Sun,crew,,Max Off,schedule
+2026-08-10,Mon,ai,107,107 1st Requests,schedule
+2026-08-10,Mon,crew,,Matt Booi Off,schedule
+2026-08-10,Mon,crew,,Tim Off,schedule
+2026-08-10,Mon,due,102,102 PL Due,schedule
+2026-08-10,Mon,edit,101,101 Conform,schedule
+2026-08-10,Mon,edit,102,102 Edit Week 11,schedule
+2026-08-10,Mon,edit,104,104 Edit Week 8,schedule
+2026-08-10,Mon,edit,105,105 Edit Week 3,schedule
+2026-08-10,Mon,edit,103,105 Edit Week 4,schedule
+2026-08-10,Mon,edit,107,107 Edit Prep,schedule
+2026-08-11,Tue,ai,107,107 1st Requests,schedule
+2026-08-11,Tue,crew,,Matt Booi Off,schedule
+2026-08-11,Tue,crew,,Max Off,schedule
+2026-08-11,Tue,edit,101,101 Conform,schedule
+2026-08-11,Tue,edit,102,102 Edit Week 11,schedule
+2026-08-11,Tue,edit,104,104 Edit Week 8,schedule
+2026-08-11,Tue,edit,105,105 Edit Week 3,schedule
+2026-08-11,Tue,edit,107,107 Edit Prep,schedule
+2026-08-11,Tue,shoot,103,DOWN,schedule
+2026-08-12,Wed,ai,107,107 1st Requests,schedule
+2026-08-12,Wed,crew,,Matt Booi Off,schedule
+2026-08-12,Wed,crew,,Max Off (am only),schedule
+2026-08-12,Wed,cut,102,102 PL delivered to network,airtable
+2026-08-12,Wed,due,102,102 PL Due,schedule
+2026-08-12,Wed,due,103,103 FC - History/Corus/Legal Notes Due,schedule
+2026-08-12,Wed,edit,101,101 Conform,schedule
+2026-08-12,Wed,edit,104,104 Edit Week 8,schedule
+2026-08-12,Wed,edit,105,105 Edit Week 4,schedule
+2026-08-12,Wed,edit,107,107 Edit Prep,schedule
+2026-08-12,Wed,shoot,103,DOWN,schedule
+2026-08-13,Thu,ai,107,107 1st Requests,schedule
+2026-08-13,Thu,crew,,Matt Booi Off,schedule
+2026-08-13,Thu,edit,101,101 Conform,schedule
+2026-08-13,Thu,edit,104,104 Edit Week 8,schedule
+2026-08-13,Thu,edit,105,105 Edit Week 4,schedule
+2026-08-13,Thu,edit,106,106 Edit Prep,schedule
+2026-08-13,Thu,edit,107,107 Edit Prep,schedule
+2026-08-13,Thu,shoot,103,DOWN,schedule
+2026-08-14,Fri,ai,105,105 2nd Delivery DUE,schedule
+2026-08-14,Fri,crew,,Matt Booi Off,schedule
+2026-08-14,Fri,crew,,Steph Off,schedule
+2026-08-14,Fri,due,104,104 IFC Due,schedule
+2026-08-14,Fri,edit,101,101 Conform,schedule
+2026-08-14,Fri,edit,102,102 VO,schedule
+2026-08-14,Fri,edit,103,103 VO,schedule
+2026-08-14,Fri,edit,105,105 Edit Week 4,schedule
+2026-08-14,Fri,edit,106,106 Edit Prep,schedule
+2026-08-14,Fri,edit,107,107 Edit Prep,schedule
+2026-08-15,Sat,crew,,Steph off,schedule
+2026-08-16,Sun,crew,,Steph off,schedule
+2026-08-16,Sun,edit,108,108 Edit Prep,schedule
+2026-08-17,Mon,ai,108,108 1st Requests,schedule
+2026-08-17,Mon,crew,,Steph off,schedule
+2026-08-17,Mon,edit,102,102 Conform,schedule
+2026-08-17,Mon,edit,103,103 Edit Week 9,schedule
+2026-08-17,Mon,edit,105,105 Edit Week 4,schedule
+2026-08-17,Mon,edit,106,106 Edit Week 1,schedule
+2026-08-17,Mon,edit,108,108 Edit Prep,schedule
+2026-08-17,Mon,edit,101,Looks Session,schedule
+2026-08-17,Mon,shoot,104,DOWN,schedule
+2026-08-18,Tue,ai,108,108 1st Requests,schedule
+2026-08-18,Tue,crew,,Steph off,schedule
+2026-08-18,Tue,edit,101,101 Colour/Mix/Online,schedule
+2026-08-18,Tue,edit,102,102 Conform,schedule
+2026-08-18,Tue,edit,103,103 Edit Week 9,schedule
+2026-08-18,Tue,edit,105,105 Edit Week 5,schedule
+2026-08-18,Tue,edit,106,106 Edit Week 1,schedule
+2026-08-18,Tue,edit,108,108 Edit Prep,schedule
+2026-08-18,Tue,shoot,104,DOWN,schedule
+2026-08-19,Wed,ai,108,108 1st Requests,schedule
+2026-08-19,Wed,crew,,Steph off,schedule
+2026-08-19,Wed,crew,,Will Off,schedule
+2026-08-19,Wed,due,103,103 IPL Due,schedule
+2026-08-19,Wed,edit,101,101 Colour/Mix/Online,schedule
+2026-08-19,Wed,edit,102,102 Conform,schedule
+2026-08-19,Wed,edit,104,104 Edit Week 8,schedule
+2026-08-19,Wed,edit,105,105 Edit Week 5,schedule
+2026-08-19,Wed,edit,106,106 Edit Week 1,schedule
+2026-08-19,Wed,shoot,108,DOWN,schedule
+2026-08-20,Thu,ai,108,108 1st Requests,schedule
+2026-08-20,Thu,crew,,Steph off,schedule
+2026-08-20,Thu,crew,,Will Off,schedule
+2026-08-20,Thu,due,104,104 FC Due,schedule
+2026-08-20,Thu,edit,101,101 Colour/Mix/Online,schedule
+2026-08-20,Thu,edit,102,102 Conform,schedule
+2026-08-20,Thu,edit,103,103 Edit Week 10,schedule
+2026-08-20,Thu,edit,105,105 Edit Week 5,schedule
+2026-08-20,Thu,edit,106,106 Edit Week 1,schedule
+2026-08-20,Thu,shoot,108,DOWN,schedule
+2026-08-21,Fri,ai,108,108 1st Requests,schedule
+2026-08-21,Fri,crew,,Andrew off,schedule
+2026-08-21,Fri,crew,,Steph off,schedule
+2026-08-21,Fri,crew,,Tim Off,schedule
+2026-08-21,Fri,crew,,Will Off,schedule
+2026-08-21,Fri,due,103,103 PL Due,schedule
+2026-08-21,Fri,edit,102,102 Conform,schedule
+2026-08-21,Fri,edit,105,105 Edit Week 5,schedule
+2026-08-21,Fri,edit,106,106 Edit Week 1,schedule
+2026-08-21,Fri,edit,108,108 Edit Prep,schedule
+2026-08-21,Fri,edit,101,Online/Colour Review QT (EOD),schedule
+2026-08-21,Fri,shoot,104,DOWN,schedule
+2026-08-22,Sat,crew,,Andrew off,schedule
+2026-08-22,Sat,crew,,Steph off,schedule
+2026-08-23,Sun,crew,,Andrew off,schedule
+2026-08-23,Sun,crew,,Steph off,schedule
+2026-08-24,Mon,crew,,Andrew off,schedule
+2026-08-24,Mon,crew,,Lara off,schedule
+2026-08-24,Mon,crew,,Steph off,schedule
+2026-08-24,Mon,edit,101,101 Colour/Mix/Online,schedule
+2026-08-24,Mon,edit,102,102 Conform,schedule
+2026-08-24,Mon,edit,105,105 Edit Week 5,schedule
+2026-08-24,Mon,edit,106,106 Edit Week 2,schedule
+2026-08-24,Mon,edit,107,107 Edit Week 1,schedule
+2026-08-24,Mon,edit,108,108 Edit Week 1,schedule
+2026-08-24,Mon,shoot,103,DOWN,schedule
+2026-08-25,Tue,crew,,Andrew off,schedule
+2026-08-25,Tue,crew,,Lara off,schedule
+2026-08-25,Tue,crew,,Steph off,schedule
+2026-08-25,Tue,due,104,104 FC - History/Corus/Legal Notes Due,schedule
+2026-08-25,Tue,edit,102,102 Conform,schedule
+2026-08-25,Tue,edit,105,105 Edit Week 6,schedule
+2026-08-25,Tue,edit,106,106 Edit Week 2,schedule
+2026-08-25,Tue,edit,107,107 Edit Week 1,schedule
+2026-08-25,Tue,edit,108,108 Edit Week 1,schedule
+2026-08-25,Tue,edit,101,Online/Colour Review,schedule
+2026-08-25,Tue,shoot,103,DOWN,schedule
+2026-08-26,Wed,crew,,Andrew off,schedule
+2026-08-26,Wed,crew,,Lara off,schedule
+2026-08-26,Wed,crew,,Steph off,schedule
+2026-08-26,Wed,due,105,105 IRC1 Due,schedule
+2026-08-26,Wed,edit,102,102 Conform,schedule
+2026-08-26,Wed,edit,106,106 Edit Week 2,schedule
+2026-08-26,Wed,edit,107,107 Edit Week 1,schedule
+2026-08-26,Wed,edit,108,108 Edit Week 1,schedule
+2026-08-26,Wed,edit,101,Mix Review QT (EOD),schedule
+2026-08-26,Wed,shoot,103,DOWN,schedule
+2026-08-27,Thu,crew,,Andrew off,schedule
+2026-08-27,Thu,crew,,Lara off,schedule
+2026-08-27,Thu,crew,,Steph off,schedule
+2026-08-27,Thu,edit,101,101 Colour/Mix/Online,schedule
+2026-08-27,Thu,edit,102,102 Conform,schedule
+2026-08-27,Thu,edit,105,105 Edit Week 6,schedule
+2026-08-27,Thu,edit,106,106 Edit Week 2,schedule
+2026-08-27,Thu,edit,107,107 Edit Week 1,schedule
+2026-08-27,Thu,edit,108,108 Edit Week 1,schedule
+2026-08-27,Thu,shoot,103,DOWN,schedule
+2026-08-28,Fri,crew,,Andrew off,schedule
+2026-08-28,Fri,crew,,Lara off,schedule
+2026-08-28,Fri,crew,,Steph off,schedule
+2026-08-28,Fri,edit,102,102 Conform,schedule
+2026-08-28,Fri,edit,105,105 Edit Week 6,schedule
+2026-08-28,Fri,edit,106,106 Edit Week 2,schedule
+2026-08-28,Fri,edit,107,107 Edit Week 1,schedule
+2026-08-28,Fri,edit,108,108 Edit Week 1,schedule
+2026-08-28,Fri,edit,101,Mix Review,schedule
+2026-08-28,Fri,shoot,103,DOWN,schedule
+2026-08-29,Sat,crew,,Andrew off,schedule
+2026-08-29,Sat,crew,,Steph off,schedule
+2026-08-30,Sun,crew,,Andrew off,schedule
+2026-08-30,Sun,crew,,Steph off,schedule
+2026-08-30,Sun,edit,106,106 Edit Week 3,schedule
+2026-08-30,Sun,edit,107,107 Edit Week 2,schedule
+2026-08-30,Sun,edit,108,108 Edit Week 2,schedule
+2026-08-31,Mon,crew,,Andrew off,schedule
+2026-08-31,Mon,due,105,105 RC1 Due,schedule
+2026-08-31,Mon,edit,102,102 Colour/Mix/Online,schedule
+2026-08-31,Mon,edit,103,103 Conform,schedule
+2026-08-31,Mon,edit,104,104 Edit Week 9,schedule
+2026-08-31,Mon,edit,106,106 Edit Week 3,schedule
+2026-08-31,Mon,edit,107,107 Edit Week 2,schedule
+2026-08-31,Mon,note,101,101 Accessibility,schedule
+2026-08-31,Mon,shoot,108,DOWN,schedule
+2026-09-01,Tue,crew,,Andrew off,schedule
+2026-09-01,Tue,edit,102,102 Colour/Mix/Online,schedule
+2026-09-01,Tue,edit,103,103 Conform,schedule
+2026-09-01,Tue,edit,104,104 Edit Week 9,schedule
+2026-09-01,Tue,edit,106,106 Edit Week 3,schedule
+2026-09-01,Tue,edit,107,107 Edit Week 2,schedule
+2026-09-01,Tue,note,101,101 Accessibility,schedule
+2026-09-01,Tue,shoot,105,DOWN,schedule
+2026-09-02,Wed,crew,,Andrew off,schedule
+2026-09-02,Wed,due,104,104 IPL Due,schedule
+2026-09-02,Wed,due,105,105 RC1 - History/Corus/Legal Notes Due,schedule
+2026-09-02,Wed,edit,102,102 Colour/Mix/Online,schedule
+2026-09-02,Wed,edit,103,103 Conform,schedule
+2026-09-02,Wed,edit,106,106 Edit Week 3,schedule
+2026-09-02,Wed,edit,107,107 Edit Week 2,schedule
+2026-09-02,Wed,note,101,101 Accessibility,schedule
+2026-09-02,Wed,shoot,105,DOWN,schedule
+2026-09-03,Thu,ai,106,106 2nd Delivery DUE,schedule
+2026-09-03,Thu,crew,,Andrew off,schedule
+2026-09-03,Thu,edit,102,102 Colour/Mix/Online,schedule
+2026-09-03,Thu,edit,103,103 Conform,schedule
+2026-09-03,Thu,edit,104,104 Edit Week 9,schedule
+2026-09-03,Thu,edit,106,106 Edit Week 3,schedule
+2026-09-03,Thu,edit,107,107 Edit Week 2,schedule
+2026-09-03,Thu,note,101,101 Accessibility,schedule
+2026-09-03,Thu,shoot,105,DOWN,schedule
+2026-09-04,Fri,crew,,Andrew off,schedule
+2026-09-04,Fri,delivery,101,101 Delivery,schedule
+2026-09-04,Fri,due,104,104 PL Due,schedule
+2026-09-04,Fri,edit,102,102 Colour/Mix/Online,schedule
+2026-09-04,Fri,edit,103,103 Conform,schedule
+2026-09-04,Fri,edit,106,106 Edit Week 4,schedule
+2026-09-04,Fri,edit,107,107 Edit Week 3,schedule
+2026-09-04,Fri,shoot,105,DOWN,schedule
+2026-09-05,Sat,crew,,Andrew off,schedule
+2026-09-06,Sun,crew,,Andrew off,schedule
+2026-09-07,Mon,crew,,Andrew off,schedule
+2026-09-07,Mon,holiday,,LABOUR DAY - CAN/USA,schedule
+2026-09-07,Mon,shoot,102,DOWN,schedule
+2026-09-08,Tue,crew,,Andrew off,schedule
+2026-09-08,Tue,edit,102,102 Colour/Mix/Online,schedule
+2026-09-08,Tue,edit,103,103 Conform,schedule
+2026-09-08,Tue,edit,105,105 Edit Week 7,schedule
+2026-09-08,Tue,edit,106,106 Edit Week 4,schedule
+2026-09-08,Tue,edit,107,107 Edit Week 3,schedule
+2026-09-08,Tue,edit,108,108 Edit Week 2,schedule
+2026-09-08,Tue,shoot,104,DOWN,schedule
+2026-09-09,Wed,edit,102,102 Colour/Mix/Online,schedule
+2026-09-09,Wed,edit,103,103 Conform,schedule
+2026-09-09,Wed,edit,105,105 Edit Week 7,schedule
+2026-09-09,Wed,edit,106,106 Edit Week 4,schedule
+2026-09-09,Wed,edit,107,107 Edit Week 3,schedule
+2026-09-09,Wed,edit,108,108 Edit Week 2,schedule
+2026-09-09,Wed,shoot,104,DOWN,schedule
+2026-09-10,Thu,edit,102,102 Colour/Mix/Online,schedule
+2026-09-10,Thu,edit,103,103 Conform,schedule
+2026-09-10,Thu,edit,104,104 VO,schedule
+2026-09-10,Thu,edit,105,105 Edit Week 7,schedule
+2026-09-10,Thu,edit,106,106 Edit Week 4,schedule
+2026-09-10,Thu,edit,107,107 Edit Week 3,schedule
+2026-09-10,Thu,edit,108,108 Edit Week 2,schedule
+2026-09-11,Fri,edit,103,103 Conform,schedule
+2026-09-11,Fri,edit,105,105 Edit Week 7,schedule
+2026-09-11,Fri,edit,106,106 Edit Week 4,schedule
+2026-09-11,Fri,edit,107,107 Edit Week 3,schedule
+2026-09-11,Fri,edit,108,108 Edit Week 2,schedule
+2026-09-11,Fri,edit,102,Online/Colour Review QT (EOD),schedule
+2026-09-11,Fri,shoot,104,DOWN,schedule
+2026-09-12,Sat,crew,,Tim Off,schedule
+2026-09-12,Sat,edit,105,105 Edit Week 7,schedule
+2026-09-13,Sun,crew,,Tim Off,schedule
+2026-09-14,Mon,crew,,Tim Off,schedule
+2026-09-14,Mon,edit,102,102 Colour/Mix/Online,schedule
+2026-09-14,Mon,edit,103,103 Colour/Mix/Online,schedule
+2026-09-14,Mon,edit,104,104 Conform,schedule
+2026-09-14,Mon,edit,105,105 Edit Week 8,schedule
+2026-09-14,Mon,edit,106,106 Edit Week 5,schedule
+2026-09-14,Mon,edit,107,107 Edit Week 4,schedule
+2026-09-14,Mon,edit,108,108 Edit Week 3,schedule
+2026-09-15,Tue,crew,,Tim Off,schedule
+2026-09-15,Tue,edit,103,103 Colour/Mix/Online,schedule
+2026-09-15,Tue,edit,104,104 Conform,schedule
+2026-09-15,Tue,edit,105,105 Edit Week 8,schedule
+2026-09-15,Tue,edit,106,106 Edit Week 5,schedule
+2026-09-15,Tue,edit,107,107 Edit Week 4,schedule
+2026-09-15,Tue,edit,108,108 Edit Week 3,schedule
+2026-09-15,Tue,edit,102,Online/Colour Review,schedule
+2026-09-16,Wed,crew,,Tim Off,schedule
+2026-09-16,Wed,due,105,105 IFC Due,schedule
+2026-09-16,Wed,edit,103,103 Colour/Mix/Online,schedule
+2026-09-16,Wed,edit,104,104 Conform,schedule
+2026-09-16,Wed,edit,106,106 Edit Week 5,schedule
+2026-09-16,Wed,edit,107,107 Edit Week 4,schedule
+2026-09-16,Wed,edit,108,108 Edit Week 3,schedule
+2026-09-16,Wed,edit,102,Mix Review QT (EOD),schedule
+2026-09-17,Thu,ai,107,107 2nd Delivery DUE,schedule
+2026-09-17,Thu,crew,,Tim Off,schedule
+2026-09-17,Thu,edit,102,102 Colour/Mix/Online,schedule
+2026-09-17,Thu,edit,103,103 Colour/Mix/Online,schedule
+2026-09-17,Thu,edit,104,104 Conform,schedule
+2026-09-17,Thu,edit,105,105 Edit Week 8,schedule
+2026-09-17,Thu,edit,106,106 Edit Week 5,schedule
+2026-09-17,Thu,edit,107,107 Edit Week 4,schedule
+2026-09-17,Thu,edit,108,108 Edit Week 3,schedule
+2026-09-18,Fri,crew,,Tim Off,schedule
+2026-09-18,Fri,due,105,105 FC Due,schedule
+2026-09-18,Fri,edit,103,103 Colour/Mix/Online,schedule
+2026-09-18,Fri,edit,104,104 Conform,schedule
+2026-09-18,Fri,edit,106,106 Edit Week 5,schedule
+2026-09-18,Fri,edit,107,107 Edit Week 4,schedule
+2026-09-18,Fri,edit,108,108 Edit Week 3,schedule
+2026-09-18,Fri,edit,102,Mix Review,schedule
+2026-09-19,Sat,crew,,Tim Off,schedule
+2026-09-20,Sun,crew,,Tim Off / Jordana Off,schedule
+2026-09-21,Mon,edit,103,103 Colour/Mix/Online,schedule
+2026-09-21,Mon,edit,104,104 Conform,schedule
+2026-09-21,Mon,edit,106,106 Edit Week 6,schedule
+2026-09-21,Mon,edit,107,107 Edit Week 5,schedule
+2026-09-21,Mon,edit,108,108 Edit Week 4,schedule
+2026-09-21,Mon,note,102,102 Accessibility,schedule
+2026-09-21,Mon,note,105,Sizzle,schedule
+2026-09-22,Tue,due,106,106 IRC1 Due,schedule
+2026-09-22,Tue,edit,103,103 Colour/Mix/Online,schedule
+2026-09-22,Tue,edit,104,104 Conform,schedule
+2026-09-22,Tue,edit,107,107 Edit Week 5,schedule
+2026-09-22,Tue,edit,108,108 Edit Week 4,schedule
+2026-09-22,Tue,note,102,102 Accessibility,schedule
+2026-09-22,Tue,note,105,Sizzle,schedule
+2026-09-23,Wed,crew,,Jordana Off,schedule
+2026-09-23,Wed,due,105,105 FC - History/Corus/Legal Notes Due,schedule
+2026-09-23,Wed,edit,103,103 Colour/Mix/Online,schedule
+2026-09-23,Wed,edit,104,104 Conform,schedule
+2026-09-23,Wed,edit,106,106 Edit Week 6,schedule
+2026-09-23,Wed,edit,107,107 Edit Week 5,schedule
+2026-09-23,Wed,edit,108,108 Edit Week 4,schedule
+2026-09-23,Wed,note,102,102 Accessibility,schedule
+2026-09-23,Wed,note,105,Sizzle,schedule
+2026-09-24,Thu,ai,108,108 2nd Delivery DUE,schedule
+2026-09-24,Thu,crew,,Jordana Off,schedule
+2026-09-24,Thu,edit,103,103 Colour/Mix/Online,schedule
+2026-09-24,Thu,edit,104,104 Conform,schedule
+2026-09-24,Thu,edit,105,105 VO,schedule
+2026-09-24,Thu,edit,106,106 Edit Week 6,schedule
+2026-09-24,Thu,edit,107,107 Edit Week 5,schedule
+2026-09-24,Thu,edit,108,108 Edit Week 4,schedule
+2026-09-24,Thu,note,102,102 Accessibility,schedule
+2026-09-25,Fri,crew,,Jordana Off,schedule
+2026-09-25,Fri,delivery,102,102 Delivery,schedule
+2026-09-25,Fri,due,106,106 RC Due,schedule
+2026-09-25,Fri,edit,104,104 Conform,schedule
+2026-09-25,Fri,edit,107,107 Edit Week 5,schedule
+2026-09-25,Fri,edit,108,108 Edit Week 4,schedule
+2026-09-25,Fri,edit,103,Online/Colour Review QT (EOD),schedule
+2026-09-25,Fri,shoot,105,DOWN,schedule
+2026-09-26,Sat,crew,,Jordana Off,schedule
+2026-09-27,Sun,crew,,Jordana Off,schedule
+2026-09-28,Mon,crew,,Jordana Off,schedule
+2026-09-28,Mon,edit,103,103 Colour/Mix/Online,schedule
+2026-09-28,Mon,edit,104,104 Colour/Mix/Online,schedule
+2026-09-28,Mon,edit,105,105 Edit Week 9,schedule
+2026-09-28,Mon,edit,107,107 Edit Week 6,schedule
+2026-09-28,Mon,edit,108,108 Edit Week 5,schedule
+2026-09-28,Mon,shoot,106,DOWN,schedule
+2026-09-29,Tue,crew,,Jordana Off,schedule
+2026-09-29,Tue,due,107,107 IRC1 Due,schedule
+2026-09-29,Tue,edit,104,104 Colour/Mix/Online,schedule
+2026-09-29,Tue,edit,105,105 Edit Week 9,schedule
+2026-09-29,Tue,edit,108,108 Edit Week 5,schedule
+2026-09-29,Tue,edit,103,Online/Colour Review,schedule
+2026-09-29,Tue,shoot,106,DOWN,schedule
+2026-09-30,Wed,due,105,105 IPL Due,schedule
+2026-09-30,Wed,due,106,106 RC - History/Corus/Legal Notes Due,schedule
+2026-09-30,Wed,edit,104,104 Colour/Mix/Online,schedule
+2026-09-30,Wed,edit,107,107 Edit Week 6,schedule
+2026-09-30,Wed,edit,108,108 Edit Week 5,schedule
+2026-09-30,Wed,edit,103,Mix Review QT (EOD),schedule
+2026-09-30,Wed,shoot,106,DOWN,schedule
+2026-10-01,Thu,edit,103,103 Colour/Mix/Online,schedule
+2026-10-01,Thu,edit,104,104 Colour/Mix/Online,schedule
+2026-10-01,Thu,edit,105,105 Edit Week 9,schedule
+2026-10-01,Thu,edit,107,107 Edit Week 6,schedule
+2026-10-01,Thu,edit,108,108 Edit Week 5,schedule
+2026-10-01,Thu,shoot,106,DOWN,schedule
+2026-10-02,Fri,due,105,105 PL Due,schedule
+2026-10-02,Fri,due,105,105 PL Due & 107 RC Due,schedule
+2026-10-02,Fri,due,107,107 RC Due,schedule
+2026-10-02,Fri,edit,104,104 Colour/Mix/Online,schedule
+2026-10-02,Fri,edit,106,106 Edit Week 7,schedule
+2026-10-02,Fri,edit,108,108 Edit Week 5,schedule
+2026-10-02,Fri,edit,103,Mix Review,schedule
+2026-10-05,Mon,edit,104,104 Colour/Mix/Online,schedule
+2026-10-05,Mon,edit,106,106 Edit Week 7,schedule
+2026-10-05,Mon,edit,108,108 Edit Week 6,schedule
+2026-10-05,Mon,note,103,103 Accessibility,schedule
+2026-10-05,Mon,note,105,Sizzle,schedule
+2026-10-05,Mon,shoot,107,DOWN,schedule
+2026-10-06,Tue,due,108,108 IRC1 Due,schedule
+2026-10-06,Tue,edit,104,104 Colour/Mix/Online,schedule
+2026-10-06,Tue,edit,106,106 Edit Week 7,schedule
+2026-10-06,Tue,note,103,103 Accessibility,schedule
+2026-10-06,Tue,note,105,Sizzle,schedule
+2026-10-06,Tue,shoot,107,DOWN,schedule
+2026-10-07,Wed,due,107,107 RC - History/Corus/Legal Notes Due,schedule
+2026-10-07,Wed,edit,104,104 Colour/Mix/Online,schedule
+2026-10-07,Wed,edit,105,105 Conform,schedule
+2026-10-07,Wed,edit,106,106 Edit Week 7,schedule
+2026-10-07,Wed,edit,108,108 Edit Week 6,schedule
+2026-10-07,Wed,note,103,103 Accessibility,schedule
+2026-10-07,Wed,shoot,107,DOWN,schedule
+2026-10-08,Thu,edit,105,105 Conform,schedule
+2026-10-08,Thu,edit,106,106 Edit Week 7,schedule
+2026-10-08,Thu,edit,107,107 Edit Prep,schedule
+2026-10-08,Thu,edit,108,108 Edit Week 6,schedule
+2026-10-08,Thu,edit,104,Online/Colour Review QT (EOD),schedule
+2026-10-08,Thu,note,103,103 Accessibility,schedule
+2026-10-09,Fri,delivery,103,103 Delivery,schedule
+2026-10-09,Fri,due,108,108 RC Due,schedule
+2026-10-09,Fri,edit,104,104 Colour/Mix/Online,schedule
+2026-10-09,Fri,edit,105,105 Conform,schedule
+2026-10-09,Fri,edit,106,106 Edit Week 8,schedule
+2026-10-09,Fri,edit,107,107 Edit Prep,schedule
+2026-10-12,Mon,holiday,,THANKSGIVING/COLUBMUS DAY,schedule
+2026-10-12,Mon,shoot,104,DOWN,schedule
+2026-10-13,Tue,edit,105,105 Conform,schedule
+2026-10-13,Tue,edit,106,106 Edit Week 8,schedule
+2026-10-13,Tue,edit,107,107 Edit Week 7,schedule
+2026-10-13,Tue,edit,104,Online/Colour Review,schedule
+2026-10-13,Tue,shoot,108,DOWN,schedule
+2026-10-14,Wed,due,106,106 IFC Due,schedule
+2026-10-14,Wed,due,108,108 RC - History/Corus/Legal Notes Due,schedule
+2026-10-14,Wed,edit,105,105 Conform,schedule
+2026-10-14,Wed,edit,107,107 Edit Week 7,schedule
+2026-10-14,Wed,edit,104,Mix Review QT (EOD),schedule
+2026-10-14,Wed,shoot,108,DOWN,schedule
+2026-10-15,Thu,edit,104,104 Colour/Mix/Online,schedule
+2026-10-15,Thu,edit,105,105 Colour/Mix/Online,schedule
+2026-10-15,Thu,edit,106,106 Edit Week 8,schedule
+2026-10-15,Thu,edit,107,107 Edit Week 7,schedule
+2026-10-15,Thu,edit,108,108 Edit Prep,schedule
+2026-10-16,Fri,crew,,Hugh Hardy Wrap,schedule
+2026-10-16,Fri,due,106,106 FC Due,schedule
+2026-10-16,Fri,edit,105,105 Colour/Mix/Online,schedule
+2026-10-16,Fri,edit,107,107 Edit Week 7,schedule
+2026-10-16,Fri,edit,108,108 Edit Prep,schedule
+2026-10-16,Fri,edit,104,Mix Review,schedule
+2026-10-17,Sat,edit,107,107 Edit Week 7,schedule
+2026-10-19,Mon,edit,105,105 Colour/Mix/Online,schedule
+2026-10-19,Mon,edit,107,107 Edit Week 8,schedule
+2026-10-19,Mon,edit,108,108 Edit Week 7,schedule
+2026-10-19,Mon,note,104,104 Accessibility,schedule
+2026-10-19,Mon,shoot,106,DOWN,schedule
+2026-10-19,Mon,shoot,,Director Prep,schedule
+2026-10-20,Tue,edit,107,107 Edit Week 8,schedule
+2026-10-20,Tue,edit,108,108 Edit Week 7,schedule
+2026-10-20,Tue,edit,105,Online/Colour Review QT (EOD),schedule
+2026-10-20,Tue,note,104,104 Accessibility,schedule
+2026-10-20,Tue,shoot,106,DOWN,schedule
+2026-10-20,Tue,shoot,,Pickups,schedule
+2026-10-21,Wed,due,106,106 FC - History/Corus/Legal Notes Due,schedule
+2026-10-21,Wed,due,107,107 IFC Due,schedule
+2026-10-21,Wed,edit,108,108 Edit Week 7,schedule
+2026-10-21,Wed,edit,105,Online/Colour Review?,schedule
+2026-10-21,Wed,note,104,104 Accessibility,schedule
+2026-10-21,Wed,shoot,106,DOWN,schedule
+2026-10-22,Thu,edit,106,106 VO,schedule
+2026-10-22,Thu,edit,107,107 Edit Week 8,schedule
+2026-10-22,Thu,edit,108,108 Edit Week 7,schedule
+2026-10-22,Thu,edit,105,Mix Review QT (EOD),schedule
+2026-10-22,Thu,note,104,104 Accessibility,schedule
+2026-10-23,Fri,crew,,Brooks Gray Wrap,schedule
+2026-10-23,Fri,delivery,104,104 Delivery,schedule
+2026-10-23,Fri,due,107,107 FC Due,schedule
+2026-10-23,Fri,edit,108,108 Edit Week 7,schedule
+2026-10-23,Fri,edit,105,Mix Review,schedule
+2026-10-23,Fri,shoot,106,DOWN,schedule
+2026-10-26,Mon,edit,106,106 Edit Week 9,schedule
+2026-10-26,Mon,edit,108,108 Edit Week 8,schedule
+2026-10-26,Mon,note,105,105 Accessibility,schedule
+2026-10-26,Mon,shoot,107,DOWN,schedule
+2026-10-27,Tue,edit,106,106 Edit Week 9,schedule
+2026-10-27,Tue,edit,108,108 Edit Week 8,schedule
+2026-10-27,Tue,note,105,105 Accessibility,schedule
+2026-10-27,Tue,shoot,107,DOWN,schedule
+2026-10-28,Wed,due,106,106 IPL Due,schedule
+2026-10-28,Wed,due,107,107 FC - History/Corus/Legal Notes Due,schedule
+2026-10-28,Wed,due,108,108 IFC Due,schedule
+2026-10-28,Wed,note,105,105 Accessibility,schedule
+2026-10-28,Wed,shoot,107,DOWN,schedule
+2026-10-29,Thu,edit,106,106 Edit Week 9,schedule
+2026-10-29,Thu,edit,107,107 VO,schedule
+2026-10-29,Thu,edit,108,108 Edit Week 8,schedule
+2026-10-29,Thu,note,105,105 Accessibility,schedule
+2026-10-30,Fri,crew,,Lara Wrap,schedule
+2026-10-30,Fri,delivery,105,105 Delivery,schedule
+2026-10-30,Fri,due,106,106 PL Due,schedule
+2026-10-30,Fri,due,106,106 PL Due & 108 FC Due,schedule
+2026-10-30,Fri,due,108,108 FC Due,schedule
+2026-10-30,Fri,shoot,107,DOWN,schedule
+2026-11-02,Mon,edit,106,106 Conform,schedule
+2026-11-02,Mon,edit,107,107 Edit Week 9,schedule
+2026-11-02,Mon,shoot,108,DOWN,schedule
+2026-11-03,Tue,edit,106,106 Conform,schedule
+2026-11-03,Tue,edit,107,107 Edit Week 9,schedule
+2026-11-03,Tue,shoot,108,DOWN,schedule
+2026-11-04,Wed,due,107,107 IPL Due,schedule
+2026-11-04,Wed,due,108,108 FC - History/Corus/Legal Notes Due,schedule
+2026-11-04,Wed,edit,106,106 Conform,schedule
+2026-11-04,Wed,shoot,108,DOWN,schedule
+2026-11-05,Thu,edit,106,106 Conform,schedule
+2026-11-05,Thu,edit,107,107 Edit Week 9,schedule
+2026-11-05,Thu,edit,108,108 VO,schedule
+2026-11-06,Fri,due,107,107 PL Due,schedule
+2026-11-06,Fri,edit,106,106 Conform,schedule
+2026-11-06,Fri,shoot,108,DOWN,schedule
+2026-11-09,Mon,edit,106,106 Conform,schedule
+2026-11-09,Mon,edit,107,107 Conform,schedule
+2026-11-09,Mon,edit,108,108 Edit Week 9,schedule
+2026-11-10,Tue,edit,106,106 Conform,schedule
+2026-11-10,Tue,edit,107,107 Conform,schedule
+2026-11-10,Tue,edit,108,108 Edit Week 9,schedule
+2026-11-11,Wed,due,108,108 IPL Due,schedule
+2026-11-11,Wed,edit,106,106 Conform,schedule
+2026-11-11,Wed,edit,107,107 Conform,schedule
+2026-11-11,Wed,holiday,,VETERANS DAY - USA,schedule
+2026-11-12,Thu,edit,106,106 Conform,schedule
+2026-11-12,Thu,edit,107,107 Conform,schedule
+2026-11-12,Thu,edit,108,108 Edit Week 9,schedule
+2026-11-13,Fri,due,108,108 PL Due,schedule
+2026-11-13,Fri,edit,106,106 Conform,schedule
+2026-11-13,Fri,edit,107,107 Conform,schedule
+2026-11-16,Mon,edit,106,106 Colour/Mix/Online,schedule
+2026-11-16,Mon,edit,107,107 Conform,schedule
+2026-11-16,Mon,edit,108,108 Conform,schedule
+2026-11-17,Tue,edit,106,106 Colour/Mix/Online,schedule
+2026-11-17,Tue,edit,107,107 Conform,schedule
+2026-11-17,Tue,edit,108,108 Conform,schedule
+2026-11-18,Wed,edit,106,106 Colour/Mix/Online,schedule
+2026-11-18,Wed,edit,107,107 Conform,schedule
+2026-11-18,Wed,edit,108,108 Conform,schedule
+2026-11-19,Thu,edit,106,106 Colour/Mix/Online,schedule
+2026-11-19,Thu,edit,107,107 Conform,schedule
+2026-11-19,Thu,edit,108,108 Conform,schedule
+2026-11-20,Fri,edit,107,107 Conform,schedule
+2026-11-20,Fri,edit,108,108 Conform,schedule
+2026-11-20,Fri,edit,106,Online/Colour Review QT (EOD),schedule
+2026-11-23,Mon,edit,106,106 Colour/Mix/Online,schedule
+2026-11-23,Mon,edit,107,107 Colour/Mix/Online,schedule
+2026-11-23,Mon,edit,108,108 Conform,schedule
+2026-11-24,Tue,edit,107,107 Colour/Mix/Online,schedule
+2026-11-24,Tue,edit,108,108 Conform,schedule
+2026-11-24,Tue,edit,106,Online/Colour Review,schedule
+2026-11-25,Wed,edit,107,107 Colour/Mix/Online,schedule
+2026-11-25,Wed,edit,108,108 Conform,schedule
+2026-11-25,Wed,edit,106,Mix Review QT (EOD),schedule
+2026-11-26,Thu,edit,106,106 Colour/Mix/Online,schedule
+2026-11-26,Thu,edit,107,107 Colour/Mix/Online,schedule
+2026-11-26,Thu,edit,108,108 Conform,schedule
+2026-11-26,Thu,holiday,,THANKSGIVING - USA,schedule
+2026-11-27,Fri,edit,108,108 Conform,schedule
+2026-11-27,Fri,edit,106,Mix Review,schedule
+2026-11-27,Fri,edit,107,Online/Colour Review QT (EOD),schedule
+2026-11-30,Mon,edit,107,107 Colour/Mix/Online,schedule
+2026-11-30,Mon,edit,108,108 Colour/Mix/Online,schedule
+2026-11-30,Mon,note,106,106 Accessibility,schedule
+2026-12-01,Tue,edit,108,108 Colour/Mix/Online,schedule
+2026-12-01,Tue,edit,107,Online/Colour Review,schedule
+2026-12-01,Tue,note,106,106 Accessibility,schedule
+2026-12-02,Wed,edit,108,108 Colour/Mix/Online,schedule
+2026-12-02,Wed,edit,107,Mix Review QT (EOD),schedule
+2026-12-02,Wed,note,106,106 Accessibility,schedule
+2026-12-03,Thu,edit,107,107 Colour/Mix/Online,schedule
+2026-12-03,Thu,edit,108,108 Colour/Mix/Online,schedule
+2026-12-03,Thu,note,106,106 Accessibility,schedule
+2026-12-04,Fri,delivery,106,106 Delivery,schedule
+2026-12-04,Fri,edit,107,Mix Review,schedule
+2026-12-04,Fri,edit,108,Online/Colour Review QT (EOD),schedule
+2026-12-07,Mon,edit,108,108 Colour/Mix/Online,schedule
+2026-12-07,Mon,note,107,107 Accessibility,schedule
+2026-12-08,Tue,edit,108,Online/Colour Review,schedule
+2026-12-08,Tue,note,107,107 Accessibility,schedule
+2026-12-09,Wed,edit,108,Mix Review QT (EOD),schedule
+2026-12-09,Wed,note,107,107 Accessibility,schedule
+2026-12-10,Thu,edit,108,108 Colour/Mix/Online,schedule
+2026-12-10,Thu,note,107,107 Accessibility,schedule
+2026-12-11,Fri,delivery,107,107 Delivery,schedule
+2026-12-11,Fri,edit,108,Mix Review,schedule
+2026-12-14,Mon,note,108,108 Accessibility,schedule
+2026-12-15,Tue,note,108,108 Accessibility,schedule
+2026-12-16,Wed,note,108,108 Accessibility,schedule
+2026-12-17,Thu,note,108,108 Accessibility,schedule
+2026-12-18,Fri,delivery,108,108 Delivery,schedule

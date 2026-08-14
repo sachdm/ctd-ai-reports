@@ -34,6 +34,17 @@
   "Kling": 53
  },
  "creators": {
+  "WS": 1458,
+  "Marty": 282,
+  "JJ": 785,
+  "SM": 1205,
+  "KDK": 118,
+  "Paul": 311,
+  "PAUL/IAN": 461,
+  "james": 409,
+  "Unassigned": 3
+ },
+ "creatorsRaw": {
   "WS": 1433,
   "Marty": 282,
   "JJ": 785,
@@ -45,6 +56,30 @@
   "james": 409,
   "Will": 25,
   "Unassigned": 3
+ },
+ "creatorAliases": {
+  "SM": {
+   "SM": 1185,
+   "Sacha": 20
+  },
+  "WS": {
+   "WS": 1433,
+   "Will": 25
+  }
+ },
+ "person": {
+  "SM": "SM",
+  "Sacha": "SM",
+  "WS": "WS",
+  "Will": "WS",
+  "JJ": "JJ",
+  "jj": "JJ",
+  "Marty": "Marty",
+  "marty": "Marty",
+  "james": "james",
+  "Paul": "Paul",
+  "PAUL/IAN": "PAUL/IAN",
+  "KDK": "KDK"
  },
  "epShot": {
   "101": {

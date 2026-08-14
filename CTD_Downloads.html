@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CTD — AI in the Cuts</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CTD — Data Downloads</title><style>
 :root{
   --bg:#07080c; --panel:rgba(255,255,255,.038); --panel2:rgba(255,255,255,.062);
   --stroke:rgba(255,255,255,.09); --stroke2:rgba(255,255,255,.15); --line:rgba(255,255,255,.09);
@@ -108,59 +108,39 @@ a{color:var(--blue)}
   body{background:#fff;color:#111}
   .nav{display:none}
 }
+
+td .d{color:var(--dim);font-size:.8rem;margin-top:.2rem}
+a.dl{display:inline-block;border:1px solid var(--stroke);border-radius:8px;padding:.32rem .6rem;
+  font:700 .7rem/1 ui-monospace,monospace;color:var(--ink);text-decoration:none;white-space:nowrap}
+a.dl:hover{border-color:var(--stroke2);background:rgba(255,255,255,.06)}
+td a b{font-weight:720}
 </style></head><body>
-<nav class="nav"><div class="in"><span class="brand"><span class="mark"></span>CTD <small>Gen AI</small></span><span class="live"><i></i>LIVE</span><span class="navlinks"><a href="index.html" class="hub">← All reports</a><a href="CTD_AI_Dashboard.html">Dashboard</a><a href="CTD_Calendar.html">Calendar</a><a href="CTD_AI_Master_Report.html">Master</a><a href="CTD_Active_Shots.html">Shots</a><a href="CTD_AI_In_The_Cuts.html" class="active">In the Cuts</a><a href="CTD_AI_Meeting_Report.html">Accuracy</a><a href="CTD_Creative_Vetting.html">Vetting</a><a href="CTD_Downloads.html">Data</a></span></div></nav>
-<div class="wrap narrow">
+<nav class="nav"><div class="in"><span class="brand"><span class="mark"></span>CTD <small>Gen AI</small></span><span class="live"><i></i>LIVE</span><span class="navlinks"><a href="index.html" class="hub">← All reports</a><a href="CTD_AI_Dashboard.html">Dashboard</a><a href="CTD_Calendar.html">Calendar</a><a href="CTD_AI_Master_Report.html">Master</a><a href="CTD_Active_Shots.html">Shots</a><a href="CTD_AI_In_The_Cuts.html">In the Cuts</a><a href="CTD_AI_Meeting_Report.html">Accuracy</a><a href="CTD_Creative_Vetting.html">Vetting</a><a href="CTD_Downloads.html" class="active">Data</a></span></div></nav>
+<div class="wrap">
 <header class="hero">
-  <div class="eyebrow">CLOSE TO DISASTER · GEN AI</div>
-  <h1>AI in the Cuts</h1>
-  <p class="dek">How much generative-AI footage sits in each network cut, measured from the
-  GEN AI REPORTS timeline data. Read-only pull of the CTD Airtable —
-  3,892 clip entries across 11 assembled sequences.
-  Snapshot August 14, 2026.</p>
+  <div class="eyebrow">CLOSE TO DISASTER · DATA</div>
+  <h1>Every number on this site, as a spreadsheet.</h1>
+  <p>Every dataset behind these reports, exported as CSV — open in Excel, Sheets or Numbers.
+  Read-only snapshots of the CTD Airtable and the 08.12 day-to-day schedule.
+  &nbsp;<span class="stamp">Aug 14, 2026</span></p>
 </header>
 
 <div class="kpis">
-  <div class="kpi" style="--acc:var(--purple)"><b>35.9%</b><span>of each episode is AI</span></div>
-  <div class="kpi" style="--acc:var(--green)"><b>1.75:1</b><span>generate-to-use (104)</span>
-    <em>from 5.61:1 on 101</em></div>
-  <div class="kpi" style="--acc:var(--blue)"><b>5,032</b><span>AI clips generated</span></div>
-  <div class="kpi" style="--acc:var(--amber)"><b>4</b><span>cuts measured</span></div>
+  <div class="kpi" style="--acc:var(--cyan)"><b>12</b><span>CSV exports</span></div>
+  <div class="kpi" style="--acc:var(--blue)"><b>11,950</b><span>total rows</span></div>
+  <div class="kpi" style="--acc:var(--green)"><b>1,870 KB</b><span>combined</span></div>
+  <div class="kpi" style="--acc:var(--amber)"><b>1</b><span>JSON snapshot</span>
+    <em><a href="data.json" download>data.json</a> — all derived metrics</em></div>
 </div>
 
-<h2><span class="n">PER CUT</span>Latest cut, each episode</h2>
-<table><thead><tr><th>Cut</th><th>Date</th><th class="num">AI clips</th>
-<th class="num">AI screen-time</th><th class="num">Runtime</th><th class="num">AI share</th></tr></thead>
-<tbody><tr><td class="big">101 Picture Lock (conformed)</td><td class="mono">2026-07-24</td><td class="num">338</td><td class="num mono">12:46</td><td class="num mono">43:02</td><td class="num big" style="color:var(--g3)">29.7%</td></tr><tr><td class="big">102 Picture Lock</td><td class="mono">2026-08-12</td><td class="num">471</td><td class="num mono">18:57</td><td class="num mono">46:06</td><td class="num big" style="color:var(--g3)">41.1%</td></tr><tr><td class="big">103 Fine Cut</td><td class="mono">2026-08-07</td><td class="num">415</td><td class="num mono">14:20</td><td class="num mono">43:01</td><td class="num big" style="color:var(--g3)">33.3%</td></tr><tr><td class="big">104 Rough Cut</td><td class="mono">2026-07-27</td><td class="num">357</td><td class="num mono">17:07</td><td class="num mono">44:00</td><td class="num big" style="color:var(--g3)">38.9%</td></tr></tbody></table>
-<p class="note"><b>How runtime was measured:</b> the base doesn't store a master-duration field, but
-every AI clip carries its timeline Seq-Out timecode on a broadcast master that starts at
-01:00:00:00. The last AI clip in each cut therefore marks elapsed program time. Because a program
-can run a little past its final AI shot, these runtimes are a floor — so the true AI share is these
-figures or slightly lower.</p>
+<h2><span class="n">EXPORTS</span>Pick a dataset</h2>
+<table><thead><tr><th>Dataset</th><th>File</th><th class="num">Rows</th><th class="num">Cols</th>
+<th class="num">Size</th><th></th></tr></thead><tbody><tr><td><a href="ctd_shotcodes.csv" download><b>Every planned shot</b></a><div class="d">All GEN AI SHOTCODES with status, owner, priority, script beat and creative direction.</div></td><td class="mono">ctd_shotcodes.csv</td><td class="num">1,597</td><td class="num">13</td><td class="num">671 KB</td><td><a class="dl" href="ctd_shotcodes.csv" download>Download</a></td></tr><tr><td><a href="ctd_assets.csv" download><b>Every generated clip</b></a><div class="d">All GEN AI ASSETS — creator, tools, date, re-spin flag, ingest status.</div></td><td class="mono">ctd_assets.csv</td><td class="num">5,032</td><td class="num">13</td><td class="num">656 KB</td><td><a class="dl" href="ctd_assets.csv" download>Download</a></td></tr><tr><td><a href="ctd_placements.csv" download><b>Timeline placements</b></a><div class="d">Every AI clip placed in a cut (GEN AI REPORTS) — the basis for the AI-share figures.</div></td><td class="mono">ctd_placements.csv</td><td class="num">3,892</td><td class="num">11</td><td class="num">481 KB</td><td><a class="dl" href="ctd_placements.csv" download>Download</a></td></tr><tr><td><a href="ctd_cuts_measured.csv" download><b>Cuts measured</b></a><div class="d">Every assembled sequence with AI screen-time, runtime and share.</div></td><td class="mono">ctd_cuts_measured.csv</td><td class="num">11</td><td class="num">10</td><td class="num">1 KB</td><td><a class="dl" href="ctd_cuts_measured.csv" download>Download</a></td></tr><tr><td><a href="ctd_network_cuts.csv" download><b>Cuts to network</b></a><div class="d">CUTS TO NETWORK — every cut delivered or scheduled, with notes links.</div></td><td class="mono">ctd_network_cuts.csv</td><td class="num">34</td><td class="num">9</td><td class="num">2 KB</td><td><a class="dl" href="ctd_network_cuts.csv" download>Download</a></td></tr><tr><td><a href="ctd_shoot_days.csv" download><b>Shoot days</b></a><div class="d">SHOOT DATES — every confirmed shoot day with data volumes and cam rolls.</div></td><td class="mono">ctd_shoot_days.csv</td><td class="num">21</td><td class="num">6</td><td class="num">2 KB</td><td><a class="dl" href="ctd_shoot_days.csv" download>Download</a></td></tr><tr><td><a href="ctd_episodes.csv" download><b>Episode master</b></a><div class="d">One row per episode: crew, shot counts, generation, cut stage and every derived metric.</div></td><td class="mono">ctd_episodes.csv</td><td class="num">8</td><td class="num">20</td><td class="num">4 KB</td><td><a class="dl" href="ctd_episodes.csv" download>Download</a></td></tr><tr><td><a href="ctd_stories.csv" download><b>Stories</b></a><div class="d">Every story with its shot counts, generation volume and re-spin load.</div></td><td class="mono">ctd_stories.csv</td><td class="num">112</td><td class="num">11</td><td class="num">9 KB</td><td><a class="dl" href="ctd_stories.csv" download>Download</a></td></tr><tr><td><a href="ctd_people.csv" download><b>People</b></a><div class="d">Clips per generator, with the duplicate Airtable labels that were merged.</div></td><td class="mono">ctd_people.csv</td><td class="num">9</td><td class="num">5</td><td class="num">0 KB</td><td><a class="dl" href="ctd_people.csv" download>Download</a></td></tr><tr><td><a href="ctd_pipeline.csv" download><b>Pipeline status</b></a><div class="d">Shotcode status counts, series-wide and per episode.</div></td><td class="mono">ctd_pipeline.csv</td><td class="num">7</td><td class="num">12</td><td class="num">0 KB</td><td><a class="dl" href="ctd_pipeline.csv" download>Download</a></td></tr><tr><td><a href="ctd_respins_by_story.csv" download><b>Re-spin load</b></a><div class="d">Re-spin clips logged against each story, heaviest first.</div></td><td class="mono">ctd_respins_by_story.csv</td><td class="num">20</td><td class="num">4</td><td class="num">1 KB</td><td><a class="dl" href="ctd_respins_by_story.csv" download>Download</a></td></tr><tr><td><a href="ctd_daytoday.csv" download><b>Day-to-day grid</b></a><div class="d">The 08.12 schedule spreadsheet as flat rows, one per cell.</div></td><td class="mono">ctd_daytoday.csv</td><td class="num">1,207</td><td class="num">4</td><td class="num">43 KB</td><td><a class="dl" href="ctd_daytoday.csv" download>Download</a></td></tr></tbody></table>
 
-<h2><span class="n">TREND</span>AI share rises as a cut matures</h2>
-<p class="sub">Every assembled sequence in the base, in order.</p>
-<table><thead><tr><th>Ep</th><th>Stage</th><th>Date</th><th class="num">AI clips</th>
-<th class="num">AI share</th></tr></thead><tbody><tr><td class="big">101</td><td>Rough Cut 2</td><td class="mono">2026-06-26</td><td class="num">280</td><td class="num">25.9%</td></tr><tr><td class="big">101</td><td>Fine Cut</td><td class="mono">2026-07-13</td><td class="num">341</td><td class="num">29.5%</td></tr><tr><td class="big">101</td><td>Snap-ins</td><td class="mono">2026-07-14</td><td class="num">27</td><td class="num">35.1%</td></tr><tr><td class="big">101</td><td>Picture Lock</td><td class="mono">2026-07-24</td><td class="num">338</td><td class="num">29.7%</td></tr><tr><td class="big">101</td><td>Conform</td><td class="mono">—</td><td class="num">338</td><td class="num">29.6%</td></tr><tr><td class="big">102</td><td>Rough Cut 1</td><td class="mono">2026-07-01</td><td class="num">295</td><td class="num">32.5%</td></tr><tr><td class="big">102</td><td>Fine Cut</td><td class="mono">2026-07-29</td><td class="num">450</td><td class="num">44.1%</td></tr><tr><td class="big">102</td><td>Picture Lock</td><td class="mono">2026-08-12</td><td class="num">471</td><td class="num">41.1%</td></tr><tr><td class="big">103</td><td>Rough Cut</td><td class="mono">2026-07-21</td><td class="num">318</td><td class="num">27.9%</td></tr><tr><td class="big">103</td><td>Fine Cut</td><td class="mono">2026-08-07</td><td class="num">415</td><td class="num">33.3%</td></tr><tr><td class="big">104</td><td>Rough Cut</td><td class="mono">2026-07-27</td><td class="num">357</td><td class="num">38.9%</td></tr></tbody></table>
-<p>The pattern is consistent across three episodes: 101 went 25.9% → 29.5% → 29.7%
-rough cut to lock; 102 went 32.5% → 44.1% → 41.1%; 103 went 27.9% →
-33.3% between rough and fine cut. AI is not filler that gets trimmed — it gets
-<em>added</em> as sequences are finished.</p>
-
-<h2><span class="n">EFFICIENCY</span>Generated vs. used</h2>
-<p class="sub">How many AI clips we generated to land one in the cut.</p>
-<table><thead><tr><th>Episode</th><th class="num">Clips generated</th><th class="num">Used (in cut)</th>
-<th class="num">Generated per used</th></tr></thead>
-<tbody><tr><td class="big">101</td><td class="num">1,896</td><td class="num">338</td><td class="num big">5.61 : 1</td></tr><tr><td class="big">102</td><td class="num">1,163</td><td class="num">471</td><td class="num big">2.47 : 1</td></tr><tr><td class="big">103</td><td class="num">1,050</td><td class="num">415</td><td class="num big">2.53 : 1</td></tr><tr><td class="big">104</td><td class="num">624</td><td class="num">357</td><td class="num big">1.75 : 1</td></tr></tbody></table>
-<p>101 needed 5.61 generations per clip that made the cut. 102 dropped to
-2.47, 103 to 2.53, 104 to 1.75 — and the
-episodes with the <em>most</em> AI on screen are now the leanest to produce. Same or better output
-for a third of the generation waste.</p>
-<p class="note">Read with two caveats: (1) 101 has been in production longest, so it has accumulated
-the most experimental and re-spun generations — some of its 1,896 is early-days
-learning that later episodes skip. (2) "Used" counts timeline placements; a clip used twice counts
-twice, so true distinct-clip efficiency is marginally leaner still.</p>
-<p>If you need exact percentages for the network: confirm the true delivered runtime of each master
-(it will be within a few seconds of the floors above) and the figures lock. Nothing here required
-writing to the base — this is a pure read.</p>
+<p class="note">Every export is generated from the same snapshot as the report pages, so the figures
+tie out exactly: per-episode rows sum to 1,560 shotcodes and
+5,008 clips, with a further 37
+shotcodes and 24 clips carrying no episode link in Airtable
+(marked blank in the Episode column). Long text fields have newlines replaced with ⏎ so rows stay
+on one line.</p>
 <div class="foot">Compiled read-only from the CTD Airtable — nothing was written to the base · GEN AI SHOTCODES · GEN AI ASSETS · GEN AI REPORTS · CUTS TO NETWORK · SHOOT DATES · day-to-day schedule 08.12 · August 14, 2026</div></div></body></html>

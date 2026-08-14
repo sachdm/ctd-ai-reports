@@ -102,10 +102,10 @@ h1{font-size:2.5rem;line-height:1.04;margin:.5rem 0 .35rem;letter-spacing:-.025e
   </header>
 
   <div class="kpis">
-    <div class="kpi rise d1" style="--acc:#8fbcff"><div class="trend">▲ holding</div><div class="big">~33%</div><div class="lab">of each episode is AI footage</div><canvas class="spark" id="sp1"></canvas></div>
-    <div class="kpi rise d2" style="--acc:#9bf0b8"><div class="trend">▼ leaner</div><div class="big">2.4:1</div><div class="lab">generate-to-use · down from 5.1:1</div><canvas class="spark" id="sp2"></canvas></div>
-    <div class="kpi rise d3" style="--acc:#d3b8ff"><div class="trend">▼ leaner</div><div class="big">0.46</div><div class="lab">re-spins per used (in-cut) shot</div><canvas class="spark" id="sp3"></canvas></div>
-    <div class="kpi rise d4" style="--acc:#ffd07a"><div class="trend">55%</div><div class="big">870</div><div class="lab">of 1,582 shotcodes sent to Cream</div><canvas class="spark" id="sp4"></canvas></div>
+    <div class="kpi rise d1" style="--acc:#8fbcff"><div class="trend">▲ holding</div><div class="big">~33%</div><div class="lab">of each assembled cut is AI footage</div></div>
+    <div class="kpi rise d2" style="--acc:#9bf0b8"><div class="trend">▼ leaner</div><div class="big">2.4:1</div><div class="lab">generate-to-use · down from 5.1:1</div></div>
+    <div class="kpi rise d3" style="--acc:#d3b8ff"><div class="trend">▼ leaner</div><div class="big">0.46</div><div class="lab">re-spins per used (in-cut) shot</div></div>
+    <div class="kpi rise d4" style="--acc:#ffd07a"><div class="trend">56%</div><div class="big">889</div><div class="lab">of 1,582 shotcodes sent to Cream</div></div>
   </div>
 
   <div class="grid">
@@ -114,15 +114,17 @@ h1{font-size:2.5rem;line-height:1.04;margin:.5rem 0 .35rem;letter-spacing:-.025e
 
     <div class="panel c4 rise d3"><h3>Pipeline status</h3><div class="cap">All 1,582 planned shotcodes.</div><div class="cwrap"><canvas id="pipe"></canvas></div>
       <div class="legend">
-        <span><span class="dot" style="background:var(--green)"></span>Sent <b>870</b></span>
-        <span><span class="dot" style="background:var(--blue)"></span>First req <b>179</b></span>
-        <span><span class="dot" style="background:var(--amber)"></span>Active <b>53</b></span>
+        <span><span class="dot" style="background:var(--green)"></span>Sent <b>889</b></span>
+        <span><span class="dot" style="background:var(--blue)"></span>First req <b>174</b></span>
+        <span><span class="dot" style="background:var(--amber)"></span>Active <b>39</b></span>
         <span><span class="dot" style="background:#3a4353"></span>Held <b>480</b></span>
       </div>
     </div>
-    <div class="panel c8 rise d4"><h3>Generated vs. used per episode</h3><div class="cap">Clips generated (left) against clips that landed in the cut (right). The gap is closing — 101 over-generated, 103 is lean.</div><div class="cwrap"><canvas id="genUse"></canvas></div></div>
+    <div class="panel c8 rise d4"><h3>Clips generated per episode</h3><div class="cap">Clips generated (left) against clips that landed in the cut (right). The gap is closing — 101 over-generated, 103 is lean.</div><div class="cwrap"><canvas id="genUse"></canvas></div></div>
 
     <div class="panel c12 rise d4"><h3>Where every episode stands</h3><div class="cap">Full pipeline across all eight episodes as of Aug 14 — sent to the cut, in active AI production (first request / in progress / vetting), and not yet started. 104 carries the heaviest live load; 106–108 have not begun.</div><div class="cwrap tall"><canvas id="epStatus"></canvas></div></div>
+
+    <div class="panel c12 rise d4"><h3>Delivery schedule <span style="color:var(--dim2);font-weight:400;font-size:.8rem">-- AI milestones, from the production calendar</span></h3><div class="cap">First-request windows and 2nd-delivery dates per episode. <a href="ctd_schedule.csv" download style="color:var(--blue);text-decoration:none;font-weight:600">Download for Sheets (.csv)</a></div><div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:.82rem"><thead><tr><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Ep</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Title</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">1st requests</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">2nd delivery due</th><th style="text-align:left;color:var(--dim);font-weight:600;padding:6px 8px;border-bottom:1px solid var(--stroke2)">Status</th></tr></thead><tbody id="schedBody"></tbody></table></div></div>
 
     <div class="panel c12 rise d5"><h3>Re-spin load by story</h3><div class="cap">Clips sent back for changes. FDN and 447 lead — the effects-dense reactor and mid-air sequences, where getting physics right takes the most passes.</div><div class="cwrap tall"><canvas id="respinStory"></canvas></div></div>
   </div>
@@ -144,7 +146,7 @@ function spark(id,data,color){const el=document.getElementById(id);const g=el.ge
  g.addColorStop(0,color+'55');g.addColorStop(1,color+'00');
  new Chart(el,{type:'line',data:{labels:data.map((_,i)=>i),datasets:[{data,borderColor:color,borderWidth:2,fill:true,backgroundColor:g,tension:.45,pointRadius:0}]},
  options:{plugins:{legend:{display:false},tooltip:{enabled:false}},scales:{x:{display:false},y:{display:false}},maintainAspectRatio:false}});}
-spark('sp1',[27,33,28],C.blue);spark('sp2',[5.1,3,2.4],C.green);spark('sp3',[.68,.37,.46],C.purple);spark('sp4',[100,140,159,167,220],C.amber);
+
 
 new Chart(aiShare,{type:'bar',data:{labels:['101 Fine','102 RC1','103 RC'],datasets:[{data:[33,32.5,27.9],
  backgroundColor:ctx=>grad(ctx.chart.ctx,'#7db0ff','#3f6fe0'),borderRadius:10,barThickness:54,borderSkipped:false}]},
@@ -158,16 +160,15 @@ new Chart(trend,{type:'line',data:{labels:['101','102','103'],datasets:[
  scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true}}}});
 
 new Chart(pipe,{type:'doughnut',data:{labels:['Sent to Cream','First request','In prod (active)','Held'],
- datasets:[{data:[870,179,53,480],backgroundColor:[C.green,C.blue,C.amber,'#3a4353'],borderColor:'#0b0d13',borderWidth:3,hoverOffset:6}]},
+ datasets:[{data:[889,174,39,480],backgroundColor:[C.green,C.blue,C.amber,'#3a4353'],borderColor:'#0b0d13',borderWidth:3,hoverOffset:6}]},
  options:{maintainAspectRatio:false,cutout:'66%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+' ('+Math.round(c.parsed/1582*100)+'%)'}}}}});
 
-new Chart(genUse,{type:'bar',data:{labels:['101','102','103'],datasets:[
- {label:'Generated',data:[1879,872,774],backgroundColor:ctx=>grad(ctx.chart.ctx,'#5ff0dd','#2ab7a6'),borderRadius:8,borderSkipped:false},
- {label:'In the cut',data:[368,295,318],backgroundColor:ctx=>grad(ctx.chart.ctx,'#ffc24d','#e08e12'),borderRadius:8,borderSkipped:false}]},
+new Chart(genUse,{type:'bar',data:{labels:['101','102','103','104','105','106','107','108'],datasets:[
+ {label:'Clips generated',data:[1896,1163,1078,574,269,0,6,0],backgroundColor:ctx=>grad(ctx.chart.ctx,'#5ff0dd','#2ab7a6'),borderRadius:8,borderSkipped:false}]},
  options:{maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8,padding:16}}},scales:{x:{grid:noG},y:{grid:gridY,beginAtZero:true}}}});
 
 const ep=['101','102','103','104','105','106','107','108'];
-const eSent=[160,202,247,183,74,0,1,0], eAct=[2,0,69,100,61,0,0,0], eNS=[6,0,0,6,66,109,63,132], eHeld=[14,10,17,17,15,0,0,0];
+const eSent=[160,202,260,189,74,0,1,0], eAct=[2,0,56,94,61,0,0,0], eNS=[6,0,0,6,66,109,63,132], eHeld=[14,10,17,17,15,0,0,0];
 new Chart(epStatus,{type:'bar',data:{labels:ep,datasets:[
  {label:'Sent to Cream',data:eSent,backgroundColor:C.green,borderRadius:4,stack:'s'},
  {label:'Active (in prod)',data:eAct,backgroundColor:C.blue,borderRadius:4,stack:'s'},
@@ -175,6 +176,10 @@ new Chart(epStatus,{type:'bar',data:{labels:ep,datasets:[
  {label:'Held / cut',data:eHeld,backgroundColor:'#3a4353',borderRadius:4,stack:'s'}]},
  options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{labels:{usePointStyle:true,boxWidth:8,padding:14}},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.x}}},
  scales:{x:{grid:gridY,stacked:true,beginAtZero:true},y:{grid:noG,stacked:true}}}});
+const sched=[['101','MELTDOWN','-','May 25','Delivered'],['102','UNDER PRESSURE','May 13','Jun 16','Delivered'],['103','RISKY BUSINESS','Jun 1','Jul 2','Finishing'],['104','NO WAY OUT','Jun 8','Jul 10','Behind - active backlog'],['105','NATURE UNLEASHED','Jul 13','Aug 14','Due today'],['106','BREAKING POINT','Jul 30-Aug 7','Sep 3','Not started'],['107','ONE WRONG MOVE','Aug 10','Sep 17','Not started'],['108','HIDDEN JEOPARDY','Aug 17','Sep 24','Not started']];
+const sc={'Delivered':C.green,'Finishing':C.blue,'Due today':C.amber,'Behind - active backlog':C.red,'Not started':C.dim2};
+document.getElementById('schedBody').innerHTML=sched.map(function(r){var td='padding:6px 8px;border-bottom:1px solid #202b40';return '<tr><td style="'+td+';font-weight:700">'+r[0]+'</td><td style="'+td+';color:var(--dim)">'+r[1]+'</td><td style="'+td+'">'+r[2]+'</td><td style="'+td+'">'+r[3]+'</td><td style="'+td+';color:'+(sc[r[4]]||C.dim)+';font-weight:600">'+r[4]+'</td></tr>';}).join('');
+
 
 const rs=[['FDN',71,C.blue],['447',64,C.blue],['HMB',47,C.purple],['CHF',34,C.blue],['TXC',34,C.blue],['SDS',31,C.purple],['MSH',29,C.blue],['CCS',27,C.purple],['BMF',25,C.green],['PAO',22,C.green],['HKA',19,C.green],['HIN',19,C.blue],['SJE',18,C.purple],['TAD',17,C.green],['OTI',14,C.green],['LMR',13,C.purple],['AA191',9,C.purple],['LPE',7,C.green],['KAR',6,C.green]];
 new Chart(respinStory,{type:'bar',data:{labels:rs.map(r=>r[0]),datasets:[{data:rs.map(r=>r[1]),

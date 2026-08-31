@@ -116,22 +116,22 @@ a{color:var(--blue)}
   <h1>AI in the Cuts</h1>
   <p class="dek">How much generative-AI footage sits in each network cut, measured from the
   GEN AI REPORTS timeline data. Read-only pull of the CTD Airtable —
-  3,892 clip entries across 11 assembled sequences.
-  Snapshot August 14, 2026.</p>
+  5,371 clip entries across 15 assembled sequences.
+  Snapshot August 31, 2026.</p>
 </header>
 
 <div class="kpis">
-  <div class="kpi" style="--acc:var(--purple)"><b>35.9%</b><span>of each episode is AI</span></div>
-  <div class="kpi" style="--acc:var(--green)"><b>1.75:1</b><span>generate-to-use (104)</span>
-    <em>from 5.61:1 on 101</em></div>
-  <div class="kpi" style="--acc:var(--blue)"><b>5,032</b><span>AI clips generated</span></div>
+  <div class="kpi" style="--acc:var(--purple)"><b>40.0%</b><span>of each episode is AI</span></div>
+  <div class="kpi" style="--acc:var(--green)"><b>1.61:1</b><span>generate-to-use (104)</span>
+    <em>from 5.63:1 on 101</em></div>
+  <div class="kpi" style="--acc:var(--blue)"><b>5,992</b><span>AI clips generated</span></div>
   <div class="kpi" style="--acc:var(--amber)"><b>4</b><span>cuts measured</span></div>
 </div>
 
 <h2><span class="n">PER CUT</span>Latest cut, each episode</h2>
 <table><thead><tr><th>Cut</th><th>Date</th><th class="num">AI clips</th>
 <th class="num">AI screen-time</th><th class="num">Runtime</th><th class="num">AI share</th></tr></thead>
-<tbody><tr><td class="big">101 Picture Lock (conformed)</td><td class="mono">2026-07-24</td><td class="num">338</td><td class="num mono">12:46</td><td class="num mono">43:02</td><td class="num big" style="color:var(--g3)">29.7%</td></tr><tr><td class="big">102 Picture Lock</td><td class="mono">2026-08-12</td><td class="num">471</td><td class="num mono">18:57</td><td class="num mono">46:06</td><td class="num big" style="color:var(--g3)">41.1%</td></tr><tr><td class="big">103 Fine Cut</td><td class="mono">2026-08-07</td><td class="num">415</td><td class="num mono">14:20</td><td class="num mono">43:01</td><td class="num big" style="color:var(--g3)">33.3%</td></tr><tr><td class="big">104 Rough Cut</td><td class="mono">2026-07-27</td><td class="num">357</td><td class="num mono">17:07</td><td class="num mono">44:00</td><td class="num big" style="color:var(--g3)">38.9%</td></tr></tbody></table>
+<tbody><tr><td class="big">101 Conform</td><td class="mono">—</td><td class="num">338</td><td class="num mono">12:46</td><td class="num mono">43:02</td><td class="num big" style="color:var(--g3)">29.7%</td></tr><tr><td class="big">102 Conform</td><td class="mono">2026-08-19</td><td class="num">468</td><td class="num mono">18:57</td><td class="num mono">46:06</td><td class="num big" style="color:var(--g3)">41.1%</td></tr><tr><td class="big">103 Picture Lock</td><td class="mono">2026-08-25</td><td class="num">523</td><td class="num mono">18:52</td><td class="num mono">48:10</td><td class="num big" style="color:var(--g3)">39.2%</td></tr><tr><td class="big">104 Fine Cut</td><td class="mono">2026-08-24</td><td class="num">488</td><td class="num mono">21:32</td><td class="num mono">43:00</td><td class="num big" style="color:var(--g3)">50.1%</td></tr></tbody></table>
 <p class="note"><b>How runtime was measured:</b> the base doesn't store a master-duration field, but
 every AI clip carries its timeline Seq-Out timecode on a broadcast master that starts at
 01:00:00:00. The last AI clip in each cut therefore marks elapsed program time. Because a program
@@ -141,26 +141,25 @@ figures or slightly lower.</p>
 <h2><span class="n">TREND</span>AI share rises as a cut matures</h2>
 <p class="sub">Every assembled sequence in the base, in order.</p>
 <table><thead><tr><th>Ep</th><th>Stage</th><th>Date</th><th class="num">AI clips</th>
-<th class="num">AI share</th></tr></thead><tbody><tr><td class="big">101</td><td>Rough Cut 2</td><td class="mono">2026-06-26</td><td class="num">280</td><td class="num">25.9%</td></tr><tr><td class="big">101</td><td>Fine Cut</td><td class="mono">2026-07-13</td><td class="num">341</td><td class="num">29.5%</td></tr><tr><td class="big">101</td><td>Snap-ins</td><td class="mono">2026-07-14</td><td class="num">27</td><td class="num">35.1%</td></tr><tr><td class="big">101</td><td>Picture Lock</td><td class="mono">2026-07-24</td><td class="num">338</td><td class="num">29.7%</td></tr><tr><td class="big">101</td><td>Conform</td><td class="mono">—</td><td class="num">338</td><td class="num">29.6%</td></tr><tr><td class="big">102</td><td>Rough Cut 1</td><td class="mono">2026-07-01</td><td class="num">295</td><td class="num">32.5%</td></tr><tr><td class="big">102</td><td>Fine Cut</td><td class="mono">2026-07-29</td><td class="num">450</td><td class="num">44.1%</td></tr><tr><td class="big">102</td><td>Picture Lock</td><td class="mono">2026-08-12</td><td class="num">471</td><td class="num">41.1%</td></tr><tr><td class="big">103</td><td>Rough Cut</td><td class="mono">2026-07-21</td><td class="num">318</td><td class="num">27.9%</td></tr><tr><td class="big">103</td><td>Fine Cut</td><td class="mono">2026-08-07</td><td class="num">415</td><td class="num">33.3%</td></tr><tr><td class="big">104</td><td>Rough Cut</td><td class="mono">2026-07-27</td><td class="num">357</td><td class="num">38.9%</td></tr></tbody></table>
+<th class="num">AI share</th></tr></thead><tbody><tr><td class="big">101</td><td>Rough Cut 2</td><td class="mono">2026-06-26</td><td class="num">280</td><td class="num">25.9%</td></tr><tr><td class="big">101</td><td>Fine Cut</td><td class="mono">2026-07-13</td><td class="num">341</td><td class="num">29.5%</td></tr><tr><td class="big">101</td><td>Snap-ins</td><td class="mono">2026-07-14</td><td class="num">27</td><td class="num">35.1%</td></tr><tr><td class="big">101</td><td>Picture Lock</td><td class="mono">2026-07-24</td><td class="num">338</td><td class="num">29.7%</td></tr><tr><td class="big">101</td><td>Conform</td><td class="mono">—</td><td class="num">338</td><td class="num">29.6%</td></tr><tr><td class="big">102</td><td>Rough Cut 1</td><td class="mono">2026-07-01</td><td class="num">295</td><td class="num">32.5%</td></tr><tr><td class="big">102</td><td>Fine Cut</td><td class="mono">2026-07-29</td><td class="num">450</td><td class="num">44.1%</td></tr><tr><td class="big">102</td><td>Picture Lock</td><td class="mono">2026-08-12</td><td class="num">471</td><td class="num">41.1%</td></tr><tr><td class="big">103</td><td>Rough Cut</td><td class="mono">2026-07-21</td><td class="num">318</td><td class="num">27.9%</td></tr><tr><td class="big">103</td><td>Fine Cut</td><td class="mono">2026-08-07</td><td class="num">415</td><td class="num">33.3%</td></tr><tr><td class="big">104</td><td>Rough Cut</td><td class="mono">2026-07-27</td><td class="num">357</td><td class="num">38.9%</td></tr><tr><td class="big">102</td><td>Conform</td><td class="mono">2026-08-19</td><td class="num">468</td><td class="num">41.1%</td></tr><tr><td class="big">104</td><td>Fine Cut</td><td class="mono">2026-08-24</td><td class="num">488</td><td class="num">50.1%</td></tr><tr><td class="big">103</td><td>Picture Lock</td><td class="mono">2026-08-25</td><td class="num">523</td><td class="num">39.2%</td></tr></tbody></table>
 <p>The pattern is consistent across three episodes: 101 went 25.9% → 29.5% → 29.7%
-rough cut to lock; 102 went 32.5% → 44.1% → 41.1%; 103 went 27.9% →
-33.3% between rough and fine cut. AI is not filler that gets trimmed — it gets
+rough cut to lock; 102 went 32.5% → 44.1% → 41.1%; 103 went 27.9% → 33.3% → 39.2% rough cut to lock; and 104 jumped 38.9% → 50.1% between rough and fine cut. AI is not filler that gets trimmed — it gets
 <em>added</em> as sequences are finished.</p>
 
 <h2><span class="n">EFFICIENCY</span>Generated vs. used</h2>
 <p class="sub">How many AI clips we generated to land one in the cut.</p>
 <table><thead><tr><th>Episode</th><th class="num">Clips generated</th><th class="num">Used (in cut)</th>
 <th class="num">Generated per used</th></tr></thead>
-<tbody><tr><td class="big">101</td><td class="num">1,896</td><td class="num">338</td><td class="num big">5.61 : 1</td></tr><tr><td class="big">102</td><td class="num">1,163</td><td class="num">471</td><td class="num big">2.47 : 1</td></tr><tr><td class="big">103</td><td class="num">1,050</td><td class="num">415</td><td class="num big">2.53 : 1</td></tr><tr><td class="big">104</td><td class="num">624</td><td class="num">357</td><td class="num big">1.75 : 1</td></tr></tbody></table>
-<p>101 needed 5.61 generations per clip that made the cut. 102 dropped to
-2.47, 103 to 2.53, 104 to 1.75 — and the
+<tbody><tr><td class="big">101</td><td class="num">1,903</td><td class="num">338</td><td class="num big">5.63 : 1</td></tr><tr><td class="big">102</td><td class="num">1,192</td><td class="num">468</td><td class="num big">2.55 : 1</td></tr><tr><td class="big">103</td><td class="num">1,362</td><td class="num">523</td><td class="num big">2.60 : 1</td></tr><tr><td class="big">104</td><td class="num">787</td><td class="num">488</td><td class="num big">1.61 : 1</td></tr></tbody></table>
+<p>101 needed 5.63 generations per clip that made the cut. 102 dropped to
+2.55, 103 to 2.60, 104 to 1.61 — and the
 episodes with the <em>most</em> AI on screen are now the leanest to produce. Same or better output
 for a third of the generation waste.</p>
 <p class="note">Read with two caveats: (1) 101 has been in production longest, so it has accumulated
-the most experimental and re-spun generations — some of its 1,896 is early-days
+the most experimental and re-spun generations — some of its 1,903 is early-days
 learning that later episodes skip. (2) "Used" counts timeline placements; a clip used twice counts
 twice, so true distinct-clip efficiency is marginally leaner still.</p>
 <p>If you need exact percentages for the network: confirm the true delivered runtime of each master
 (it will be within a few seconds of the floors above) and the figures lock. Nothing here required
 writing to the base — this is a pure read.</p>
-<div class="foot">Compiled read-only from the CTD Airtable — nothing was written to the base · GEN AI SHOTCODES · GEN AI ASSETS · GEN AI REPORTS · CUTS TO NETWORK · SHOOT DATES · day-to-day schedule 08.12 · August 14, 2026</div></div></body></html>
+<div class="foot">Compiled read-only from the CTD Airtable — nothing was written to the base · GEN AI SHOTCODES · GEN AI ASSETS · GEN AI REPORTS · CUTS TO NETWORK · SHOOT DATES · day-to-day schedule 08.12 · August 31, 2026</div></div></body></html>

@@ -1,0 +1,142 @@
+# ============================================================
+# CTD — Lac-Mégantic AI shots
+# Locked blocks are injected wherever {STYLE}, {TRAIN}, {NIGHT}
+# appear in a shot brief. Edit a block once, every shot updates.
+# ============================================================
+
+blocks:
+  STYLE: >-
+    Photorealistic film still, documentary realism. Muted, desaturated,
+    drab color palette. Shot on a large-format digital cinema camera:
+    precisely composed, deliberate framing; low-key light from practical
+    sources only; deep controlled blacks with detail held in the
+    shadows; a cool steel-green undercast in the grade; clinical,
+    unflinching, still. No lens flares, no fantasy lighting, no aurora,
+    no stars.
+  SUMMER: >-
+    High summer in Quebec, early July: lush deep-green foliage, warm
+    humid air.
+  SUMMER_INT: >-
+    A hot, humid July night — patrons in light summer clothing.
+  NIGHT: >-
+    True night exposure: black starless overcast sky, the landscape
+    falling to black, faint mist — 1 a.m. darkness, not dusk.
+  TRAIN: >-
+    One single locomotive only — a heavy 1970s GE C30-7 six-axle diesel
+    freight unit with a long high hood, in cascade green with a black
+    roof and underframe, lightly weathered — a working locomotive in
+    maintained condition, not derelict — white-and-green diagonal safety
+    stripes on its nose, no company lettering, no logos — the only
+    marking is a small white road number '5017' painted once on the side
+    of the cab. Directly behind it: a long line of plain black
+    cylindrical oil tank cars, completely unmarked except one small
+    white 'DOT-111' stencil on each tank — no other text, no random
+    lettering, no gibberish characters, no placards. No other
+    locomotives anywhere on the train. The entire train is unlit — no
+    headlight, no ditch lights, no cab light, no lights anywhere on it.
+    The track is one track only — no second parallel track anywhere.
+  FIRE: >-
+    The locomotive is on fire: bright orange flames whip from the top of
+    its hood and a massive column of thick dark smoke billows up and
+    streams back over the length of the train, underlit orange by the
+    flames — the fire the only light source in the frame.
+
+defaults:
+  aspect_ratio: "16:9"
+  resolution: "2K"
+  variations: 4
+
+shots:
+  - code: CTD_AI_LMR_Outskirts01
+    brief: >-
+      {STYLE} {SUMMER} {NIGHT} Head-on shot, camera directly on the track axis at
+      locomotive height, pointed straight at the front of a runaway
+      freight train barreling forward through near-total darkness in
+      rural Quebec — forest and farmland walls of pure black on either
+      side of the single track. Filling the frame: the front of the
+      locomotive. {TRAIN} {FIRE} Gravel ballast and rails in the
+      immediate foreground barely visible. A burning black train in a
+      black world.
+
+  - code: CTD_AI_LMR_RevealLacMega
+    brief: >-
+      {STYLE} {SUMMER} {NIGHT} Camera positioned low, directly behind a moving
+      freight train, centered over a single railway track — one track
+      only — looking straight down the length of the train. The rear of
+      the last black DOT-111 oil tank car is large in the foreground,
+      slightly soft. Beyond it, the long line of tank cars stretches
+      away down the track, shrinking with distance, the perspective
+      converging toward the glowing town of Lac-Mégantic on the horizon
+      — warm streetlights and a small brightly lit church steeple in a
+      shallow valley, hazy with mist. At the far front of the train,
+      small with distance, thick black smoke billows against the town
+      glow. The whole train drives away from camera toward the town
+      lights. {TRAIN}
+
+  - code: CTD_AI_LMR_TaxiHighway
+    brief: >-
+      {STYLE} {SUMMER} {NIGHT} Low camera beside a rural highway exit in Quebec,
+      long lens. In the near foreground, large in frame, heavily out of
+      focus: a taxi — an early-2010s sedan with a roof light, headlights
+      on — soft blurred shape with warm bokeh as it passes on the exit
+      ramp. No road signs anywhere. Focus is set deep: very far in the
+      background, small on the horizon but sharp, a freight train sits
+      parked on a single railway track across wide dark misty fields.
+      {TRAIN} {FIRE} Sparse sodium highway lights cast pools of orange
+      on the asphalt.
+
+  - code: CTD_AI_TankRupture02
+    brief: >-
+      {STYLE} {NIGHT} Low wide-angle shot, camera just above the ground
+      in the derailment zone of Lac-Mégantic, deep focus — everything
+      sharp, no blur anywhere. Lower half of frame: a thick spill of
+      crude oil spreading across cracked asphalt toward the lens — not
+      water: viscous, heavy, tar-black liquid with a slow glossy sheen,
+      its leading edge rolling over gravel and swallowing it, its dark
+      mirror surface reflecting the wreck. Upper half of frame, sharp
+      and unmistakable: a derailed black DOT-111 oil tank car lying
+      toppled on its side, tank ruptured, a thick stream of crude
+      gushing from the tear — and beside it four or five more black
+      DOT-111 tank cars overturned and jackknifed at violent angles,
+      twisted rails bent upward beneath them. Only faint orange
+      emergency light flicker and one dim streetlight. No fire.
+
+  - code: CTD_AI_LMR_POVWindscreenDusk
+    brief: >-
+      {STYLE} {SUMMER} Dusk. Shot from inside a 1970s GE C30-7 diesel locomotive
+      cab, camera tight at the front windscreen. At the extreme left
+      edge of frame, barely intruding: a thin sliver of the engineer's
+      shoulder — a few centimeters of worn work-shirt fabric, heavily
+      out of focus, no face, no head, no arm. Through the scratched,
+      dusty windscreen: the single track stretches ahead through rural
+      Quebec forest and farmland, and in the distance the town of
+      Lac-Mégantic — rooftops and a church steeple in a shallow valley,
+      first streetlights flickering on. The train heads east: no sun and
+      no sunset colors — the sky ahead a darkening slate blue-purple,
+      cold and sunless. Bottom edge of frame, dim and out of focus: cab
+      dash and control stand, gauges glowing weakly amber.
+
+  - code: CTD_AI_LMR_LeaveBar02
+    brief: >-
+      {STYLE} {SUMMER_INT} Night interior. Extreme close-up at floor level inside a
+      small-town Quebec bar, warm and crowded. In sharp focus, center
+      frame: two pairs of feet walking briskly — a man's casual sneakers
+      and a woman's flat casual shoes, mid-stride side by side on worn
+      wooden floorboards, moving toward the exit. Razor-thin depth of
+      field: legs and feet of other patrons, chair legs and stool bases
+      dissolving into dark bokeh, warm amber bar light smeared into soft
+      glowing spots. Spilled-drink sheen on the floorboards catching
+      amber reflections.
+
+  - code: CTD_AI_WheelsDerail
+    brief: >-
+      {STYLE} {NIGHT} Extreme close-up: a single solid steel freight
+      wheel and the rail fill the entire frame, camera at ground level
+      almost touching it. The wheel is grinding through gravel and dirt
+      beside the rail, kicking up a violent spray of ballast rocks and
+      thick gray-brown dust toward the lens, sparks bursting where steel
+      scrapes rock. Above it, the black tank car is only a dark mass at
+      the top of frame. Pitch black, the scene lit only by the sparks.
+      The wheel face is a flat vertical steel disc, like a solid dinner
+      plate — NOT dished, NOT concave, no spokes, no holes — dull matte
+      gray, dry. Wheel sharp, no motion blur on the wheel itself.

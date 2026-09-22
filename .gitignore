@@ -1,0 +1,36 @@
+# ── Never commit ──────────────────────────────────────────
+# Krea / API credentials
+.krea_key
+*.key
+.env
+.env.*
+secrets.*
+
+# Video deliverables & heavy media (keep the repo light)
+*.mov
+*.mp4
+*.mxf
+*.wav
+*.aif
+*.prores
+
+# Raw Airtable dumps / scratch data pulls
+*_raw.json
+*_dump.json
+tool-results/
+scratch/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+._*
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+
+# Generated preview images
+*_preview.png
+mrp_*.png
+ios_*.png
+chk.png
